@@ -12,5 +12,5 @@ const getUsers = asyncHandelr(async (req, res, next) => {
 );
 
 module.exports = {
-    getUsers
+    getUsers,
 };
