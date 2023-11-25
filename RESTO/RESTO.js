@@ -4,6 +4,7 @@ const logger = require("./middlewares/logger");
 
 
 dotenv.config({ path: "config.env" });
+process.env.TZ = process.env.TIMEZONE;
 const userRoute = require("./routes/userRoute");
 const authRoute = require("./routes/authRoute");
 const ApiError = require("./utils/apiError");
