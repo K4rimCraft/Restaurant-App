@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const dbConnection = require("../config/database");
 
 const verifyToken = (req, res, next) => {
     const token = req.headers.token;
@@ -16,21 +17,31 @@ const verifyToken = (req, res, next) => {
 }
 
 const verifyTokenAndAuthorization = (req, res, next) => {
-    verifyToken(req, res, () => {
-        if ((req.person.personId == req.params.personId) || (req.person.type === "admin")) {
-            next();
-        } else {
+    verifyToken(req, res, async () => {
+        const [rows] = await (await dbConnection).query('SELECT * FROM persons where personId=?', [req.person.id]);
+        if (rows.length > 0) {
+            if ((req.person.id == rows[0].personId) || (req.person.type === "admin")) {
+                next();
+            } else {
+                return res.status(403).json({ message: "You Are Not Allowed:)" });
+            }
+        }else{
             return res.status(403).json({ message: "You Are Not Allowed" });
         }
     })
 }
 
-const verifyTokenAndAdmin = (req, res, next) => {
-    verifyToken(req, res, () => {
-        if (req.person.type === "admin") {
-            next();
+const verifyTokenAndAdmin = async (req, res, next) => {
+    verifyToken(req, res, async () => {
+        const [rows] = await (await dbConnection).query('SELECT * FROM persons where personId=?', [req.person.id]);
+        if (rows.length > 0) {
+            if (req.person.type === "admin") {
+                next();
+            } else {
+                return res.status(403).json({ message: "You Are Not Allowed, Only Admin" });
+            }
         } else {
-            return res.status(403).json({ message: "You Are Not Allowed, Only Admin" });
+            return res.status(403).json({ message: "You Are Not Allowed" });
         }
     })
 }
