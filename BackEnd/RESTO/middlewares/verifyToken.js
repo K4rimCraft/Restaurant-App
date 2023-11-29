@@ -25,7 +25,21 @@ const verifyTokenAndAuthorization = (req, res, next) => {
             } else {
                 return res.status(403).json({ message: "You Are Not Allowed:)" });
             }
-        }else{
+        } else {
+            return res.status(403).json({ message: "You Are Not Allowed" });
+        }
+    })
+}
+const verifyTokenDeliveryMan = (req, res, next) => {
+    verifyToken(req, res, async () => {
+        const [rows] = await (await dbConnection).query('SELECT * FROM persons where personId=?', [req.person.id]);
+        if (rows.length > 0) {
+            if (((req.person.id == rows[0].personId) && (req.person.type === "deliveryman")) || (req.person.type === "admin")) {
+                next();
+            } else {
+                return res.status(403).json({ message: "You Are Not Allowed:)" });
+            }
+        } else {
             return res.status(403).json({ message: "You Are Not Allowed" });
         }
     })
@@ -48,5 +62,6 @@ const verifyTokenAndAdmin = async (req, res, next) => {
 
 module.exports = {
     verifyTokenAndAuthorization,
-    verifyTokenAndAdmin
+    verifyTokenAndAdmin,
+    verifyTokenDeliveryMan
 }

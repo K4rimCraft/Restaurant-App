@@ -50,10 +50,7 @@ const login = asyncHandelr(async (req, res, next) => {
     if (rows.length === 0) {
         return next(new ApiError(`Wrong Email Or Password`, 404));
     }
-    console.log(req.body)
-    console.log(rows[0].password)
     const passwordMatch = bcrypt.compare(req.body.password, rows[0].password);
-    console.log(passwordMatch)
     if (!passwordMatch) {
         return next(new ApiError(`Wrong Email Or Password`, 404));
     }
