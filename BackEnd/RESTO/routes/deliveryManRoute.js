@@ -4,8 +4,8 @@ const { verifyTokenAndAuthorization } = require("../middlewares/verifyToken");
 
 const router = express.Router();
 
-router.post("/editRating", verifyTokenAndAuthorization, editRating);
-router.post("/editStatus", verifyTokenAndAuthorization, editStatus);
-router.post("/editNumberOfOrders", verifyTokenAndAuthorization, editNumberOfOrders);
+router.put("/editRating", verifyTokenAndAuthorization, editRating);
+router.put("/editStatus", verifyTokenAndAuthorization, editStatus);
+router.put("/editNumberOfOrders", verifyTokenAndAuthorization, editNumberOfOrders);
 
 module.exports = router;
