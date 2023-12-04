@@ -2,9 +2,6 @@ const Joi = require("joi");
 
 const validateCreateUser = (obj) => {
     const shcema = Joi.object({
-        personId: Joi.number().min(1).required(),
-        customerId: Joi.number().min(1),
-        deliveryManId: Joi.number().min(1),
         firstName: Joi.string().trim().min(3).max(200).required(),
         lastName: Joi.string().trim().min(3).max(200).required(),
         email: Joi.string().trim().min(11).max(200).required(),
