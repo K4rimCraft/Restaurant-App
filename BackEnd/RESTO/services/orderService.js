@@ -20,7 +20,7 @@ const placeOrder = asyncHandelr(async (req, res, next) => {
     }
     const decoded = jwt.verify(req.headers.token, process.env.JWT_SECRETKEY);
     req.person = decoded;
-    const [result2] = await (await dbConnection).query(`SELECT customerId FROM customers WHERE personId=(SELECT personId FROM persons WHERE email=?)`, [req.person.email]);
+    const [result2] = await (await dbConnection).query(`SELECT customerId FROM customers WHERE personId=?`, [req.person.id]);
     const [result3] = await (await dbConnection).query(`INSERT INTO orders (longitudeAddress,latitudeAddress,customerId,totalPrice) VALUES (?,?,?,?)`, [longitudeAddress, latitudeAddress, result2[0].customerId, totalPrice]);
     const [result4] = await (await dbConnection).query(`SELECT MAX(orderId) AS orderId FROM orders`);
     for (var i = 0; i < itemsList.length; i++) {

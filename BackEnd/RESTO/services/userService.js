@@ -18,7 +18,7 @@ const changeEmail = asyncHandelr(async (req, res, next) => {
     const decoded = jwt.verify(req.headers.token, process.env.JWT_SECRETKEY);
     req.person = decoded;
     const email = req.body.email;
-    const [result] = await (await dbConnection).query(`UPDATE persons SET email=? WHERE email=?`, [email, req.person.email]);
+    const [result] = await (await dbConnection).query(`UPDATE persons SET email=? WHERE personId=?`, [email, req.person.id]);
     res.status(200).json({ message: "Email Updated" });
 });
 
@@ -26,7 +26,7 @@ const changePassword = asyncHandelr(async (req, res, next) => {
     const decoded = jwt.verify(req.headers.token, process.env.JWT_SECRETKEY);
     req.person = decoded;
     //const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    const [result] = await (await dbConnection).query(`UPDATE persons SET password=? WHERE email=?`, [req.body.password, req.person.email]);
+    const [result] = await (await dbConnection).query(`UPDATE persons SET password=? WHERE personId=?`, [req.body.password, req.person.id]);
     res.status(200).json({ message: "Password Updated" });
 });
 
@@ -37,10 +37,10 @@ const forgotPassword = asyncHandelr(async (req, res, next) => {
         return next(new ApiError(`Wrong Email`, 404));
     }
     sendEmail("mahmoudgalal173.95@gmail.com", "ResetPassword", 5121524);
-    const token = jwt.sign({ email: email, type: result[0].type }, process.env.JWT_SECRETKEY, {
+    const token = jwt.sign({ id: result[0].personId, type: result[0].type }, process.env.JWT_SECRETKEY, {
         expiresIn: "90d"
     });
-    res.status(200).json({token});
+    res.status(200).json({ token });
 });
 
 module.exports = {

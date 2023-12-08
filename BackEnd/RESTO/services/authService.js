@@ -34,7 +34,7 @@ const register = asyncHandelr(async (req, res, next) => {
             const [result] = await (await dbConnection).query(`INSERT INTO deliverymen (personId) VALUES (?)`, [personId]);
         }
     }
-    const token = jwt.sign({ email: email, type: type }, process.env.JWT_SECRETKEY, {
+    const token = jwt.sign({ id: personId, type: type }, process.env.JWT_SECRETKEY, {
         expiresIn: "90d"
     });
     res.json({ token });
@@ -54,7 +54,7 @@ const login = asyncHandelr(async (req, res, next) => {
     if (req.body.password !== result[0].password) {
         return next(new ApiError(`Wrong Email Or Password`, 404));
     }
-    const token = jwt.sign({ email: req.body.email, type: result[0].type }, process.env.JWT_SECRETKEY, {
+    const token = jwt.sign({ id: result[0].personId, type: result[0].type }, process.env.JWT_SECRETKEY, {
         expiresIn: "90d"
     });
     res.json({ token });

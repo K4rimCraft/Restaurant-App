@@ -18,9 +18,9 @@ const verifyToken = (req, res, next) => {
 
 const verifyTokenAndAuthorization = (req, res, next) => {
     verifyToken(req, res, async () => {
-        const [rows] = await (await dbConnection).query('SELECT email FROM persons where email=?', [req.person.email]);
+        const [rows] = await (await dbConnection).query('SELECT personId FROM persons where personId=?', [req.person.id]);
         if (rows.length > 0) {
-            if ((req.person.email == rows[0].email) || (req.person.type === "admin")) {
+            if ((req.person.id == rows[0].personId) || (req.person.type === "admin")) {
                 next();
             } else {
                 return res.status(403).json({ message: "You Are Not Allowed:)" });
@@ -32,9 +32,9 @@ const verifyTokenAndAuthorization = (req, res, next) => {
 }
 const verifyTokenDeliveryMan = (req, res, next) => {
     verifyToken(req, res, async () => {
-        const [rows] = await (await dbConnection).query('SELECT email FROM persons where email=?', [req.person.email]);
+        const [rows] = await (await dbConnection).query('SELECT personId FROM persons where personId=?', [req.person.id]);
         if (rows.length > 0) {
-            if (((req.person.email == rows[0].email) && (req.person.type === "deliveryman")) || (req.person.type === "admin")) {
+            if (((req.person.id == rows[0].personId) && (req.person.type === "deliveryman")) || (req.person.type === "admin")) {
                 next();
             } else {
                 return res.status(403).json({ message: "You Are Not Allowed:)" });
@@ -47,7 +47,7 @@ const verifyTokenDeliveryMan = (req, res, next) => {
 
 const verifyTokenAndAdmin = async (req, res, next) => {
     verifyToken(req, res, async () => {
-        const [rows] = await (await dbConnection).query('SELECT email FROM persons where email=?', [req.person.email]);
+        const [rows] = await (await dbConnection).query('SELECT personId FROM persons where personId=?', [req.person.id]);
         if (rows.length > 0) {
             if (req.person.type === "admin") {
                 next();

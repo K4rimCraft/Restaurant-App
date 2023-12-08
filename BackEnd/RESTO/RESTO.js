@@ -22,6 +22,7 @@ RESTO.use("/api", require("./routes/catogeryRoute"));
 RESTO.use("/api", require("./routes/menuRoute"));
 RESTO.use("/api", require("./routes/deliveryManRoute"));
 RESTO.use("/api", require("./routes/orderRoute"));
+RESTO.use("/api", require("./routes/bookingRoute"));
 
 RESTO.all("*", (req, res, next) => {
     next(new ApiError(`Can't find this route ${req.originalUrl}`, 400));
