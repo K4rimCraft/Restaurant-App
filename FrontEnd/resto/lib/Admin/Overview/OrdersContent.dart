@@ -259,7 +259,7 @@ class _OrdersContentState extends State<OrdersContent> {
               ),
             const Divider(),
             Flexible(
-              child: FutureBuilder<List<OrderData>>(
+              child: FutureBuilder(
                 future: futureOrders,
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {

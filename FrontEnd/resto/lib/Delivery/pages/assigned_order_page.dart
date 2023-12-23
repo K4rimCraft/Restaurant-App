@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resto/Delivery/API.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:resto/main.dart';
 
 class AssignedOrderPage extends StatefulWidget {
   const AssignedOrderPage({super.key});
@@ -200,14 +201,15 @@ class OrderItem extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // Container(
-                //     clipBehavior: Clip.antiAliasWithSaveLayer,
-                //     decoration: BoxDecoration(
-                //         borderRadius: BorderRadiusDirectional.circular(10)),
-                //     child: Image.network(itemData.image,
-                //         width: 50,
-                //         fit: BoxFit.cover,
-                //         height: 50)), // Replace with actual image URL
+                Container(
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.circular(10)),
+                    child: Image.network(
+                        '$serverUrl/images/${itemData.firstImage}',
+                        width: 50,
+                        fit: BoxFit.cover,
+                        height: 50)), // Replace with actual image URL
                 Text(itemData.name, style: const TextStyle(fontSize: 22)),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -5,6 +5,28 @@ const dbConnection = require("../config/database");
 const ApiError = require("../utils/apiError");
 const { validateCreateUser, validateLogineUser } = require("../models/userModel");
 
+async function hashPassword(pass) {
+    const saltRounds = 10;
+    const hashedPassword = await new Promise((resolve, reject) => {
+        bcrypt.hash(pass, saltRounds, function (err, hash) {
+            if (err) reject(err)
+            resolve(hash)
+        });
+    })
+    return hashedPassword
+}
+
+
+async function comparePassword(plainPass, hashword) {
+    const result = await new Promise((resolve, reject) => {
+        bcrypt.compare(plainPass, hashword, function (err, isPasswordMatch) {
+            if (err) reject(err)
+            resolve(isPasswordMatch)
+        });
+    })
+    return result
+}
+
 
 const register = asyncHandelr(async (req, res, next) => {
     let personId;
@@ -22,12 +44,13 @@ const register = asyncHandelr(async (req, res, next) => {
         email, password, birthDate,
         longitudeAddress, latitudeAddress,
         phoneNumber, type } = req.body;
+    const hashedPassword = await hashPassword(password);
 
-    //const hashedPassword = await bcrypt.hash(password, 10);
+
     const [result2] = await (await dbConnection).query(`INSERT INTO persons
         (firstName,lastName,email,password,birthDate,longitudeAddress,latitudeAddress,phoneNumber,type)
         VALUES(?,?,?,?,?,?,?,?,?)`,
-        [firstName, lastName, email, password, birthDate, longitudeAddress, latitudeAddress, phoneNumber, type]);
+        [firstName, lastName, email, hashedPassword, birthDate, longitudeAddress, latitudeAddress, phoneNumber, type]);
     if (type !== "admin") {
         const [result1] = await (await dbConnection).query('SELECT personId FROM persons where email = ?', [email]);
 
@@ -51,6 +74,9 @@ const register = asyncHandelr(async (req, res, next) => {
 
 const login = asyncHandelr(async (req, res, next) => {
     let Id;
+
+
+
     const { error } = validateLogineUser(req.body);
     if (error) {
         return next(new ApiError(error.details[0].message, 400));
@@ -59,8 +85,10 @@ const login = asyncHandelr(async (req, res, next) => {
     if (result.length === 0) {
         return next(new ApiError(`Wrong Email Or Password`, 404));
     }
-    //const passwordMatch  = bcrypt.compare(req.body.password, result[0].password);
-    if (req.body.password !== result[0].password) {
+
+    const passwordMatch = await comparePassword(req.body.password, result[0].password);
+
+    if (!passwordMatch) {
         return next(new ApiError(`Wrong Email Or Password`, 404));
     }
     if (result[0].type === 'customer') {

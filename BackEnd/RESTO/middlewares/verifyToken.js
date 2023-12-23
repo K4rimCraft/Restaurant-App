@@ -9,7 +9,7 @@ const verifyToken = (req, res, next) => {
             req.person =decoded ;
             next();
         } catch {
-            res.status(401).json({ message: "Invalid Ioken" });
+            res.status(401).json({ message: "Invalid Token" });
         }
     } else {
         res.status(401).json({ message: "No Token Provided" });

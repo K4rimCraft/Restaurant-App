@@ -129,8 +129,21 @@ class _LoginPagePageState extends State<LoginPage> {
                       if (_formKey.currentState!.validate()) {
                         APIStatus status = await login(
                             _mailController.text, _passwordController.text);
-                        saveInfo(
-                            status.body[0], status.body[1], status.body[2]);
+                        if (status.statusCode == 200) {
+                          saveInfo(
+                              status.body[0], status.body[1], status.body[2]);
+                        } else {
+                          if (context.mounted) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                behavior: SnackBarBehavior.floating,
+                                content: Text(status.body[2]),
+                                duration: const Duration(seconds: 3),
+                              ),
+                            );
+                          }
+                        }
+                        ;
                       }
                     },
                     child: const Text(
@@ -212,7 +225,6 @@ class _LoginPagePageState extends State<LoginPage> {
                         print(prefs.getString('token') ?? '');
                         print(prefs.getString('type') ?? '');
                         print(prefs.getInt('id') ?? '');
-                        
                       },
                       icon: AppAssets.kGoogle),
                   const SizedBox(width: 31),

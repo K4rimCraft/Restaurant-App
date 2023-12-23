@@ -8,7 +8,7 @@ import 'package:resto/User/MainPage.dart';
 import 'package:resto/User/theme/app_color.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-String serverUrl = "http://10.0.2.2:3000";
+String serverUrl = "http://localhost:3000";
 int selectedInterface = 0;
 void main() {
   runApp(const MyApp());

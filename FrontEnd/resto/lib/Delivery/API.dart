@@ -2,8 +2,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
 import 'package:resto/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-int myDeliveryManId = 2001;
 List<OrderData> tookOrderData = [];
 List<ItemData> tookOrderItemsData = [];
 
@@ -15,10 +15,14 @@ class APIStatus {
 }
 
 Future<List<OrderData>> fetchUndeliverdOrders() async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.get(
-    Uri.parse('$serverUrl/getUndeliverdOrders'),
+    Uri.parse('$serverUrl/delivery/getUndeliverdOrders'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
   );
 
@@ -29,6 +33,23 @@ Future<List<OrderData>> fetchUndeliverdOrders() async {
   }
 }
 
+Future<List<OrderData>> fetchTookOrder() async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+  final response = await http.get(
+    Uri.parse('$serverUrl/delivery/getTookOrder'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
+    },
+  );
+
+  if (response.statusCode == 200) {
+    return OrderData.toList(jsonDecode(response.body));
+  } else {
+    throw Exception('Failed to load took Order');
+  }
+}
 // 0 new Orderd
 // 1 taken Order
 // 2 the order on its way
@@ -36,34 +57,22 @@ Future<List<OrderData>> fetchUndeliverdOrders() async {
 // 4 deiliverd
 
 Future<APIStatus> updateOrderData(int orderId, int deliveryStatus) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.put(
-    Uri.parse('$serverUrl/updateOrderData/${orderId.toString()}'),
+    Uri.parse('$serverUrl/delivery/updateOrderData/${orderId.toString()}'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
     body: jsonEncode(<String, String>{
-      'deliveryManId': myDeliveryManId.toString(),
       'deliveryStatus': deliveryStatus.toString(),
     }),
   );
   return APIStatus(
       statusCode: response.statusCode,
-      message: jsonDecode(response.body).values.toList().first);
-}
-
-Future<List<OrderData>> fetchTookOrder() async {
-  final response = await http.get(
-    Uri.parse('$serverUrl/getTookOrder/${myDeliveryManId.toString()}'),
-    headers: <String, String>{
-      'Content-Type': 'application/json; charset=UTF-8',
-    },
-  );
-
-  if (response.statusCode == 200) {
-    return OrderData.toList(jsonDecode(response.body));
-  } else {
-    throw Exception('Failed to load order history');
-  }
+      message: jsonDecode(response.body)['message']);
 }
 
 class OrderData {
@@ -120,13 +129,16 @@ class OrderData {
 }
 
 Future<List<ItemData>> fetchOrderItems() async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
   final response = await http.get(
-    Uri.parse('$serverUrl/getOrderItems/${tookOrderData.first.orderId}'),
+    Uri.parse(
+        '$serverUrl/delivery/getOrderItems/${tookOrderData.first.orderId}'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
   );
-
   if (response.statusCode == 200) {
     return ItemData.toList(jsonDecode(response.body));
   } else {
@@ -141,7 +153,7 @@ class ItemData {
   final String description;
   final double rating;
   final double price;
-  final String image;
+  final String firstImage;
   final int quantity;
 
   ItemData({
@@ -151,7 +163,7 @@ class ItemData {
     required this.description,
     required this.rating,
     required this.price,
-    required this.image,
+    required this.firstImage,
     required this.quantity,
   });
 
@@ -166,7 +178,7 @@ class ItemData {
           description: data[i]['description'],
           rating: data[i]['rating'] + 0.0,
           price: data[i]['price'] + 0.0,
-          image: data[i]['image'],
+          firstImage: data[i]['firstImage'],
           quantity: data[i]['quantity'],
         ));
       } catch (err) {
@@ -179,10 +191,14 @@ class ItemData {
 }
 
 Future<APIStatus> updateDeliveryManStatus(int status) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.put(
-    Uri.parse('$serverUrl/updateDeliveryManStatus/${myDeliveryManId.toString()}'),
+    Uri.parse('$serverUrl/delivery/updateDeliveryManStatus/'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
     body: jsonEncode(<String, String>{
       'status': status.toString(),
@@ -190,10 +206,10 @@ Future<APIStatus> updateDeliveryManStatus(int status) async {
   );
   return APIStatus(
       statusCode: response.statusCode,
-      message: jsonDecode(response.body).values.toList().first);
+      message: jsonDecode(response.body)['message']);
 }
 
-enum OrderStatus { pickedUp, atLocation, delivered }
+//enum OrderStatus { pickedUp, atLocation, delivered }
 
 // List<Order> generateOrders() {
 //   Random random = Random();

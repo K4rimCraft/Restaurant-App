@@ -97,6 +97,15 @@ class _RegisterPageState extends State<RegisterPage> {
             //saveInfo();
             print(status.body);
             saveInfo(status.body[0], status.body[1], status.body[2]);
+          } else {
+            if (context.mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(status.body[2]),
+                  duration: Duration(seconds: 3),
+                ),
+              );
+            }
           }
         } else {
           if (context.mounted) {

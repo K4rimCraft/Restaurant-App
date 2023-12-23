@@ -11,6 +11,7 @@ const globalError = require("./middlewares/errorMiddleware");
 
 const RESTO = express();
 
+
 RESTO.use(express.json());
 RESTO.use(express.urlencoded({ extended: true }));
 RESTO.use(logger);
@@ -28,10 +29,17 @@ RESTO.use("/api", require("./routes/User/favoritesRoute"));
 RESTO.use("/admin", require("./routes/Admin/itemRoute"));
 RESTO.use("/admin", require("./routes/Admin/categoryRoute"));
 RESTO.use("/admin", require("./routes/Admin/overviewRoute"));
+RESTO.use("/delivery", require("./routes/DeliveryMen/deliveryRoute"));
+
+
+
+
+
 RESTO.all("*", (req, res, next) => {
     next(new ApiError(`Can't find this route ${req.originalUrl}`, 400));
 });
 RESTO.use(globalError);
+
 
 const PORT = process.env.PORT;
 const server = RESTO.listen(PORT, () => {

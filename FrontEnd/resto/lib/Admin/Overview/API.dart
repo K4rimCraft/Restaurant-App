@@ -12,6 +12,7 @@ Future<List<OrderData>> fetchOrders(double minPrice, double maxPrice) async {
         'minPrice': minPrice.toString(),
         'maxPrice': maxPrice.toString()
       }));
+
   if (response.statusCode == 200) {
     return OrderData.toList(jsonDecode(response.body), response.headers);
   } else {
@@ -81,8 +82,9 @@ class OrderData {
       List<dynamic> data, Map<String, String> headers) {
     if (headers.keys.contains('maxprice')) {
       if (headers['maxprice'].toString() != 'NaN') {
-        maxPrice =
-            double.parse(headers['maxprice'].toString()).ceil().toDouble();
+        maxPrice = (double.tryParse(headers['maxprice'].toString()) ?? 0)
+            .ceil()
+            .toDouble();
       }
     }
 
@@ -174,7 +176,8 @@ class DeliveryMenData {
       List<dynamic> data, Map<String, String> headers) {
     if (headers.keys.contains('maxnumberoforders')) {
       if (headers['maxnumberoforders'].toString() != 'NaN') {
-        maxNumberOfOrders = int.parse(headers['maxnumberoforders'].toString());
+        maxNumberOfOrders =
+            (int.tryParse(headers['maxnumberoforders'].toString()) ?? 0);
       }
     }
 

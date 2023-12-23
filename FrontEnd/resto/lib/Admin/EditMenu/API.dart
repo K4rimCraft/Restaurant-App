@@ -43,7 +43,7 @@ Future<List<FoodCardData>> searchItem(String searchTerm) async {
       'searchterm': searchTerm,
     }),
   );
-  print(response.body);
+
   if (response.statusCode == 200) {
     return FoodCardData.toList(jsonDecode(response.body), Map());
   } else {
@@ -64,6 +64,7 @@ Future<List<FoodCardData>> fetchFoodCardData(
             'maxPrice': maxPrice.toString(),
             'minPrice': minPrice.toString()
           }));
+  print(response.body);
   if (response.statusCode == 200) {
     return FoodCardData.toList(jsonDecode(response.body), response.headers);
   } else {
@@ -190,7 +191,8 @@ class FoodCardData {
       //       double.parse(headers['maxprice'].toString()).ceil().toDouble();
       // }
       if (headers['maxtimesordered'].toString() != 'NaN') {
-        maxTimesOrdered = double.parse(headers['maxtimesordered'].toString());
+        maxTimesOrdered =
+            double.tryParse(headers['maxtimesordered'].toString()) ?? 0;
       }
     }
 
@@ -242,7 +244,6 @@ Future<APIStatus> sendCatagory(CategoryData dataObj) async {
       'categoryName': dataObj.catagoryName,
     }),
   );
-  print(response.body);
   return APIStatus(
       statusCode: response.statusCode,
       message: jsonDecode(response.body)['message']);

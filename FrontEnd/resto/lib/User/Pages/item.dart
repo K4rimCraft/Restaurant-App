@@ -48,10 +48,12 @@ class _ItemState extends State<Item> {
     return ChangeNotifierProvider(
         create: (context) => Cart(),
         child: Scaffold(
+            extendBodyBehindAppBar: true,
             backgroundColor: AppColorsLight.lightColor,
             appBar: AppBar(
+              backgroundColor: Colors.transparent,
               elevation: 0,
-              foregroundColor: AppColorsLight.primaryColor.shade900,
+              foregroundColor: AppColorsLight.primaryColor.shade500,
               leading: IconButton(
                 onPressed: () {
                   Navigator.of(context).pop();

@@ -30,13 +30,7 @@ const placeOrder = asyncHandelr(async (req, res, next) => {
     res.status(200).json({ message: 'Order Placed!' });
 });
 
-const getAllOrders = asyncHandelr(async (req, res, next) => {
-    const [result] = await (await dbConnection).query(`SELECT * FROM orders`);
-    if (result.length == 0) {
-        return next(new ApiError(`No Orders Found`, 404));
-    }
-    res.status(200).json(result);
-});
+
 
 
 
@@ -69,6 +63,5 @@ const getOrdersFilter = asyncHandelr(async (req, res, next) => {
 
 module.exports = {
     placeOrder,
-    getAllOrders,
     getOrdersFilter
 }

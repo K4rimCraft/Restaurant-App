@@ -43,9 +43,13 @@ const getAllBooking = asyncHandelr(async (req, res) => {
 
 const getBusyTables = asyncHandelr(async (req, res) => {
     const { date, startTime, endTime } = req.body;
-    var sql = (`SELECT tableNumber,startTime,endTime FROM bookings WHERE date='${date}' And startTime < '${endTime}' And  endTime > '${startTime}' order by startTime;`);
+    var sql = (`SELECT tableNumber FROM bookings WHERE date='${date}' And startTime < '${endTime}' And  endTime > '${startTime}' order by startTime;`);
     const [busyTables] = await (await dbConnection).query(sql)
-    res.status(200).json(busyTables)
+    // var numbers = []
+    // for( i = 0; i <busyTables.length; i++ ){
+    //     numbers.
+    // }
+    res.status(200).send(busyTables)
 });
 
 const deleteBooking = asyncHandelr(async (req, res, next) => {

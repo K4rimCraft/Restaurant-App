@@ -169,7 +169,6 @@ Future<List<OrderData>> getOrdersFilter(int status) async {
       'token': token,
     },
   );
-  print(response.body);
   if (response.statusCode == 200) {
     return OrderData.toList(jsonDecode(response.body));
   } else {

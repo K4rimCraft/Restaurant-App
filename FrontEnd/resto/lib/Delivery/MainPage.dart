@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resto/Delivery/pages/assigned_order_page.dart';
 import 'package:resto/Delivery/pages/available_order_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DeliveryInteface extends StatefulWidget {
   const DeliveryInteface({super.key});
@@ -15,7 +16,17 @@ class _DeliveryIntefaceState extends State<DeliveryInteface> {
   final List<Widget> _widgetOptions = <Widget>[
     const AvailableOrderPage(),
     AssignedOrderPage(),
-    const Text('Settings Screen'),
+    Center(
+      child: Container(
+        child: ElevatedButton(
+          child: Text('dwd'),
+          onPressed: () async {
+            final prefs = await SharedPreferences.getInstance();
+            await prefs.remove('token');
+          },
+        ),
+      ),
+    )
   ];
 
   void _onItemTapped(int index) {

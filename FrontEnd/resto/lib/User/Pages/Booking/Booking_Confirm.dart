@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:resto/User/API/BookingAPI.dart';
 
 import '../../MainPage.dart';
 import '../../models/booking_table.dart';
@@ -54,67 +55,95 @@ class _BookingConfirmState extends State<BookingConfirm> {
         padding: const EdgeInsets.all(15.0),
         child: Stack(
           children: [
-            ListView(
-              children: [
-                Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        buildSeatOption("Images/Seats/Eight_Seats.png", 8, 1),
-                        buildSeatOption("Images/Seats/Six_Seats.png", 6, 2),
-                        buildSeatOption("Images/Seats/Six_Seats.png", 6, 3),
-                        buildSeatOption("Images/Seats/Five_Seats.png", 5, 4),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        buildSeatOption("Images/Seats/Six_Seats.png", 6, 5),
-                        buildSeatOption("Images/Seats/Five_Seats.png", 5, 6),
-                        buildSeatOption("Images/Seats/Four_Seats.png", 4, 7),
-                        buildSeatOption("Images/Seats/Five_Seats.png", 5, 8),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        buildSeatOption("Images/Seats/Five_Seats.png", 5, 9),
-                        buildSeatOption("Images/Seats/Four_Seats.png", 4, 10),
-                        buildSeatOption("Images/Seats/Six_Seats.png", 6, 11),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        buildSeatOption("Images/Seats/Eight_Seats.png", 8, 12),
-                        buildSeatOption("Images/Seats/Four_Seats.png", 4, 13),
-                        buildSeatOption("Images/Seats/Five_Seats.png", 5, 14),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        buildSeatOption("Images/Seats/Eight_Seats.png", 8, 15),
-                        buildSeatOption("Images/Seats/Four_Seats.png", 4, 16),
-                        buildSeatOption("Images/Seats/Four_Seats.png", 4, 17),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        buildSeatOption("Images/Seats/Six_Seats.png", 6, 18),
-                        buildSeatOption("Images/Seats/Four_Seats.png", 4, 19),
-                        buildSeatOption("Images/Seats/Eight_Seats.png", 8, 20),
-                      ],
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.08,
-                    )
-                  ],
-                ),
-              ],
-            ),
+            FutureBuilder(
+                future: getBusyTables(),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    BookingTable.setTables = snapshot.data!;
+                  }
+
+                  return ListView(
+                    children: [
+                      Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              buildSeatOption(
+                                  "Images/Seats/Eight_Seats.png", 8, 1),
+                              buildSeatOption(
+                                  "Images/Seats/Six_Seats.png", 6, 2),
+                              buildSeatOption(
+                                  "Images/Seats/Six_Seats.png", 6, 3),
+                              buildSeatOption(
+                                  "Images/Seats/Five_Seats.png", 5, 4),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              buildSeatOption(
+                                  "Images/Seats/Six_Seats.png", 6, 5),
+                              buildSeatOption(
+                                  "Images/Seats/Five_Seats.png", 5, 6),
+                              buildSeatOption(
+                                  "Images/Seats/Four_Seats.png", 4, 7),
+                              buildSeatOption(
+                                  "Images/Seats/Five_Seats.png", 5, 8),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              buildSeatOption(
+                                  "Images/Seats/Five_Seats.png", 5, 9),
+                              buildSeatOption(
+                                  "Images/Seats/Four_Seats.png", 4, 10),
+                              buildSeatOption(
+                                  "Images/Seats/Six_Seats.png", 6, 11),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              buildSeatOption(
+                                  "Images/Seats/Eight_Seats.png", 8, 12),
+                              buildSeatOption(
+                                  "Images/Seats/Four_Seats.png", 4, 13),
+                              buildSeatOption(
+                                  "Images/Seats/Five_Seats.png", 5, 14),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              buildSeatOption(
+                                  "Images/Seats/Eight_Seats.png", 8, 15),
+                              buildSeatOption(
+                                  "Images/Seats/Four_Seats.png", 4, 16),
+                              buildSeatOption(
+                                  "Images/Seats/Four_Seats.png", 4, 17),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              buildSeatOption(
+                                  "Images/Seats/Six_Seats.png", 6, 18),
+                              buildSeatOption(
+                                  "Images/Seats/Four_Seats.png", 4, 19),
+                              buildSeatOption(
+                                  "Images/Seats/Eight_Seats.png", 8, 20),
+                            ],
+                          ),
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.08,
+                          )
+                        ],
+                      ),
+                    ],
+                  );
+                }),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
