@@ -6,7 +6,7 @@ const verifyToken = (req, res, next) => {
     if (token) {
         try {
             const decoded = jwt.verify(token, process.env.JWT_SECRETKEY);
-            req.person = decoded;
+            req.person =decoded ;
             next();
         } catch {
             res.status(401).json({ message: "Invalid Ioken" });

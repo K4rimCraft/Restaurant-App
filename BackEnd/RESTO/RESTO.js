@@ -7,23 +7,27 @@ const logger = require("./middlewares/logger");
 dotenv.config({ path: "config.env" });
 process.env.TZ = process.env.TIMEZONE;
 const ApiError = require("./utils/apiError");
-const globalError = require("./middlewares/erroeMiddleware");
+const globalError = require("./middlewares/errorMiddleware");
 
 const RESTO = express();
 
 RESTO.use(express.json());
 RESTO.use(express.urlencoded({ extended: true }));
 RESTO.use(logger);
-RESTO.use(cors());
+RESTO.use(cors({ exposedHeaders: ['maxPrice', 'maxTimesOrdered', 'maxNumberOfOrders'], }));
+RESTO.use('/images', express.static(__dirname + '/images'));
 
 RESTO.use("/api", require("./routes/userRoute"));
 RESTO.use("/api", require("./routes/authRoute"));
-RESTO.use("/api", require("./routes/catogeryRoute"));
-RESTO.use("/api", require("./routes/menuRoute"));
-RESTO.use("/api", require("./routes/deliveryManRoute"));
-RESTO.use("/api", require("./routes/orderRoute"));
-RESTO.use("/api", require("./routes/bookingRoute"));
-
+RESTO.use("/api", require("./routes/User/catogeryRoute"));
+RESTO.use("/api", require("./routes/User/menuRoute"));
+RESTO.use("/api", require("./routes/User/deliveryManRoute"));
+RESTO.use("/api", require("./routes/User/orderRoute"));
+RESTO.use("/api", require("./routes/User/bookingRoute"));
+RESTO.use("/api", require("./routes/User/favoritesRoute"));
+RESTO.use("/admin", require("./routes/Admin/itemRoute"));
+RESTO.use("/admin", require("./routes/Admin/categoryRoute"));
+RESTO.use("/admin", require("./routes/Admin/overviewRoute"));
 RESTO.all("*", (req, res, next) => {
     next(new ApiError(`Can't find this route ${req.originalUrl}`, 400));
 });

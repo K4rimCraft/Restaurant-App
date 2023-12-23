@@ -1,0 +1,300 @@
+Sat Dec 23 2023 15:20:08 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:39:40 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:39:57 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:52:25 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:53:40 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:54:59 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:55:02 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:55:03 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:55:03 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:55:04 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:56:03 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sat Dec 23 2023 15:56:05 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'ordes.orderId' in 'field list'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Other Team Members\Restaurant-App-main\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:19:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: '\n' +
+      '    SELECT ordes.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName \n' +
+      '    FROM orders \n' +
+      '    INNER JOIN customers ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId \n' +
+      "    WHERE orders.totalPrice BETWEEN '0.0' AND '1231.0';",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'ordes.orderId' in 'field list'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'ordes.orderId' in 'field list'",
+  stack: "Error: Unknown column 'ordes.orderId' in 'field list'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Other Team Members\\Restaurant-App-main\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:19:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
