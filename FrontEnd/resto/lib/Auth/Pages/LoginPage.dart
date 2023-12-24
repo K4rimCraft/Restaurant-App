@@ -7,6 +7,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../UI_Components/DateTextField.dart';
 
 class LoginPage extends StatefulWidget {
   final Function update;
@@ -21,10 +22,16 @@ class _LoginPagePageState extends State<LoginPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _mailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-
+  final TextEditingController _urlController = TextEditingController();
   void _validateFirstName(String value) {
     // Additional validation logic for the first name if needed
     _formKey.currentState!.validate();
+  }
+
+  @override
+  void initState() {
+    _urlController.text = serverUrl;
+    super.initState();
   }
 
   void saveInfo(String token, String type, int id) async {
@@ -103,8 +110,11 @@ class _LoginPagePageState extends State<LoginPage> {
                 hintText: 'Email address',
               ),
               const SizedBox(height: 16),
-              MyTextField(
-                onChanged: _validateFirstName,
+              MyPassField(
+                onChanged: (value) {
+                  _formKey.currentState!.validate();
+                  return;
+                },
                 iconColor: AppColors.kPeriwinkle,
                 controller: _passwordController,
                 keyboardType: TextInputType.visiblePassword,
@@ -227,7 +237,19 @@ class _LoginPagePageState extends State<LoginPage> {
                         print(prefs.getInt('id') ?? '');
                       },
                       icon: AppAssets.kGoogle),
-                  const SizedBox(width: 31),
+                  Container(
+                      height: 70,
+                      width: 200,
+                      child: TextField(
+                        controller: _urlController,
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(),
+                        ),
+                        onChanged: (value) {
+                          _urlController.text = value;
+                          serverUrl = value;
+                        },
+                      )),
                   SocialButton(onTap: () {}, icon: AppAssets.kFacebook),
                 ],
               ),

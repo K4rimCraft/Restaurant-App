@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../Pages/item.dart';
 import '../models/food.dart';
 import '../theme/app_color.dart';
+import 'package:resto/main.dart';
 
 class MyADS extends StatefulWidget {
   final FoodData food;
@@ -58,10 +59,10 @@ class _MyADSState extends State<MyADS> {
                         width: MediaQuery.of(context).size.width * 0.3,
                         child: Padding(
                           padding: const EdgeInsets.all(5.0),
-                          child: Text(" Try ${widget.food.description}%",
+                          child: Text(widget.food.description,
                               style: GoogleFonts.aBeeZee(
                                   color: Colors.white,
-                                  fontSize: 5,
+                                  fontSize: 10,
                                   fontWeight: FontWeight.w600)),
                         ),
                       ),
@@ -70,8 +71,9 @@ class _MyADSState extends State<MyADS> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.3,
-                  child:
-                      Image.asset(widget.food.firstImage, fit: BoxFit.contain),
+                  child: Image.network(
+                      '$serverUrl/images/${widget.food.firstImage}',
+                      fit: BoxFit.contain),
                 ),
               ],
             ),

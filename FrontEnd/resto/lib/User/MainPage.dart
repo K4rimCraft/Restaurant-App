@@ -10,6 +10,7 @@ import '/User/Pages/Booking/Booking.dart';
 import '/User/Pages/MainPage.dart';
 import '/User/Pages/Menu.dart';
 import '/User/Pages/Settings/Settings.dart';
+import '/User/Pages/Orders/Pages/Orders_Page.dart';
 
 bool paymentStatus = false;
 
@@ -97,6 +98,7 @@ class _UserInterfaceState extends State<UserInterface> {
                 MainPage(update: update),
                 Menu(update: update),
                 Booking(),
+                ShowOrderPage(),
                 Settings(selectedPage: widget.selectedPage),
               ][widget.selectedPage],
               Container(
@@ -123,6 +125,10 @@ class _UserInterfaceState extends State<UserInterface> {
                       Tooltip(
                           message: "Booking",
                           child: Icon(Icons.table_restaurant,
+                              color: AppColorsLight.lightColor)),
+                      Tooltip(
+                          message: "Orders",
+                          child: Icon(Icons.shopping_bag,
                               color: AppColorsLight.lightColor)),
                       Tooltip(
                           message: "Settings",

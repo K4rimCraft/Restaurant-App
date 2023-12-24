@@ -22,6 +22,8 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  Future<List<FoodData>> futureAdsItems = fetchRandomItems();
+  Future<List<FoodData>> futurePopulerItems = fetchMostPopularItems();
   Future<List<CategoryData>> futureCategories = fetchCatagories();
 
   Future<void> _refresh() async {
@@ -126,24 +128,51 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                 ),
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  width: MediaQuery.of(context).size.width,
-                  child: CarouselSlider(
-                    items: ads
-                        .map((item) => Container(
-                              child: item,
-                            ))
-                        .toList(),
-                    options: CarouselOptions(
-                      autoPlay: true,
-                      aspectRatio: 2.0,
-                      enlargeCenterPage: false,
-                    ),
-                    carouselController: CarouselController(),
-                  ),
-                ),
-                Padding(
+                FutureBuilder(
+                    future: futureAdsItems,
+                    builder: (context, snapshot) {
+                      if (snapshot.hasError) {
+                        return Container(
+                            alignment: Alignment.center,
+                            child: const Text(
+                              'Error: Request to server failed',
+                              textScaler: TextScaler.linear(1.5),
+                            ));
+                      } else if (snapshot.hasData) {
+                        if (snapshot.data!.isEmpty) {
+                          return Container(
+                              alignment: Alignment.center,
+                              child: const Text(
+                                'Empty',
+                                textScaler: TextScaler.linear(1.5),
+                              ));
+                        } else {
+                          return Container(
+                            height: MediaQuery.of(context).size.height * 0.3,
+                            width: MediaQuery.of(context).size.width,
+                            child: CarouselSlider(
+                              items: snapshot.data!
+                                  .map((item) => MyADS(
+                                        food: item,
+                                      ))
+                                  .toList(),
+                              options: CarouselOptions(
+                                autoPlay: true,
+                                aspectRatio: 2.0,
+                                enlargeCenterPage: false,
+                              ),
+                              carouselController: CarouselController(),
+                            ),
+                          );
+                        }
+                      } else {
+                        return Container(
+                          alignment: Alignment.center,
+                          child: const CircularProgressIndicator(),
+                        );
+                      }
+                    }),
+                const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 25),
                   child: Text(
                     "Most Popular FoodData",
@@ -154,16 +183,43 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                 ),
-                Container(
-                  height: 230,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: chickenMenu.length,
-                    itemBuilder: (context, index) => MostPopularCard(
-                      food: chickenMenu[index],
-                    ),
-                  ),
-                ),
+                FutureBuilder(
+                    future: futurePopulerItems,
+                    builder: (context, snapshot) {
+                      if (snapshot.hasError) {
+                        return Container(
+                            alignment: Alignment.center,
+                            child: const Text(
+                              'Error: Request to server failed',
+                              textScaler: TextScaler.linear(1.5),
+                            ));
+                      } else if (snapshot.hasData) {
+                        if (snapshot.data!.isEmpty) {
+                          return Container(
+                              alignment: Alignment.center,
+                              child: const Text(
+                                'Empty',
+                                textScaler: TextScaler.linear(1.5),
+                              ));
+                        } else {
+                          return SizedBox(
+                            height: 230,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: snapshot.data!.length,
+                              itemBuilder: (context, index) => MostPopularCard(
+                                food: snapshot.data![index],
+                              ),
+                            ),
+                          );
+                        }
+                      } else {
+                        return Container(
+                          alignment: Alignment.center,
+                          child: const CircularProgressIndicator(),
+                        );
+                      }
+                    }),
 
                 /* Container(
                      decoration:BoxDecoration(
@@ -207,17 +263,6 @@ class _MainPageState extends State<MainPage> {
                    ),
                    */
 
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25),
-                  child: Text(
-                    "Categories",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   child: FutureBuilder(
@@ -226,23 +271,42 @@ class _MainPageState extends State<MainPage> {
                       if (snapshot.hasError) {
                         return Container();
                       } else if (snapshot.hasData) {
-                        return GridView.builder(
-                          shrinkWrap: true,
-                          padding: EdgeInsets.fromLTRB(40, 10, 40, 0),
-                          gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
-                                  mainAxisExtent: 100,
-                                  crossAxisSpacing: 10,
-                                  crossAxisCount: 2),
-                          itemCount: snapshot.data!.length,
-                          itemBuilder: (context, index) {
-                            return buildCategries(
-                                index + 1,
-                                Icon(Icons.set_meal),
-                                snapshot.data![index].catagoryName,
-                                snapshot.data![index].categoryId);
-                          },
-                        );
+                        if (snapshot.data!.isNotEmpty) {
+                          return Column(
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 25),
+                                child: Text(
+                                  "Categories",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ),
+                              GridView.builder(
+                                shrinkWrap: true,
+                                padding: EdgeInsets.fromLTRB(40, 10, 40, 0),
+                                gridDelegate:
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                        mainAxisExtent: 100,
+                                        crossAxisSpacing: 10,
+                                        crossAxisCount: 2),
+                                itemCount: snapshot.data!.length,
+                                itemBuilder: (context, index) {
+                                  return buildCategries(
+                                      index + 1,
+                                      Icon(Icons.set_meal),
+                                      snapshot.data![index].catagoryName,
+                                      snapshot.data![index].categoryId);
+                                },
+                              ),
+                            ],
+                          );
+                        } else {
+                          return Container();
+                        }
                       } else {
                         return Container(
                           alignment: Alignment.center,

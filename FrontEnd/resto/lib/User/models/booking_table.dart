@@ -18,23 +18,42 @@ class BookingTable {
     _busyTables = tables;
   }
 
+  static set setDate(String date) {
+    _date = date;
+  }
+
+  static set setStartTime(String startTime) {
+    _startTime = startTime;
+  }
+
+  static set setEndTime(String endTime) {
+    _endTime = endTime;
+  }
+
+  static set setName(String name) {
+    _name = name;
+  }
+
   static String? get date {
     if (dateTime != null) {
-      _date = "${dateTime!.year}-${dateTime!.month}-${dateTime!.day}";
+      _date =
+          "${dateTime!.year}-${dateTime!.month.toString().padLeft(2, '0')}-${dateTime!.day.toString().padLeft(2, '0')}";
     }
     return _date;
   }
 
   static String? get startTime {
     if (pickedHour != null) {
-      _startTime = "${pickedHour!.hour}:${pickedHour!.minute}";
+      _startTime =
+          "${pickedHour!.hour.toString().padLeft(2, '0')}:${pickedHour!.minute.toString().padLeft(2, '0')}";
     }
     return _startTime;
   }
 
   static String? get endTime {
     if (pickedHour != null) {
-      _endTime = "${pickedHour!.hour + 1}:${pickedHour!.minute}";
+      _endTime =
+          "${((pickedHour!.hour + 1) == 24 ? 00 : pickedHour!.hour + 1).toString().padLeft(2, '0')}:${pickedHour!.minute.toString().padLeft(2, '0')}";
     }
     return _endTime;
   }

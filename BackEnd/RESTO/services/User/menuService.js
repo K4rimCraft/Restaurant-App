@@ -22,17 +22,24 @@ const getItemByCategory = asyncHandelr(async (req, res, next) => {
 });
 
 const getMostPopularItems = asyncHandelr(async (req, res, next) => {
-    const [result] = await (await dbConnection).query("SELECT * FROM menuItems WHERE rating > 3.5 OR timesOrdered >100 ORDER BY rating DESC");
+    const [result] = await (await dbConnection).query("SELECT * FROM menuItems ORDER BY rating DESC");
     // if (result.length === 0) {
     //     return next(new ApiError(`No Items Found`, 404));
     // }
     res.status(200).json(result);
 });
 
-
+const getRandomItems = asyncHandelr(async (req, res, next) => {
+    const [result] = await (await dbConnection).query("SELECT * FROM menuItems ORDER BY RAND() LIMIT 5");
+    // if (result.length === 0) {
+    //     return next(new ApiError(`No Items Found`, 404));
+    // }
+    res.status(200).json(result);
+});
 
 module.exports = {
     getAllItems,
     getItemByCategory,
     getMostPopularItems,
+    getRandomItems,
 };

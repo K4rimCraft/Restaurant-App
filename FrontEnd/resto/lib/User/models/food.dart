@@ -3,11 +3,11 @@ class FoodData {
   static double maxTimesOrdered = 100;
   final int itemId;
   final String name;
-  final int stock;
+
   final String description;
   final double rating;
   final double price;
-  final int timesOrdered;
+
   final String firstImage;
   final String secondImage;
   int quantity;
@@ -19,8 +19,6 @@ class FoodData {
     required this.description,
     required this.rating,
     required this.price,
-    required this.timesOrdered,
-    required this.stock,
     required this.firstImage,
     required this.secondImage,
     required this.quantity,
@@ -37,11 +35,31 @@ class FoodData {
           description: data[i]['description'],
           rating: data[i]['rating'] + .0,
           price: data[i]['price'] + .0,
-          timesOrdered: data[i]['timesOrdered'],
-          stock: data[i]['stock'],
           firstImage: data[i]['firstImage'],
           secondImage: data[i]['secondImage'],
           quantity: 0,
+          //catagories: CategoryData.toList(data[i]['categories']),
+        ));
+      } catch (err) {
+        print(err);
+      }
+    }
+    return card;
+  }
+
+  static List<FoodData> toList2(List<dynamic> data) {
+    List<FoodData> card = [];
+    for (int i = 0; i < data.length; i++) {
+      try {
+        card.add(FoodData(
+          itemId: data[i]['itemId'],
+          name: data[i]['name'],
+          description: data[i]['description'],
+          rating: data[i]['rating'] + .0,
+          price: data[i]['price'] + .0,
+          firstImage: data[i]['firstImage'],
+          secondImage: data[i]['secondImage'],
+          quantity: data[i]['quantity'],
           //catagories: CategoryData.toList(data[i]['categories']),
         ));
       } catch (err) {
@@ -69,8 +87,6 @@ class FoodData {
       description: "",
       rating: 0,
       price: 0,
-      timesOrdered: 0,
-      stock: 0,
       quantity: 0,
       firstImage: "",
       secondImage: "",

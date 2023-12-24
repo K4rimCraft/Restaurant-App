@@ -40,3 +40,1392 @@ Sun Dec 24 2023 10:25:53 GMT+0000 (GMT)
     '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
     '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:50:50'
 }
+Sun Dec 24 2023 10:36:32 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: "password" length must be at least 8 characters long
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:78:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:175:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: '"password" length must be at least 8 characters long',
+  stack: 'Error: "password" length must be at least 8 characters long\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:78:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:175:3)'
+}
+Sun Dec 24 2023 10:36:36 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:88:21 {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:88:21'
+}
+Sun Dec 24 2023 10:36:40 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:88:21 {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:88:21'
+}
+Sun Dec 24 2023 11:38:41 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: "email" length must be at least 11 characters long
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:78:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:175:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: '"email" length must be at least 11 characters long',
+  stack: 'Error: "email" length must be at least 11 characters long\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:78:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:175:3)'
+}
+Sun Dec 24 2023 11:52:46 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: "email" length must be at least 11 characters long
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:78:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:175:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: '"email" length must be at least 11 characters long',
+  stack: 'Error: "email" length must be at least 11 characters long\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:78:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:175:3)'
+}
+Sun Dec 24 2023 11:52:50 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: "email" length must be at least 11 characters long
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:78:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:175:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: '"email" length must be at least 11 characters long',
+  stack: 'Error: "email" length must be at least 11 characters long\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:78:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:175:3)'
+}
+Sun Dec 24 2023 11:52:51 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: "email" length must be at least 11 characters long
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:78:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:175:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: '"email" length must be at least 11 characters long',
+  stack: 'Error: "email" length must be at least 11 characters long\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:78:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:175:3)'
+}
+Sun Dec 24 2023 11:52:55 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: "email" length must be at least 11 characters long
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:78:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:175:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: '"email" length must be at least 11 characters long',
+  stack: 'Error: "email" length must be at least 11 characters long\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:78:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:175:3)'
+}
+Sun Dec 24 2023 11:53:11 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: "email" length must be at least 11 characters long
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:78:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:175:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: '"email" length must be at least 11 characters long',
+  stack: 'Error: "email" length must be at least 11 characters long\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:78:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:175:3)'
+}
+Sun Dec 24 2023 17:29:09 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 Am to 12:00 Am!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 Am to 12:00 Am!',
+  stack: 'Error: Resto is open from 8:00 Am to 12:00 Am!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:29:11 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 Am to 12:00 Am!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 Am to 12:00 Am!',
+  stack: 'Error: Resto is open from 8:00 Am to 12:00 Am!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:29:12 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 Am to 12:00 Am!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 Am to 12:00 Am!',
+  stack: 'Error: Resto is open from 8:00 Am to 12:00 Am!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:29:12 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 Am to 12:00 Am!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 Am to 12:00 Am!',
+  stack: 'Error: Resto is open from 8:00 Am to 12:00 Am!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:29:31 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 Am to 12:00 Am!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 Am to 12:00 Am!',
+  stack: 'Error: Resto is open from 8:00 Am to 12:00 Am!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:02 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:02 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:02 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:02 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:27 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:28 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:28 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:36 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:36 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:36 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:37 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:37 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:31:37 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:32:11 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:33:12 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:33:27 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:33:28 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:33:28 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:33:28 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:33:29 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:33:29 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:33:29 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:33:34 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:33:34 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:34:39 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:34:45 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:34:50 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:35:00 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:35:43 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:35:47 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:35:47 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:36:59 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:37:06 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:37:14 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:10:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:10:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:43:05 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 17:43:20 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 18:04:03 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Can't find this route /api/getCurrentBooking
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\resTO.js:39:10
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: "Can't find this route /api/getCurrentBooking",
+  stack: "Error: Can't find this route /api/getCurrentBooking\n" +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\resTO.js:39:10\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)'
+}
+Sun Dec 24 2023 18:19:10 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: ReferenceError: dateStr is not defined
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:44:17
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: 'dateStr is not defined',
+  stack: 'ReferenceError: dateStr is not defined\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:44:17\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 18:19:15 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: ReferenceError: dateStr is not defined
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:44:17
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: 'dateStr is not defined',
+  stack: 'ReferenceError: dateStr is not defined\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:44:17\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 18:22:10 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: ReferenceError: dateStr is not defined
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:44:17
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: 'dateStr is not defined',
+  stack: 'ReferenceError: dateStr is not defined\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:44:17\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 18:22:14 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: ReferenceError: dateStr is not defined
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:44:17
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: 'dateStr is not defined',
+  stack: 'ReferenceError: dateStr is not defined\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:44:17\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 18:22:53 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Incorrect DATE value: '2023 24-12-'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:48:51
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_WRONG_VALUE',
+    errno: 1525,
+    sql: "SELECT * FROM bookings WHERE customerId = 2 AND endTime > '18:22:53' AND date >= '2023 24-12-' order by startTime;",
+    sqlState: 'HY000',
+    sqlMessage: "Incorrect DATE value: '2023 24-12-'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Incorrect DATE value: '2023 24-12-'",
+  stack: "Error: Incorrect DATE value: '2023 24-12-'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:48:51\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 18:23:09 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Incorrect DATE value: '2023-24-12'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:48:51
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_WRONG_VALUE',
+    errno: 1525,
+    sql: "SELECT * FROM bookings WHERE customerId = 2 AND endTime > '18:23:09' AND date >= '2023-24-12' order by startTime;",
+    sqlState: 'HY000',
+    sqlMessage: "Incorrect DATE value: '2023-24-12'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Incorrect DATE value: '2023-24-12'",
+  stack: "Error: Incorrect DATE value: '2023-24-12'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:48:51\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 18:53:30 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'undefined' in 'where clause'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:84:51
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: "DELETE from bookings WHERE customerId=2 AND startTime='20:45' AND date ='2023-12-25' AND tableNumber=undefined;",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'undefined' in 'where clause'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'undefined' in 'where clause'",
+  stack: "Error: Unknown column 'undefined' in 'where clause'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:84:51\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Sun Dec 24 2023 18:53:41 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Unknown column 'undefined' in 'where clause'
+      at PromiseConnection.query (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:84:51
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sql: "DELETE from bookings WHERE customerId=2 AND startTime='20:45' AND date ='2023-12-25' AND tableNumber=undefined;",
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'undefined' in 'where clause'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Unknown column 'undefined' in 'where clause'",
+  stack: "Error: Unknown column 'undefined' in 'where clause'\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:84:51\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}

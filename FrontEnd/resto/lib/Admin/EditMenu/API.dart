@@ -64,7 +64,6 @@ Future<List<FoodCardData>> fetchFoodCardData(
             'maxPrice': maxPrice.toString(),
             'minPrice': minPrice.toString()
           }));
-  print(response.body);
   if (response.statusCode == 200) {
     return FoodCardData.toList(jsonDecode(response.body), response.headers);
   } else {

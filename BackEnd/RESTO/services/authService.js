@@ -45,7 +45,6 @@ const register = asyncHandelr(async (req, res, next) => {
         longitudeAddress, latitudeAddress,
         phoneNumber, type } = req.body;
     const hashedPassword = await hashPassword(password);
-console.log(hashedPassword)
 
     const [result2] = await (await dbConnection).query(`INSERT INTO persons
         (firstName,lastName,email,password,birthDate,longitudeAddress,latitudeAddress,phoneNumber,type)

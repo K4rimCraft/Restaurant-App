@@ -80,11 +80,11 @@ class _EditMenuPageState extends State<EditMenuPage> {
           height: 200,
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
           child: Card(
+            clipBehavior: Clip.antiAlias,
             elevation: 6,
             child: Stack(
               children: [
                 InkWell(
-                  borderRadius: const BorderRadius.all(Radius.circular(10)),
                   onTap: () {},
                 ),
                 Column(

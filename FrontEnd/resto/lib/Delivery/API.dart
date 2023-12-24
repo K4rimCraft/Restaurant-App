@@ -86,6 +86,7 @@ class OrderData {
   final String lastName;
   final double longitudeAddress;
   final double latitudeAddress;
+    final String phoneNumber;
   final int? confirmationNumber;
 
   const OrderData({
@@ -99,6 +100,7 @@ class OrderData {
     required this.lastName,
     required this.longitudeAddress,
     required this.latitudeAddress,
+      required this.phoneNumber,
     required this.confirmationNumber,
   });
 
@@ -117,6 +119,7 @@ class OrderData {
           totalPrice: data[i]['totalPrice'] + 0.0,
           longitudeAddress: double.parse(data[i]['longitudeAddress']),
           latitudeAddress: double.parse(data[i]['latitudeAddress']),
+          phoneNumber: data[i]['phoneNumber'],
           confirmationNumber: data[i]['confirmationNumber'],
         ));
       } catch (err) {

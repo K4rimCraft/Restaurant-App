@@ -6,12 +6,13 @@ import '../../../API/MenuAPI.dart';
 
 class OrdersPage extends StatelessWidget {
   final int status;
-  final Future<List<OrderData>> futureOrders = getOrdersFilter(3);
+  late Future<List<OrderData>> futureOrders;
   final ScrollController yourScrollController = ScrollController();
   OrdersPage({required this.status});
 
   @override
   Widget build(BuildContext context) {
+    futureOrders = getOrdersFilter(status);
     return FutureBuilder(
         future: futureOrders,
         builder: (context, snapshot) {
@@ -42,7 +43,6 @@ class OrdersPage extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: OrderItem(
                           order: snapshot.data![index],
-                          Iscompleted: false,
                         ),
                       );
                     },

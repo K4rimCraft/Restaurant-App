@@ -23,15 +23,16 @@ class _ShoeAppSignInPageState extends State<S2> {
 // Validation function
   void validateForm() {
     final data = Provider.of<s2_data>(context, listen: false);
-     if(!data.phoneNumberController.text.isEmpty||!data.dateController.text.isEmpty||!data.addressController.text.isEmpty){
+    if (!data.phoneNumberController.text.isEmpty ||
+        !data.dateController.text.isEmpty ||
+        !data.addressController.text.isEmpty) {
       data.validateAddress(data.addressController.text);
       data.validatePhoneNumber(data.phoneNumberController.text);
 
-
-      data.isFormValid = data.formKey.currentState!.validate() ;
+      data.isFormValid = data.formKey.currentState!.validate();
     }
-
   }
+
   @override
   Widget build(BuildContext context) {
     final data = Provider.of<s2_data>(context);
@@ -72,9 +73,8 @@ class _ShoeAppSignInPageState extends State<S2> {
                 controller: data.dateController,
                 keyboardType: TextInputType.datetime,
                 icon: AppAssets.Date,
-                hintText: 'Date Time',
+                hintText: 'Birth Date',
               ),
-
 
               const SizedBox(height: 25),
               MyTextField(

@@ -166,37 +166,41 @@ class _MenuState extends State<Menu> {
                   if (snapshot.hasError) {
                     return Container();
                   } else if (snapshot.hasData) {
-                    categories.addAll(snapshot.data!);
-                    return Padding(
-                      padding: const EdgeInsets.only(right: 18.0, left: 18.0),
-                      child: CupertinoSlidingSegmentedControl(
-                        backgroundColor: AppColorsLight.primaryColor.shade300,
-                        thumbColor: AppColorsLight.primaryColor.shade600,
-                        children: Map.fromIterable(categories,
-                            key: (v) => categories.indexOf(v),
-                            value: (v) => Text(
-                                  v.catagoryName,
-                                  style: GoogleFonts.alata(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 15,
-                                    color: AppColorsLight.lightColor,
-                                  ),
-                                )),
-                        groupValue: sliding,
-                        onValueChanged: (value) {
-                          setState(() {
-                            sliding = value!;
-                            switch (value) {
-                              case (0):
-                                futureItems = fetchAllItems();
-                              case (int()):
-                                futureItems = fetchItemsByCategory(
-                                    categories[value].categoryId);
-                            }
-                          });
-                        },
-                      ),
-                    );
+                    if (snapshot.data!.isNotEmpty) {
+                      categories.addAll(snapshot.data!);
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 18.0, left: 18.0),
+                        child: CupertinoSlidingSegmentedControl(
+                          backgroundColor: AppColorsLight.primaryColor.shade300,
+                          thumbColor: AppColorsLight.primaryColor.shade600,
+                          children: Map.fromIterable(categories,
+                              key: (v) => categories.indexOf(v),
+                              value: (v) => Text(
+                                    v.catagoryName,
+                                    style: GoogleFonts.alata(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 15,
+                                      color: AppColorsLight.lightColor,
+                                    ),
+                                  )),
+                          groupValue: sliding,
+                          onValueChanged: (value) {
+                            setState(() {
+                              sliding = value!;
+                              switch (value) {
+                                case (0):
+                                  futureItems = fetchAllItems();
+                                case (int()):
+                                  futureItems = fetchItemsByCategory(
+                                      categories[value].categoryId);
+                              }
+                            });
+                          },
+                        ),
+                      );
+                    } else {
+                      return Container();
+                    }
                     // return snapshot.data ?? Container();
                   } else {
                     return Container(

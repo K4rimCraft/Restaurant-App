@@ -39,7 +39,8 @@ class _MyDateFieldState extends State<MyDateField> {
       keyboardType: widget.keyboardType,
       validator: widget.validator,
       decoration: InputDecoration(
-        hintText: widget.hintText,
+        border: const OutlineInputBorder(),
+        labelText: widget.hintText,
         hintStyle: const TextStyle(color: Colors.grey),
         fillColor: AppColors.kLightWhite2,
         filled: true,
@@ -50,40 +51,47 @@ class _MyDateFieldState extends State<MyDateField> {
             height: 35,
             width: 35,
             alignment: Alignment.center,
-            decoration: BoxDecoration(shape: BoxShape.circle, color: widget.iconColor),
+            decoration:
+                BoxDecoration(shape: BoxShape.circle, color: widget.iconColor),
             child: SvgPicture.asset(widget.icon),
           ),
         ),
-        suffixIcon: IconButton(
-          icon: Icon(Icons.calendar_today),
-          onPressed: () async {
-            DateTime? pickedDate = await showDatePicker(
-              context: context,
-              initialDate: DateTime.now(),
-              firstDate: DateTime(1900),
-              lastDate: DateTime.now(),
-              builder: (BuildContext context, Widget? child) {
-                return Theme(
-                  data: ThemeData.dark().copyWith(
-                    primaryColor: Colors.deepOrange, // Your desired color here
-                    hintColor: Colors.deepOrange,
-                    colorScheme: ColorScheme.light(primary: Colors.deepOrange),
-                    buttonTheme: ButtonThemeData(textTheme: ButtonTextTheme.primary),
-                  ),
-                  child: child!,
-                );
-              },
-            );
+        suffixIcon: Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
+          child: IconButton(
+            icon: const Icon(Icons.calendar_today),
+            onPressed: () async {
+              DateTime? pickedDate = await showDatePicker(
+                context: context,
+                initialDate: DateTime.now(),
+                firstDate: DateTime(1900),
+                lastDate: DateTime.now(),
+                builder: (BuildContext context, Widget? child) {
+                  return Theme(
+                    data: ThemeData.dark().copyWith(
+                      primaryColor:
+                          Colors.deepOrange, // Your desired color here
+                      hintColor: Colors.deepOrange,
+                      colorScheme:
+                          ColorScheme.light(primary: Colors.deepOrange),
+                      buttonTheme:
+                          ButtonThemeData(textTheme: ButtonTextTheme.primary),
+                    ),
+                    child: child!,
+                  );
+                },
+              );
 
-            if (pickedDate != null) {
-              setState(() {
-                data = DateFormat("yyyy-MM-dd").format(pickedDate);
-                widget.controller.text = data;
-              });
+              if (pickedDate != null) {
+                setState(() {
+                  data = DateFormat("yyyy-MM-dd").format(pickedDate);
+                  widget.controller.text = data;
+                });
 
-              widget.onChanged?.call(data);
-            }
-          },
+                widget.onChanged?.call(data);
+              }
+            },
+          ),
         ),
       ),
     );

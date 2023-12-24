@@ -3,12 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import '../Pages/item.dart';
 import '../models/food.dart';
 import '../theme/app_color.dart';
+import 'package:resto/main.dart';
 
 class MostPopularCard extends StatefulWidget {
-
   final FoodData food;
-  const MostPopularCard(
-      {super.key, required this.food});
+  const MostPopularCard({super.key, required this.food});
 
   @override
   State<MostPopularCard> createState() => _MostPopularCardState();
@@ -46,8 +45,8 @@ class _MostPopularCardState extends State<MostPopularCard> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                        child: Image.asset(
-                          "Images/Chicken/images.png",
+                        child: Image.network(
+                          '$serverUrl/images/${widget.food.firstImage}',
                           fit: BoxFit.contain,
                         ),
                         height: 110),
@@ -72,10 +71,12 @@ class _MostPopularCardState extends State<MostPopularCard> {
                               Row(children: [
                                 Icon(Icons.star,
                                     color: AppColorsLight.primaryColor),
-                                Text(widget.food.rating.toString(),
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15))
+                                Text(
+                                  widget.food.rating.toString(),
+                                  style: GoogleFonts.dmSerifDisplay(
+                                    fontSize: 20,
+                                  ),
+                                )
                               ]),
                               Text(
                                 '\$' + widget.food.price.toString(),

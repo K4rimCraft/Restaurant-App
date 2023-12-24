@@ -11,7 +11,6 @@ const globalError = require("./middlewares/errorMiddleware");
 
 const RESTO = express();
 
-
 RESTO.use(express.json());
 RESTO.use(express.urlencoded({ extended: true }));
 RESTO.use(logger);
@@ -30,6 +29,7 @@ RESTO.use("/admin", require("./routes/Admin/itemRoute"));
 RESTO.use("/admin", require("./routes/Admin/categoryRoute"));
 RESTO.use("/admin", require("./routes/Admin/overviewRoute"));
 RESTO.use("/delivery", require("./routes/DeliveryMen/deliveryRoute"));
+
 
 
 

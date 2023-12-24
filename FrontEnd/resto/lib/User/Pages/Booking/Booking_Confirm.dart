@@ -70,70 +70,70 @@ class _BookingConfirmState extends State<BookingConfirm> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               buildSeatOption(
-                                  "Images/Seats/Eight_Seats.png", 8, 1),
+                                  "assets/Seats/Eight_Seats.png", 8, 1),
                               buildSeatOption(
-                                  "Images/Seats/Six_Seats.png", 6, 2),
+                                  "assets/Seats/Six_Seats.png", 6, 2),
                               buildSeatOption(
-                                  "Images/Seats/Six_Seats.png", 6, 3),
+                                  "assets/Seats/Six_Seats.png", 6, 3),
                               buildSeatOption(
-                                  "Images/Seats/Five_Seats.png", 5, 4),
+                                  "assets/Seats/Five_Seats.png", 5, 4),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               buildSeatOption(
-                                  "Images/Seats/Six_Seats.png", 6, 5),
+                                  "assets/Seats/Six_Seats.png", 6, 5),
                               buildSeatOption(
-                                  "Images/Seats/Five_Seats.png", 5, 6),
+                                  "assets/Seats/Five_Seats.png", 5, 6),
                               buildSeatOption(
-                                  "Images/Seats/Four_Seats.png", 4, 7),
+                                  "assets/Seats/Four_Seats.png", 4, 7),
                               buildSeatOption(
-                                  "Images/Seats/Five_Seats.png", 5, 8),
+                                  "assets/Seats/Five_Seats.png", 5, 8),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               buildSeatOption(
-                                  "Images/Seats/Five_Seats.png", 5, 9),
+                                  "assets/Seats/Five_Seats.png", 5, 9),
                               buildSeatOption(
-                                  "Images/Seats/Four_Seats.png", 4, 10),
+                                  "assets/Seats/Four_Seats.png", 4, 10),
                               buildSeatOption(
-                                  "Images/Seats/Six_Seats.png", 6, 11),
+                                  "assets/Seats/Six_Seats.png", 6, 11),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               buildSeatOption(
-                                  "Images/Seats/Eight_Seats.png", 8, 12),
+                                  "assets/Seats/Eight_Seats.png", 8, 12),
                               buildSeatOption(
-                                  "Images/Seats/Four_Seats.png", 4, 13),
+                                  "assets/Seats/Four_Seats.png", 4, 13),
                               buildSeatOption(
-                                  "Images/Seats/Five_Seats.png", 5, 14),
+                                  "assets/Seats/Five_Seats.png", 5, 14),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               buildSeatOption(
-                                  "Images/Seats/Eight_Seats.png", 8, 15),
+                                  "assets/Seats/Eight_Seats.png", 8, 15),
                               buildSeatOption(
-                                  "Images/Seats/Four_Seats.png", 4, 16),
+                                  "assets/Seats/Four_Seats.png", 4, 16),
                               buildSeatOption(
-                                  "Images/Seats/Four_Seats.png", 4, 17),
+                                  "assets/Seats/Four_Seats.png", 4, 17),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               buildSeatOption(
-                                  "Images/Seats/Six_Seats.png", 6, 18),
+                                  "assets/Seats/Six_Seats.png", 6, 18),
                               buildSeatOption(
-                                  "Images/Seats/Four_Seats.png", 4, 19),
+                                  "assets/Seats/Four_Seats.png", 4, 19),
                               buildSeatOption(
-                                  "Images/Seats/Eight_Seats.png", 8, 20),
+                                  "assets/Seats/Eight_Seats.png", 8, 20),
                             ],
                           ),
                           SizedBox(
@@ -154,12 +154,32 @@ class _BookingConfirmState extends State<BookingConfirm> {
                       backgroundColor: MaterialStateProperty.all(
                           AppColorsLight.primaryColor),
                     ),
-                    onPressed: () {
+                    onPressed: () async {
                       if (BookingTable.tableNumber != null &&
                           BookingTable.numOfSeats != null) {
-                        BookingTable.isbook = true;
-                        while (Navigator.of(context).canPop()) {
-                          Navigator.of(context).pop();
+                       // BookingTable.isbook = true;
+                        APIStatus status = await addBooking();
+
+                        if (status.statusCode == 200 && context.mounted) {
+                          print(status.statusCode);
+                          while (Navigator.of(context).canPop()) {
+                            Navigator.of(context).pop();
+                          }
+                        }
+
+                        if (context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            backgroundColor:
+                                AppColorsLight.secondaryColor.shade800,
+                            action: SnackBarAction(
+                              label: "OK",
+                              textColor: AppColorsLight.lightColor,
+                              onPressed: () {},
+                            ),
+                            content: Text(status.message,
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold)),
+                          ));
                         }
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -170,7 +190,7 @@ class _BookingConfirmState extends State<BookingConfirm> {
                             textColor: AppColorsLight.lightColor,
                             onPressed: () {},
                           ),
-                          content: Text("Select Available Table",
+                          content: const Text("Select Available Table",
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ));
                       }

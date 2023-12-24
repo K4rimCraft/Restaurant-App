@@ -11,11 +11,12 @@ const placeOrder = asyncHandelr(async (req, res, next) => {
     for (var i = 0; i < itemsList.length; i++) {
         items[i] = itemsList[i].itemId;
     }
-    const [result1] = await (await dbConnection).query(`SELECT itemId,price FROM menuitems WHERE itemId IN (?)`, [items]);
+    const [result1] = await (await dbConnection).query(`SELECT itemId,timesOrdered,price FROM menuitems WHERE itemId IN (?)`, [items]);
     for (var i = 0; i < itemsList.length; i++) {
         for (var j = 0; j < result1.length; j++) {
             if (result1[j].itemId === itemsList[i].itemId) {
                 totalPrice += result1[j].price * itemsList[i].quantity;
+                await (await dbConnection).query(`UPDATE menuitems SET timesOrdered = ? WHERE itemId = ?`, [result1[j].timesOrdered + itemsList[i].quantity, result1[j].itemId]);
             }
         }
     }
@@ -25,7 +26,8 @@ const placeOrder = asyncHandelr(async (req, res, next) => {
     const [result3] = await (await dbConnection).query(`INSERT INTO orders (longitudeAddress,latitudeAddress,customerId,totalPrice) VALUES (?,?,?,?)`, [longitudeAddress, latitudeAddress, result2[0].customerId, totalPrice]);
     const [result4] = await (await dbConnection).query(`SELECT MAX(orderId) AS orderId FROM orders`);
     for (var i = 0; i < itemsList.length; i++) {
-        const [result] = await (await dbConnection).query(`INSERT INTO orders_has_menuitems VALUES (?,?,?)`, [result4[0].orderId, itemsList[i].itemId, itemsList[i].quantity]);
+
+        const [result2] = await (await dbConnection).query(`INSERT INTO orders_has_menuitems VALUES (?,?,?)`, [result4[0].orderId, itemsList[i].itemId, itemsList[i].quantity]);
     }
     res.status(200).json({ message: 'Order Placed!' });
 });
@@ -61,7 +63,23 @@ const getOrdersFilter = asyncHandelr(async (req, res, next) => {
 
 });
 
+
+const getOrderItems = asyncHandelr(async (req, res, next) => {
+    const query = `
+    SELECT menuitems.itemId, menuitems.name , menuitems.stock,menuitems.description, menuitems.rating, menuitems.price, menuitems.firstImage, menuitems.secondImage, orders_has_menuitems.quantity
+    FROM menuitems 
+    INNER JOIN orders_has_menuitems 
+    ON menuitems.itemId = orders_has_menuitems.itemId 
+    WHERE orders_has_menuitems.orderId = ?;`;
+
+    const [Table] = await (await dbConnection).query(query, req.params.orderId);
+    res.status(200).json(Table);
+});
+
+
+
 module.exports = {
     placeOrder,
-    getOrdersFilter
+    getOrdersFilter,
+    getOrderItems
 }

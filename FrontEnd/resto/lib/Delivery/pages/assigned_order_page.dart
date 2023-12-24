@@ -111,6 +111,24 @@ class OrderDetailsPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
+                      'Phone Number: ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
+                    ),
+                    Text(
+                      "${order.phoneNumber}",
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 4),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
                       'Grandtotal: ',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -189,7 +207,7 @@ class OrderItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 5,
+      elevation: 3,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 3.0),
         child: Container(
@@ -212,7 +230,7 @@ class OrderItem extends StatelessWidget {
                         height: 50)), // Replace with actual image URL
                 Text(itemData.name, style: const TextStyle(fontSize: 22)),
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text('Quantity: ${itemData.quantity}',
                         style: const TextStyle(

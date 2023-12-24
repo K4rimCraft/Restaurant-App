@@ -48,6 +48,42 @@ Future<List<FoodData>> fetchAllItems() async {
   }
 }
 
+Future<List<FoodData>> fetchMostPopularItems() async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+  final response = await http.get(
+    Uri.parse('$serverUrl/api/getMostPopularItems'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
+    },
+  );
+  print(response.body);
+  if (response.statusCode == 200) {
+    return FoodData.toList(jsonDecode(response.body));
+  } else {
+    throw Exception('faild to fetch food card data');
+  }
+}
+
+Future<List<FoodData>> fetchRandomItems() async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+  final response = await http.get(
+    Uri.parse('$serverUrl/api/getRandomItems'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
+    },
+  );
+
+  if (response.statusCode == 200) {
+    return FoodData.toList(jsonDecode(response.body));
+  } else {
+    throw Exception('faild to fetch food card data');
+  }
+}
+
 Future<List<FoodData>> fetchItemsByCategory(int categoryId) async {
   final prefs = await SharedPreferences.getInstance();
   final String token = prefs.getString('token') ?? '';
@@ -171,6 +207,24 @@ Future<List<OrderData>> getOrdersFilter(int status) async {
   );
   if (response.statusCode == 200) {
     return OrderData.toList(jsonDecode(response.body));
+  } else {
+    throw Exception('Failed to load order history');
+  }
+}
+
+Future<List<FoodData>> fetchOrderItems(int orderId) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+  final response = await http.get(
+    Uri.parse('$serverUrl/api/getOrderItems/$orderId'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
+    },
+  );
+
+  if (response.statusCode == 200) {
+    return FoodData.toList2(jsonDecode(response.body));
   } else {
     throw Exception('Failed to load order history');
   }

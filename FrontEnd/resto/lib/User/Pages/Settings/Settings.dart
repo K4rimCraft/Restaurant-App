@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'Favorite.dart';
@@ -49,12 +48,14 @@ class _SettingsState extends State<Settings> {
                         builder: (context) => Profile(),
                       ));
                     },
-                    child: Ink(child: BuildContainer("Profile", Icons.person)),
+                    child: Ink(
+                        decoration: BoxDecoration(
+                            color: AppColorsLight.secondaryColor.shade200,
+                            borderRadius: BorderRadius.circular(15)),
+                        child: BuildContainer("Profile", Icons.person)),
                   ),
                 ),
-                SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
                 InkWell(
                   borderRadius: BorderRadius.circular(15),
                   onTap: () {
@@ -63,29 +64,15 @@ class _SettingsState extends State<Settings> {
                     ));
                   },
                   child: Ink(
+                    decoration: BoxDecoration(
+                        color: AppColorsLight.secondaryColor.shade200,
+                        borderRadius: BorderRadius.circular(15)),
                     child: Tooltip(
                         message: 'Go To Cart',
                         child: BuildContainer("My Cart", Icons.shopping_cart)),
                   ),
                 ),
-                SizedBox(
-                  height: 15,
-                ),
-                InkWell(
-                  borderRadius: BorderRadius.circular(15),
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => ShowOrderPage()));
-                  },
-                  child: Ink(
-                    child: Tooltip(
-                        message: 'Go To My Orders',
-                        child: BuildContainer("My Orders", Icons.shop)),
-                  ),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
                 InkWell(
                   borderRadius: BorderRadius.circular(15),
                   onTap: () {
@@ -94,99 +81,107 @@ class _SettingsState extends State<Settings> {
                     ));
                   },
                   child: Ink(
+                    decoration: BoxDecoration(
+                        color: AppColorsLight.secondaryColor.shade200,
+                        borderRadius: BorderRadius.circular(15)),
                     child: Tooltip(
                         message: 'Go To My Favorites',
                         child: BuildContainer("My Favorites", Icons.favorite)),
                   ),
                 ),
-                SizedBox(
-                  height: 15,
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                      color: AppColorsLight.secondaryColor.shade200,
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 15.0, right: 15, bottom: 10, top: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Row(
-                          children: [
-                            Icon(Icons.sunny,
-                                color: AppColorsLight.primaryColor, size: 25),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text("Dark Mode",
-                                style: TextStyle(
-                                    color: AppColorsLight.primaryColor,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500)),
-                          ],
-                        ),
-                        Container(
-                          height: 30,
-                          child: Switch(
-                            activeColor: AppColorsLight.primaryColor,
-                            value: Settings.darkMode,
-                            onChanged: (value) {
-                              setState(() {
-                                Settings.darkMode = value;
-                              });
-                            },
+                const SizedBox(height: 15),
+                InkWell(
+                  borderRadius: BorderRadius.circular(15),
+                  onTap: () {},
+                  child: Ink(
+                    decoration: BoxDecoration(
+                        color: AppColorsLight.secondaryColor.shade200,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          left: 15.0, right: 15, bottom: 10, top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Row(
+                            children: [
+                              Icon(Icons.sunny,
+                                  color: AppColorsLight.primaryColor, size: 25),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text("Dark Mode",
+                                  style: TextStyle(
+                                      color: AppColorsLight.primaryColor,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500)),
+                            ],
                           ),
-                        )
-                      ],
+                          SizedBox(
+                            height: 30,
+                            child: Switch(
+                              activeColor: AppColorsLight.primaryColor,
+                              value: Settings.darkMode,
+                              onChanged: (value) {
+                                setState(() {
+                                  Settings.darkMode = value;
+                                });
+                              },
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 50,
-                ),
+                const SizedBox(height: 50),
                 InkWell(
                   borderRadius: BorderRadius.circular(15),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => PrivacyPolicy(),
+                      builder: (context) => const PrivacyPolicy(),
                     ));
                   },
                   child: Ink(
+                    decoration: BoxDecoration(
+                        color: AppColorsLight.secondaryColor.shade200,
+                        borderRadius: BorderRadius.circular(15)),
                     child: Tooltip(
                         message: 'Read Privacy Policy',
                         child: BuildContainer(
                             "Privacy Policy", Icons.contact_page_outlined)),
                   ),
                 ),
-                SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
                 InkWell(
                   borderRadius: BorderRadius.circular(15),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => TermsConditions(),
+                      builder: (context) => const TermsConditions(),
                     ));
                   },
                   child: Ink(
+                    decoration: BoxDecoration(
+                        color: AppColorsLight.secondaryColor.shade200,
+                        borderRadius: BorderRadius.circular(15)),
                     child: Tooltip(
                         message: 'Read Terms & Conditions',
                         child: BuildContainer(
                             "Terms & Conditions", Icons.contact_page)),
                   ),
                 ),
-                SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
                 InkWell(
                   borderRadius: BorderRadius.circular(15),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => AboutUs(),
+                      builder: (context) => const AboutUs(),
                     ));
                   },
                   child: Ink(
+                    decoration: BoxDecoration(
+                        color: AppColorsLight.secondaryColor.shade200,
+                        borderRadius: BorderRadius.circular(15)),
                     child: Tooltip(
                         message: 'About Us',
                         child: BuildContainer(
@@ -203,9 +198,6 @@ class _SettingsState extends State<Settings> {
 
   Widget BuildContainer(String name, IconData icon) {
     return Container(
-      decoration: BoxDecoration(
-          color: AppColorsLight.secondaryColor.shade200,
-          borderRadius: BorderRadius.circular(15)),
       child: Padding(
         padding:
             const EdgeInsets.only(left: 15.0, right: 15, bottom: 10, top: 10),
@@ -215,17 +207,17 @@ class _SettingsState extends State<Settings> {
             Row(
               children: [
                 Icon(icon, color: AppColorsLight.primaryColor, size: 25),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
-                Text("$name",
-                    style: TextStyle(
+                Text(name,
+                    style: const TextStyle(
                         color: AppColorsLight.primaryColor,
                         fontSize: 18,
                         fontWeight: FontWeight.w500)),
               ],
             ),
-            Icon(
+            const Icon(
               Icons.chevron_right,
               color: AppColorsLight.primaryColor,
               size: 22,

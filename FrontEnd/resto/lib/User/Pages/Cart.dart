@@ -260,6 +260,7 @@ class _CartState extends State<Cart> {
                                     CartList.items.clear();
                                   }
                                   if (context.mounted) {
+                                    setState(() {});
                                     Navigator.pop(context);
                                     ScaffoldMessenger.of(context).showSnackBar(
                                         SnackBar(

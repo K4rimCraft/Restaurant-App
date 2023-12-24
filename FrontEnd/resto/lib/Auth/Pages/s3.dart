@@ -43,11 +43,12 @@ class _ShoeAppSignInPageState extends State<S3> {
           child: Column(
             children: [
               const SizedBox(height: 250),
-              MyTextField(
+              MyPassField(
                 onChanged: (password) {
-                  data.onPasswordChanged(password);
+                  data.onPasswordChanged(password ?? '');
 
                   data.isFormValid = data.formKey.currentState!.validate();
+                  return;
                 },
                 validator: (value) {
                   return data.validatePassword(value);
@@ -61,9 +62,10 @@ class _ShoeAppSignInPageState extends State<S3> {
               const SizedBox(
                 height: 15,
               ),
-              MyTextField(
+              MyPassField(
                 onChanged: (value) {
                   data.isFormValid = data.formKey.currentState!.validate();
+                  return;
                 },
                 validator: (value) {
                   return value != data.passwordController.text

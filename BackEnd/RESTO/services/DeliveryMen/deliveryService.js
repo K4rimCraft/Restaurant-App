@@ -22,7 +22,7 @@ const getUndeliverdOrders = asyncHandelr(async (req, res, next) => {
 const getTookOrder = asyncHandelr(async (req, res, next) => {
 
     const query = `
-        SELECT orders.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, orders.confirmationNumber, persons.firstName, persons.lastName 
+        SELECT orders.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, orders.confirmationNumber, persons.firstName, persons.lastName ,persons.phoneNumber 
         FROM orders 
         INNER JOIN customers 
         ON orders.customerId = customers.customerId 
@@ -57,7 +57,7 @@ const updateOrderData = asyncHandelr(async (req, res, next) => {
 
     const [Table] = await (await dbConnection).query(updateQuery, [deliverymen[0].deliveryManId, deliveryStatus, req.params.orderId]);
 
-    res.status(200).json({ message: 'Record updated successfully' });
+    res.status(200).json({ message: 'Order delivery process has started!' });
 
 });
 
