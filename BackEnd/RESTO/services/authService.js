@@ -45,7 +45,7 @@ const register = asyncHandelr(async (req, res, next) => {
         longitudeAddress, latitudeAddress,
         phoneNumber, type } = req.body;
     const hashedPassword = await hashPassword(password);
-
+console.log(hashedPassword)
 
     const [result2] = await (await dbConnection).query(`INSERT INTO persons
         (firstName,lastName,email,password,birthDate,longitudeAddress,latitudeAddress,phoneNumber,type)
@@ -74,9 +74,6 @@ const register = asyncHandelr(async (req, res, next) => {
 
 const login = asyncHandelr(async (req, res, next) => {
     let Id;
-
-
-
     const { error } = validateLogineUser(req.body);
     if (error) {
         return next(new ApiError(error.details[0].message, 400));
