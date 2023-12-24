@@ -66,194 +66,215 @@ class _LoginPagePageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
         child: Form(
           key: _formKey,
-          child: Column(
-            children: [
-              const SizedBox(height: 56),
-              const Center(
-                child: Text(
-                  'Sign In',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 5),
-              const Text(
-                'Welcome back! Please enter your details',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w200,
-                  color: Colors.black,
-                ),
-              ),
-              const SizedBox(height: 120),
-              MyTextField(
-                onChanged: _validateFirstName,
-                iconColor: AppColors.kLavender,
-                controller: _mailController,
-                keyboardType: TextInputType.emailAddress,
-                icon: AppAssets.kMail,
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'Please enter your email address';
-                  } else if (!value.contains("@")) {
-                    return 'Please enter a valid email address';
-                  }
-
-                  return null;
-                },
-                hintText: 'Email address',
-              ),
-              const SizedBox(height: 16),
-              MyPassField(
-                onChanged: (value) {
-                  _formKey.currentState!.validate();
-                  return;
-                },
-                iconColor: AppColors.kPeriwinkle,
-                controller: _passwordController,
-                keyboardType: TextInputType.visiblePassword,
-                icon: AppAssets.kLock,
-                hintText: 'Password',
-              ),
-              const SizedBox(height: 14),
-              const SizedBox(height: 40),
-              SizedBox(
-                width: 300,
-                height: 50,
-                child: FilledButtonTheme(
-                  data: const FilledButtonThemeData(
-                      style:
-                          ButtonStyle(elevation: MaterialStatePropertyAll(3))),
-                  child: FilledButton(
-                    onPressed: () async {
-                      if (_mailController.text == 'admin' &&
-                          _passwordController.text == "admin") {
-                        saveInfo('admin', 'admin', 1);
-                      }
-                      if (_formKey.currentState!.validate()) {
-                        APIStatus status = await login(
-                            _mailController.text, _passwordController.text);
-                        if (status.statusCode == 200) {
-                          saveInfo(
-                              status.body[0], status.body[1], status.body[2]);
-                        } else {
-                          if (context.mounted) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                behavior: SnackBarBehavior.floating,
-                                content: Text(status.body[2]),
-                                duration: const Duration(seconds: 3),
-                              ),
-                            );
-                          }
-                        }
-                        ;
-                      }
-                    },
-                    child: const Text(
-                      'Login',
-                      style: TextStyle(
-                        fontSize: 22,
-                      ),
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: Column(
+              children: [
+                Expanded(
+                  child: Container(
+                    clipBehavior: Clip.antiAlias,
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(40),
+                            bottomRight: Radius.circular(40))),
+                    width: MediaQuery.of(context).size.width,
+                    // height: 450,
+                    child: Image.asset(
+                      'assets/Login.png',
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 24),
-              Row(
-                children: [
-                  const Text(
-                    'Create account',
-                    style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.orange),
-                  ),
-                  const Spacer(),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('Forgot Password'),
-                  ),
-                  SizedBox(width: 10),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Navigate to the sign-up page
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                RegisterPage(update: widget.update)),
-                      );
-                    },
-                    child: const Text('Register'),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Divider(
-                        color: Colors.orange[800],
-                        height: 10,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                Padding(
+                  padding: EdgeInsets.all(30),
+                  child: Column(children: [
+                    const Center(
                       child: Text(
-                        "  or with  ",
-                        style:
-                            TextStyle(color: Colors.orange[800], fontSize: 20),
-                      ),
-                    ),
-                    Expanded(
-                      child: Divider(
-                        color: Colors.orange[800],
-                        height: 10,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 56),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SocialButton(
-                      onTap: () async {
-                        final prefs = await SharedPreferences.getInstance();
-                        print(prefs.getString('token') ?? '');
-                        print(prefs.getString('type') ?? '');
-                        print(prefs.getInt('id') ?? '');
-                      },
-                      icon: AppAssets.kGoogle),
-                  Container(
-                      height: 70,
-                      width: 200,
-                      child: TextField(
-                        controller: _urlController,
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
+                        'Sign In',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
                         ),
-                        onChanged: (value) {
-                          _urlController.text = value;
-                          serverUrl = value;
-                        },
-                      )),
-                  SocialButton(onTap: () {}, icon: AppAssets.kFacebook),
-                ],
-              ),
-            ],
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    const Text(
+                      'Welcome back! Please enter your details',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w200,
+                        color: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    MyTextField(
+                      onChanged: _validateFirstName,
+                      iconColor: AppColors.kLavender,
+                      controller: _mailController,
+                      keyboardType: TextInputType.emailAddress,
+                      icon: AppAssets.kMail,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter your email address';
+                        } else if (!value.contains("@")) {
+                          return 'Please enter a valid email address';
+                        }
+
+                        return null;
+                      },
+                      hintText: 'Email address',
+                    ),
+                    const SizedBox(height: 15),
+                    MyPassField(
+                      onChanged: (value) {
+                        _formKey.currentState!.validate();
+                        return;
+                      },
+                      iconColor: AppColors.kPeriwinkle,
+                      controller: _passwordController,
+                      keyboardType: TextInputType.visiblePassword,
+                      icon: AppAssets.kLock,
+                      hintText: 'Password',
+                    ),
+
+                    const SizedBox(height: 20),
+                    SizedBox(
+                      width: 300,
+                      height: 50,
+                      child: FilledButtonTheme(
+                        data: const FilledButtonThemeData(
+                            style: ButtonStyle(
+                                elevation: MaterialStatePropertyAll(3))),
+                        child: FilledButton(
+                          onPressed: () async {
+                            if (_mailController.text == 'admin' &&
+                                _passwordController.text == "admin") {
+                              saveInfo('admin', 'admin', 1);
+                            }
+                            if (_formKey.currentState!.validate()) {
+                              APIStatus status = await login(
+                                  _mailController.text,
+                                  _passwordController.text);
+                              if (status.statusCode == 200) {
+                                saveInfo(status.body[0], status.body[1],
+                                    status.body[2]);
+                              } else {
+                                if (context.mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      behavior: SnackBarBehavior.floating,
+                                      content: Text(status.body[2]),
+                                      duration: const Duration(seconds: 3),
+                                    ),
+                                  );
+                                }
+                              }
+                              ;
+                            }
+                          },
+                          child: const Text(
+                            'Login',
+                            style: TextStyle(
+                              fontSize: 22,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: [
+                        const Text(
+                          'Create account',
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.orange),
+                        ),
+                        const Spacer(),
+                        ElevatedButton(
+                          onPressed: () {},
+                          child: const Text('Forgot Password'),
+                        ),
+                        SizedBox(width: 10),
+                        ElevatedButton(
+                          onPressed: () {
+                            // Navigate to the sign-up page
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      RegisterPage(update: widget.update)),
+                            );
+                          },
+                          child: const Text('Register'),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    SizedBox(
+                        height: 70,
+                        width: 200,
+                        child: TextField(
+                          controller: _urlController,
+                          decoration: const InputDecoration(
+                            border: OutlineInputBorder(),
+                          ),
+                          onChanged: (value) {
+                            _urlController.text = value;
+                            serverUrl = value;
+                          },
+                        )),
+                    // Container(
+                    //   child: Row(
+                    //     mainAxisAlignment: MainAxisAlignment.center,
+                    //     children: [
+                    //       Expanded(
+                    //         child: Divider(
+                    //           color: Colors.orange[800],
+                    //           height: 10,
+                    //         ),
+                    //       ),
+                    //       Padding(
+                    //         padding: const EdgeInsets.symmetric(horizontal: 8),
+                    //         child: Text(
+                    //           "  or with  ",
+                    //           style: TextStyle(
+                    //               color: Colors.orange[800], fontSize: 20),
+                    //         ),
+                    //       ),
+                    //       Expanded(
+                    //         child: Divider(
+                    //           color: Colors.orange[800],
+                    //           height: 10,
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
+                    // const SizedBox(height: 56),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.center,
+                    //   children: [
+                    //     SocialButton(
+                    //         onTap: () async {
+                    //           final prefs = await SharedPreferences.getInstance();
+                    //           print(prefs.getString('token') ?? '');
+                    //           print(prefs.getString('type') ?? '');
+                    //           print(prefs.getInt('id') ?? '');
+                    //         },
+                    //         icon: AppAssets.kGoogle),
+                    //     SocialButton(onTap: () {}, icon: AppAssets.kFacebook),
+                    //   ],
+                    // ),
+                  ]),
+                )
+              ],
+            ),
           ),
         ),
       ),
