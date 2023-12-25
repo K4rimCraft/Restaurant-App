@@ -224,9 +224,11 @@ class _LoginPagePageState extends State<LoginPage> {
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(),
                           ),
-                          onChanged: (value) {
-                            _urlController.text = value;
+                          onChanged: (value) async {
+                            final prefs = await SharedPreferences.getInstance();
+                            //_urlController.text = value;
                             serverUrl = value;
+                            prefs.setString('serverUrl', value);
                           },
                         )),
                     // Container(
