@@ -1429,3 +1429,316 @@ Sun Dec 24 2023 18:53:41 GMT+0000 (GMT)
     '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:84:51\n' +
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
 }
+Mon Dec 25 2023 05:55:12 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: "password" length must be at least 8 characters long
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:78:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:175:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: '"password" length must be at least 8 characters long',
+  stack: 'Error: "password" length must be at least 8 characters long\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:78:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:175:3)'
+}
+Mon Dec 25 2023 05:55:15 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: "password" length must be at least 8 characters long
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:78:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:175:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: '"password" length must be at least 8 characters long',
+  stack: 'Error: "password" length must be at least 8 characters long\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:78:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:175:3)'
+}
+Mon Dec 25 2023 05:55:20 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:88:21 {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:88:21'
+}
+Mon Dec 25 2023 05:55:27 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\resTO.js:39:10
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: "Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg",
+  stack: "Error: Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg\n" +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\resTO.js:39:10\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)'
+}
+Mon Dec 25 2023 05:55:31 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\resTO.js:39:10
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: "Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg",
+  stack: "Error: Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg\n" +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\resTO.js:39:10\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)'
+}
+Mon Dec 25 2023 05:55:35 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\resTO.js:39:10
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: "Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg",
+  stack: "Error: Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg\n" +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\resTO.js:39:10\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)'
+}
+Mon Dec 25 2023 05:55:39 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\resTO.js:39:10
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: "Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg",
+  stack: "Error: Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg\n" +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\resTO.js:39:10\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)'
+}
+Mon Dec 25 2023 05:56:02 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg
+      at C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\resTO.js:39:10
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at Route.dispatch (C:\Users\kimos\Downloads\CSE College Files\CSE2 1st Term\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: "Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg",
+  stack: "Error: Can't find this route /images/6a9d4e49-3faa-474d-a736-6c34d7a14dd3.jpg\n" +
+    '    at C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\resTO.js:39:10\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\CSE College Files\\CSE2 1st Term\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)'
+}
+Mon Dec 25 2023 14:26:03 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Can't find this route /favicon.ico
+      at C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\resTO.js:40:10
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at next (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at Route.dispatch (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: "Can't find this route /favicon.ico",
+  stack: "Error: Can't find this route /favicon.ico\n" +
+    '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\resTO.js:40:10\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)'
+}
+Mon Dec 25 2023 14:34:43 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FOM persons where email = 'qwrqererqer@gmail.com'' at line 1
+      at PromiseConnection.query (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:80:49
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sql: "SELECT * FOM persons where email = 'qwrqererqer@gmail.com'",
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FOM persons where email = 'qwrqererqer@gmail.com'' at line 1",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FOM persons where email = 'qwrqererqer@gmail.com'' at line 1",
+  stack: "Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FOM persons where email = 'qwrqererqer@gmail.com'' at line 1\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:80:49\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Mon Dec 25 2023 16:39:55 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: "email" length must be at least 11 characters long
+      at C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:36:21
+      at asyncUtilWrap (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at Route.dispatch (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3)
+      at Layer.handle [as handle_request] (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:284:15
+      at Function.process_params (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:346:12)
+      at next (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:280:10)
+      at Function.handle (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\express\lib\router\index.js:175:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: '"email" length must be at least 11 characters long',
+  stack: 'Error: "email" length must be at least 11 characters long\n' +
+    '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:36:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\index.js:175:3)'
+}

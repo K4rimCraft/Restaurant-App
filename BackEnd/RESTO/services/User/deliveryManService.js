@@ -14,12 +14,12 @@ const editRating = asyncHandelr(async (req, res, next) => {
 });
 
 const editStatus = asyncHandelr(async (req, res, next) => {
-    const status = req.body.status;
-    const decoded = jwt.verify(req.headers.token, process.env.JWT_SECRETKEY);
-    req.person = decoded;
-    const personId = req.person.id;
-    const [result2] = await (await dbConnection).query(`UPDATE deliveryMen SET status=? WHERE personId=?`, [status, personId]);
-    res.status(200).json(result2);
+    // const status = req.body.status;
+    // const decoded = jwt.verify(req.headers.token, process.env.JWT_SECRETKEY);
+    // req.person = decoded;
+    // const personId = req.person.id;
+    // const [result2] = await (await dbConnection).query(`UPDATE deliveryMen SET status=? WHERE personId=?`, [status, personId]);
+    // res.status(200).json(result2);
 });
 
 const editNumberOfOrders = asyncHandelr(async (req, res, next) => {

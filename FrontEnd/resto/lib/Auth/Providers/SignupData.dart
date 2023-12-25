@@ -17,6 +17,9 @@ class s1_data extends ChangeNotifier {
     if (valueF!.isEmpty) {
       return 'Please enter your first name';
     }
+    if (valueF.length < 3) {
+      return 'Must be 3 charecters long';
+    }
     return null;
   }
 
@@ -24,13 +27,18 @@ class s1_data extends ChangeNotifier {
     if (valueL!.isEmpty) {
       return 'Please enter your last name';
     }
-
+    if (valueL.length < 3) {
+      return 'Must be 3 charecters long';
+    }
     return null;
   }
 
   String? validEmail(String? email) {
     if (email!.isEmpty) {
       return 'Please enter your email';
+    }
+    if (email.length < 11) {
+      return 'Must be 11 charecters long';
     }
 
     bool isValidEmail = RegExp(

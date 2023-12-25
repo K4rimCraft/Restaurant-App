@@ -99,7 +99,7 @@ class OrderItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Order Contents: ${order.totalPrice}',
+                    'Order Price: ${order.totalPrice}',
                     style: GoogleFonts.aladin(
                       color: AppColorsLight.primaryColor,
                       fontSize: 20,

@@ -376,7 +376,7 @@ class _DeliveryConfirmationState extends State<DeliveryConfirmation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('First Route'),
+        title: const Text('Confirm'),
       ),
       body: Center(
           child: Column(

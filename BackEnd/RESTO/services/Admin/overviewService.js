@@ -63,7 +63,7 @@ const getDeliveryMen = asyncHandelr(async (req, res, next) => {
 
   const query = `
     SELECT * FROM deliverymen 
-    INNER JOIN persons ON deliverymen.personId = persons.personId WHERE numberOfOrders > ?`;
+    INNER JOIN persons ON deliverymen.personId = persons.personId WHERE numberOfOrders >= ?`;
   const maxNumberOfOrdersQuery = 'SELECT MAX(numberOfOrders) FROM deliverymen';
 
   const [maxNumberOfOrders] = await (await dbConnection).query(maxNumberOfOrdersQuery);

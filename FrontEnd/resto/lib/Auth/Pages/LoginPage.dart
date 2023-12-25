@@ -8,6 +8,7 @@ import 'package:http/http.dart' as http;
 import '/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../UI_Components/DateTextField.dart';
+import 'ForgotPasswordForm.dart';
 
 class LoginPage extends StatefulWidget {
   final Function update;
@@ -126,7 +127,7 @@ class _LoginPagePageState extends State<LoginPage> {
 
                         return null;
                       },
-                      hintText: 'Email address',
+                      hintText: 'Email',
                     ),
                     const SizedBox(height: 15),
                     MyPassField(
@@ -187,18 +188,23 @@ class _LoginPagePageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 20),
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
-                          'Create account',
-                          style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.orange),
-                        ),
-                        const Spacer(),
                         ElevatedButton(
-                          onPressed: () {},
-                          child: const Text('Forgot Password'),
+                          onPressed: () {
+                            setState(() {
+                              showModalBottomSheet(
+                                isScrollControlled: true,
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return ForgotPasswordForm();
+                                },
+                              );
+                              //foodTitles.insert(0, 'element');
+                            });
+                          },
+                          child: const Text('Forgot Password?'),
                         ),
                         SizedBox(width: 10),
                         ElevatedButton(

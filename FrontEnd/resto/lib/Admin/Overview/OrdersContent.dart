@@ -183,7 +183,7 @@ class _OrdersContentState extends State<OrdersContent> {
                             decoration: const InputDecoration(
                                 constraints: BoxConstraints(maxHeight: 45),
                                 border: OutlineInputBorder(),
-                                labelText: 'Catagory Name'),
+                                labelText: 'Name'),
                           ),
                         ),
                       ),
@@ -290,6 +290,7 @@ class _OrdersContentState extends State<OrdersContent> {
                                         Text(
                                           'Order #${OrderList.orderId}',
                                           style: const TextStyle(
+                                              fontWeight: FontWeight.bold,
                                               color: Colors.black,
                                               fontSize: 20),
                                         ),
@@ -297,18 +298,20 @@ class _OrdersContentState extends State<OrdersContent> {
                                           width: 12,
                                         ),
                                         Text(
-                                            'Status: ${switch (OrderList.deliveryStatus) {
-                                              0 => 'Just Placed',
-                                              1 => 'In Transit',
-                                              2 => 'Delivered',
-                                              int() => ''
-                                            }}',
-                                            style:
-                                                const TextStyle(fontSize: 20)),
-                                        Text(
                                           'Name: ${OrderList.firstName} ${OrderList.lastName}',
                                           style: const TextStyle(fontSize: 20),
                                         ),
+                                        Text(
+                                            'Status: ${switch (OrderList.deliveryStatus) {
+                                              0 => 'Just Placed',
+                                              1 => 'Order Processed',
+                                              2 => 'Picked Up',
+                                              3 => 'At Location',
+                                              4 => 'Delivered',
+                                              int() => 'Unknown'
+                                            }}',
+                                            style:
+                                                const TextStyle(fontSize: 20)),
                                         const SizedBox(
                                           width: 12,
                                         ),

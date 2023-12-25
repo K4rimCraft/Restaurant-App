@@ -54,6 +54,10 @@ const updateOrderData = asyncHandelr(async (req, res, next) => {
     const decoded = jwt.verify(req.headers.token, process.env.JWT_SECRETKEY);
     req.person = decoded;
     const [deliverymen] = await (await dbConnection).query(`SELECT deliveryManId FROM deliverymen WHERE personId = ?`, [req.person.id]);
+    if (deliveryStatus == 4) {
+        const [result2] = await (await dbConnection).query(`SELECT numberOfOrders FROM deliveryMen where personId=? `, [req.person.id]);
+        const [result3] = await (await dbConnection).query(`UPDATE deliveryMen SET numberOfOrders=? WHERE personId=?`, [result2[0].numberOfOrders + 1, req.person.id]);
+    }
 
     const [Table] = await (await dbConnection).query(updateQuery, [deliverymen[0].deliveryManId, deliveryStatus, req.params.orderId]);
 
@@ -82,15 +86,11 @@ const updateDeliveryManStatus = asyncHandelr(async (req, res, next) => {
     const updateQuery = `
       UPDATE deliverymen
       SET status = ?
-      WHERE deliveryManId = ?
+      WHERE personId = ?
     `;
-
     const decoded = jwt.verify(req.headers.token, process.env.JWT_SECRETKEY);
     req.person = decoded;
-    const [deliverymen] = await (await dbConnection).query(`SELECT deliveryManId FROM deliverymen WHERE personId = ?`, [req.person.id]);
-
-    const [Table] = await (await dbConnection).query(updateQuery, [status, deliverymen[0].deliveryManId]);
-
+    const [Table] = await (await dbConnection).query(updateQuery, [status, req.person.id]);
     res.status(200).json({ message: 'Record updated successfully' });
 
 });

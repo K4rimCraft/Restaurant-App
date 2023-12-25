@@ -5,6 +5,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:resto/Admin/EditMenu/API.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:uuid/uuid.dart';
 
 import 'package:image_picker/image_picker.dart';
 import 'package:resto/main.dart';
@@ -137,16 +138,18 @@ class _EditFormState extends State<EditForm> {
                                     image1 = await ImagePicker()
                                         .pickImage(source: ImageSource.gallery);
                                     image1State = true;
+                                    image1Name =
+                                        '${const Uuid().v1()}.${image1!.name.split(".").last}';
 
-                                    image1Name = kIsWeb
-                                        ? image1!.path
-                                                .split('http://')[1]
-                                                .split('/')[1] +
-                                            "." +
-                                            image1!.name.split(".").last
-                                        : image1!.path.split('/')[6] +
-                                            "." +
-                                            image1!.name.split(".").last;
+                                    // image1Name = kIsWeb
+                                    //     ? image1!.path
+                                    //             .split('http://')[1]
+                                    //             .split('/')[1] +
+                                    //         "." +
+                                    //         image1!.name.split(".").last
+                                    //     : image1!.path.split('/')[6] +
+                                    //         "." +
+                                    //         image1!.name.split(".").last;
                                     await sendProductPics(image1!, image1Name);
                                     setState(() {
                                       image1 = XFile(
@@ -198,16 +201,18 @@ class _EditFormState extends State<EditForm> {
                                       }
                                     });
                                     image2State = true;
+                                    image2Name =
+                                        '${const Uuid().v1()}.${image2!.name.split(".").last}';
 
-                                    image2Name = kIsWeb || !image2Changed
-                                        ? image2!.path
-                                                .split('http://')[1]
-                                                .split('/')[1] +
-                                            "." +
-                                            image2!.name.split(".").last
-                                        : image2!.path.split('/')[6] +
-                                            "." +
-                                            image2!.name.split(".").last;
+                                    // image2Name = kIsWeb || !image2Changed
+                                    //     ? image2!.path
+                                    //             .split('http://')[1]
+                                    //             .split('/')[1] +
+                                    //         "." +
+                                    //         image2!.name.split(".").last
+                                    //     : image2!.path.split('/')[6] +
+                                    //         "." +
+                                    //         image2!.name.split(".").last;
                                     await sendProductPics(image2!, image2Name);
                                     setState(() {
                                       image2 = XFile(

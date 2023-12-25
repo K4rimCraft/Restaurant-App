@@ -23,7 +23,7 @@ const verifyTokenAndAuthorization = (req, res, next) => {
             if ((req.person.id == rows[0].personId) || (req.person.type === "admin")) {
                 next();
             } else {
-                return res.status(403).json({ message: "You Are Not Allowed:)" });
+                return res.status(403).json({ message: "You Are Not Allowed" });
             }
         } else {
             return res.status(403).json({ message: "You Are Not Allowed" });

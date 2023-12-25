@@ -37,7 +37,7 @@ Future<List<int>> getBusyTables() async {
     for (int i = 0; i < wew.length; i++) {
       numbers.add(wew[i]['tableNumber']);
     }
-    print(numbers);
+
     return numbers;
   } else {
     throw Exception('faild to fetch food card data');

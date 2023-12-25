@@ -23,7 +23,6 @@ class Item extends StatefulWidget {
 class _ItemState extends State<Item> {
   int amount = 1;
   void decrementQuantity() {
-    print(widget.food.quantity);
     setState(() {
       if (!CartList.items.contains(widget.food) && amount > 1) {
         amount--;

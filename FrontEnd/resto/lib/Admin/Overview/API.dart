@@ -189,7 +189,7 @@ class DeliveryMenData {
           lastName: data[i]['lastName'],
           deliveryManId: data[i]['deliveryManId'],
           dateOfJoining: data[i]['dateOfJoining'],
-          rating: data[i]['rating'],
+          rating: data[i]['rating'] + 0.0,
           numberOfOrders: data[i]['numberOfOrders'],
         ));
       } catch (err) {

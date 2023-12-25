@@ -74,6 +74,7 @@ class _FoodTileState extends State<MenuCard> {
                             children: [
                               Text(
                                 widget.food.name,
+                                maxLines: 1,
                                 style: GoogleFonts.dmSerifDisplay(
                                   fontSize: 22,
                                 ),

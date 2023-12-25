@@ -95,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
           if (context.mounted && status.statusCode == 200) {
             //saveInfo();
-            print(status.body);
+            (status.body);
             saveInfo(status.body[0], status.body[1], status.body[2]);
           } else {
             if (context.mounted) {

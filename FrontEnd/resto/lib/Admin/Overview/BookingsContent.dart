@@ -177,7 +177,7 @@ class _BookingsContentState extends State<BookingsContent> {
                                     onTap: () {
                                       setState(() {
                                         numberOfPeopleIndex =
-                                            ": ${(index + 1).toString()}";
+                                            ": ${((index + 1) * 2).toString()}";
                                         futurebooking =
                                             fetchBookingWithNumberOfPeople(
                                                 numberOfPeople[index]);
@@ -235,15 +235,11 @@ class _BookingsContentState extends State<BookingsContent> {
                                           color: Colors.green, fontSize: 20),
                                     ),
                                     Text(
-                                      'Start Time: ${bookingList.startTime}',
+                                      'Time: ${bookingList.startTime.substring(0, 5)} - ${bookingList.endTime.substring(0, 5)}',
                                       style: const TextStyle(
                                           color: Colors.red, fontSize: 20),
                                     ),
-                                    Text(
-                                      'End Time: ${bookingList.endTime}',
-                                      style: const TextStyle(
-                                          color: Colors.red, fontSize: 20),
-                                    ),
+
                                     // const SizedBox(width: 100),
                                   ],
                                 ),

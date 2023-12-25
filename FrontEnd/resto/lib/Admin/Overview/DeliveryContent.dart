@@ -202,19 +202,15 @@ class _DeliveryContentState extends State<DeliveryContent> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Name: ${deliveryList.firstName} ${deliveryList.lastName}',
-                                      style: const TextStyle(fontSize: 20),
-                                    ),
-                                    const SizedBox(
-                                      width: 430,
+                                      'ID: #${deliveryList.deliveryManId}',
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black,
+                                          fontSize: 20),
                                     ),
                                     Text(
-                                      'Delivery Man ID: ${deliveryList.deliveryManId}',
-                                      style: const TextStyle(
-                                          color: Colors.black, fontSize: 20),
-                                    ),
-                                    const SizedBox(
-                                      width: 430,
+                                      'Name: ${deliveryList.firstName} ${deliveryList.lastName}',
+                                      style: const TextStyle(fontSize: 20),
                                     ),
                                     Text(
                                       'Date Of Joining: ${deliveryList.dateOfJoining.split('T')[0]}',
