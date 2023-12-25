@@ -10,7 +10,7 @@ import '../models/booking_table.dart';
 
 Future<void> PdfGenerator(BuildContext context) async {
   final Uint8List imageData =
-      (await rootBundle.load('Images/Receipt/Receipt.jpg'))
+      (await rootBundle.load('assets/Receipt/Receipt.jpg'))
           .buffer
           .asUint8List();
 

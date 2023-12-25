@@ -460,7 +460,7 @@ class _CartState extends State<Cart> {
                         padding: (selector == 0)
                             ? EdgeInsets.all(8.0)
                             : EdgeInsets.all(0),
-                        child: Image.asset("Images/Payment/Paypal.png"),
+                        child: Image.asset("assets/Payment/Paypal.png"),
                       ),
                     ),
                   ),
@@ -484,7 +484,7 @@ class _CartState extends State<Cart> {
                         padding: (selector == 1)
                             ? EdgeInsets.all(8.0)
                             : EdgeInsets.all(0),
-                        child: Image.asset("Images/Payment/Visa.png"),
+                        child: Image.asset("assets/Payment/Visa.png"),
                       ),
                     ),
                   ),
@@ -513,7 +513,7 @@ class _CartState extends State<Cart> {
                         padding: (selector == 2)
                             ? EdgeInsets.all(8.0)
                             : EdgeInsets.all(0),
-                        child: Image.asset("Images/Payment/Mastercard.png"),
+                        child: Image.asset("assets/Payment/Mastercard.png"),
                       ),
                     ),
                   ),
@@ -537,7 +537,7 @@ class _CartState extends State<Cart> {
                         padding: (selector == 3)
                             ? EdgeInsets.all(8.0)
                             : EdgeInsets.all(0),
-                        child: Image.asset("Images/Payment/Bitcoin.png"),
+                        child: Image.asset("assets/Payment/Bitcoin.png"),
                       ),
                     ),
                   ),

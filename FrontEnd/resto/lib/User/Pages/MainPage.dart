@@ -136,16 +136,11 @@ class _MainPageState extends State<MainPage> {
                             alignment: Alignment.center,
                             child: const Text(
                               'Error: Request to server failed',
-                              textScaler: TextScaler.linear(1.5),
+                              style: TextStyle(fontSize: 20),
                             ));
                       } else if (snapshot.hasData) {
                         if (snapshot.data!.isEmpty) {
-                          return Container(
-                              alignment: Alignment.center,
-                              child: const Text(
-                                'Empty',
-                                textScaler: TextScaler.linear(1.5),
-                              ));
+                          return Container();
                         } else {
                           return Container(
                             height: MediaQuery.of(context).size.height * 0.3,
@@ -172,17 +167,6 @@ class _MainPageState extends State<MainPage> {
                         );
                       }
                     }),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25),
-                  child: Text(
-                    "Most Popular FoodData",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
                 FutureBuilder(
                     future: futurePopulerItems,
                     builder: (context, snapshot) {
@@ -191,26 +175,37 @@ class _MainPageState extends State<MainPage> {
                             alignment: Alignment.center,
                             child: const Text(
                               'Error: Request to server failed',
-                              textScaler: TextScaler.linear(1.5),
+                              style: TextStyle(fontSize: 20),
                             ));
                       } else if (snapshot.hasData) {
                         if (snapshot.data!.isEmpty) {
-                          return Container(
-                              alignment: Alignment.center,
-                              child: const Text(
-                                'Empty',
-                                textScaler: TextScaler.linear(1.5),
-                              ));
+                          return Container();
                         } else {
-                          return SizedBox(
-                            height: 230,
-                            child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              itemCount: snapshot.data!.length,
-                              itemBuilder: (context, index) => MostPopularCard(
-                                food: snapshot.data![index],
+                          return Column(
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 25),
+                                child: Text(
+                                  "Most Popular FoodData",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 18,
+                                  ),
+                                ),
                               ),
-                            ),
+                              SizedBox(
+                                height: 230,
+                                child: ListView.builder(
+                                  scrollDirection: Axis.horizontal,
+                                  itemCount: snapshot.data!.length,
+                                  itemBuilder: (context, index) =>
+                                      MostPopularCard(
+                                    food: snapshot.data![index],
+                                  ),
+                                ),
+                              ),
+                            ],
                           );
                         }
                       } else {

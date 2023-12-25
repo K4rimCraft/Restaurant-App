@@ -119,7 +119,7 @@ class OrderData {
           totalPrice: data[i]['totalPrice'] + 0.0,
           longitudeAddress: double.parse(data[i]['longitudeAddress']),
           latitudeAddress: double.parse(data[i]['latitudeAddress']),
-          phoneNumber: data[i]['phoneNumber'],
+          phoneNumber: data[i]['phoneNumber'].toString(),
           confirmationNumber: data[i]['confirmationNumber'],
         ));
       } catch (err) {

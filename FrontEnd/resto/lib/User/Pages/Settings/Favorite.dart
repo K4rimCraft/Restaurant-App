@@ -52,7 +52,7 @@ class _FavoriteState extends State<Favorite> {
                     alignment: Alignment.center,
                     child: const Text(
                       'Error: Request to server failed',
-                      textScaler: TextScaler.linear(1.5),
+                      style: TextStyle(fontSize: 20),
                     ));
               } else if (snapshot.hasData) {
                 if (snapshot.data!.isEmpty) {
@@ -60,7 +60,7 @@ class _FavoriteState extends State<Favorite> {
                       alignment: Alignment.center,
                       child: const Text(
                         'No Data within the specified filters',
-                        textScaler: TextScaler.linear(1.5),
+                        style: TextStyle(fontSize: 20),
                       ));
                 } else {
                   return Scrollbar(

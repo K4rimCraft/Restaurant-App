@@ -222,7 +222,7 @@ class _MenuState extends State<Menu> {
                               alignment: Alignment.center,
                               child: const Text(
                                 'Error: Request to server failed',
-                                textScaler: TextScaler.linear(1.5),
+                                style: TextStyle(fontSize: 20),
                               ));
                         } else if (snapshot.hasData) {
                           FavoriteList.setItems(snapshot.data![1]);
@@ -231,7 +231,7 @@ class _MenuState extends State<Menu> {
                                 alignment: Alignment.center,
                                 child: const Text(
                                   'Empty',
-                                  textScaler: TextScaler.linear(1.5),
+                                  style: TextStyle(fontSize: 20),
                                 ));
                           } else {
                             return Scrollbar(
