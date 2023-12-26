@@ -36,6 +36,7 @@ class OrderData {
   final double totalPrice;
   final String firstName;
   final String lastName;
+    final String confirmationNumber;
 
   const OrderData({
     required this.orderId,
@@ -48,6 +49,7 @@ class OrderData {
     required this.totalPrice,
     required this.firstName,
     required this.lastName,
+    required this.confirmationNumber,
   });
 
   static List<OrderData> toList(List<dynamic> data) {
@@ -65,6 +67,7 @@ class OrderData {
           firstName: data[i]['firstName'],
           lastName: data[i]['lastName'],
           totalPrice: data[i]['totalPrice'] + 0.0,
+          confirmationNumber: data[i]['confirmationNumber'].toString(),
         ));
       } catch (err) {
         print(err);

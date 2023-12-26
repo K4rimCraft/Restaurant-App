@@ -68,7 +68,7 @@ class _EditFormState extends State<EditForm> {
     nameControl.text = widget.cardData.name;
     descControl.text = widget.cardData.description;
     priceControl.text = widget.cardData.price.toString();
-    stockControl.text = widget.cardData.timesOrdered.toString();
+    stockControl.text = widget.cardData.stock.toString();
     selectedCategories = widget.cardData.catagories ?? [];
   }
 

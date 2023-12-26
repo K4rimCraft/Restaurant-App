@@ -192,3 +192,81 @@ class s3_data extends ChangeNotifier {
     notifyListeners(); // Notify listeners once after processing all conditions
   }
 }
+
+
+class forgot_data extends ChangeNotifier {
+  bool isRemember = false;
+  bool valid = false;
+  bool isFormValid = false; // Added boolean variable
+  UserTypeSelection userTypeSelection = UserTypeSelection();
+  bool isPassword8Char = false;
+  bool isPasswordHas1Number = false;
+  bool hasUppercase = false;
+  bool hasLowercase = false;
+  bool hasSpecialCharacters = false;
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController passwordRepeatController = TextEditingController();
+
+  String? validatePassword(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Password is required';
+    }
+
+    isPassword8Char = value.length >= 8;
+    isPasswordHas1Number = RegExp(r'\d').hasMatch(value);
+    hasUppercase = RegExp(r'[A-Z]').hasMatch(value);
+    hasLowercase = RegExp(r'[a-z]').hasMatch(value);
+    hasSpecialCharacters = RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(value);
+
+    if (!isPassword8Char) {
+      return 'Enter at least 8 characters';
+    } else if (!isPasswordHas1Number) {
+      return 'Password must contain at least 1 number';
+    } else if (!hasUppercase) {
+      return 'Password must contain at least 1 uppercase letter';
+    } else if (!hasLowercase) {
+      return 'Password must contain at least 1 lowercase letter';
+    } else if (!hasSpecialCharacters) {
+      return 'Password must contain at least 1 special character';
+    }
+    notifyListeners(); // Notify listeners once after processing all conditions
+
+    return null; // Return null if the password meets all criteria
+  }
+
+  void onPasswordChanged(String password) {
+    isPassword8Char = false;
+    isPasswordHas1Number = false;
+    hasUppercase = false;
+    hasLowercase = false;
+    hasSpecialCharacters = false;
+
+    if (password.contains(RegExp(r'.{8,}'))) {
+      isPassword8Char = true;
+      formKey.currentState?.validate();
+    }
+
+    if (password.contains(RegExp(r'[0-9]'))) {
+      isPasswordHas1Number = true;
+      formKey.currentState?.validate();
+    }
+
+    if (password.contains(RegExp(r'[A-Z]'))) {
+      hasUppercase = true;
+      formKey.currentState?.validate();
+    }
+
+    if (password.contains(RegExp(r'[a-z]'))) {
+      hasLowercase = true;
+      formKey.currentState?.validate();
+    }
+
+    if (password.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'))) {
+      hasSpecialCharacters = true;
+      formKey.currentState?.validate();
+    }
+
+    notifyListeners(); // Notify listeners once after processing all conditions
+  }
+}

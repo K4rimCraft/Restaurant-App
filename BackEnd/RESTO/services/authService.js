@@ -50,6 +50,7 @@ const register = asyncHandelr(async (req, res, next) => {
         (firstName,lastName,email,password,birthDate,longitudeAddress,latitudeAddress,phoneNumber,type)
         VALUES(?,?,?,?,?,?,?,?,?)`,
         [firstName, lastName, email, hashedPassword, birthDate, longitudeAddress, latitudeAddress, phoneNumber, type]);
+
     if (type !== "admin") {
         const [result1] = await (await dbConnection).query('SELECT personId FROM persons where email = ?', [email]);
 
@@ -62,6 +63,8 @@ const register = asyncHandelr(async (req, res, next) => {
             const [result] = await (await dbConnection).query(`INSERT INTO deliverymen (personId) VALUES (?)`, [personId]);
             Id = result.insertId;
         }
+    } else {
+        Id = result1[0].personId;
     }
     const token = jwt.sign({ id: personId, type: type }, process.env.JWT_SECRETKEY, {
         expiresIn: "90d"
@@ -86,6 +89,9 @@ const login = asyncHandelr(async (req, res, next) => {
 
     if (!passwordMatch) {
         return next(new ApiError(`Wrong Email Or Password`, 404));
+    }
+    if (result[0].type === 'admin') {
+        Id = result[0].personId;
     }
     if (result[0].type === 'customer') {
         const [result0] = await (await dbConnection).query('SELECT customerId FROM customers WHERE personId = ?', [result[0].personId]);

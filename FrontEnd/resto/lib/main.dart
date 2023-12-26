@@ -38,7 +38,8 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
     final String? token = prefs.getString('token');
     final String? type = prefs.getString('type');
     serverUrl = prefs.getString('serverUrl') ?? 'http://localhost:3000';
-
+    print(token);
+    print(type);
     if (token == null) {
       selectedInterface = 1;
     } else if (type == 'customer') {

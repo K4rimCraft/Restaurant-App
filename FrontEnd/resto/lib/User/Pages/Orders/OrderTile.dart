@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:resto/User/Pages/Orders/Pages/DeliveryConfirm.dart';
 import '/User/theme/app_color.dart';
 import '/main.dart';
 import '../../models/Order_list.dart';
 import '../../models/food.dart';
-import 'StriperPage.dart';
-import '../../API/MenuAPI.dart';
 import '../../API/MenuAPI.dart';
 
 class OrderItem extends StatelessWidget {
+  final Function update;
   final OrderData order;
   late Future<List<FoodData>> futureOrderItems;
-  OrderItem({required this.order});
+  OrderItem({required this.order, required this.update});
   final ScrollController yourScrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
@@ -36,56 +36,86 @@ class OrderItem extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Text(
-                          "Order #" + order.orderId.toString(),
-                          style: GoogleFonts.aladin(
-                            color: AppColorsLight.primaryColor,
-                            fontSize: 25,
-                          ),
+                        Column(
+                          children: [
+                            Text(
+                              "Order #" + order.orderId.toString(),
+                              style: GoogleFonts.aladin(
+                                color: AppColorsLight.primaryColor,
+                                fontSize: 25,
+                              ),
+                            ),
+                            Text(
+                              '${order.dateOfOrder.substring(0, 10)}',
+                              style: GoogleFonts.aladin(
+                                color: AppColorsLight.primaryColor,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
                         ),
                         const SizedBox(
                           width: 10,
                         ),
-                        SizedBox(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: switch (order.deliveryStatus) {
-                                0 => AppColorsLight.primaryColor.shade200,
-                                1 => AppColorsLight.primaryColor.shade300,
-                                2 => AppColorsLight.primaryColor.shade400,
-                                3 => AppColorsLight.primaryColor.shade500,
-                                4 => Colors.green,
-                                int() => AppColorsLight.primaryColor.shade200,
-                              },
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
-                              child: Text(
-                                switch (order.deliveryStatus) {
-                                  0 => 'Just Placed',
-                                  1 => 'Order Processed',
-                                  2 => 'Picked Up',
-                                  3 => 'At Location',
-                                  4 => 'Delivered',
-                                  int() => 'Unknown'
-                                },
-                                style: GoogleFonts.aladin(
-                                  color: AppColorsLight.lightColor,
-                                  fontSize: 18,
+                        Column(
+                          children: [
+                            SizedBox(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: switch (order.deliveryStatus) {
+                                    0 => AppColorsLight.primaryColor.shade200,
+                                    1 => AppColorsLight.primaryColor.shade300,
+                                    2 => AppColorsLight.primaryColor.shade400,
+                                    3 => AppColorsLight.primaryColor.shade500,
+                                    4 => Colors.green,
+                                    int() =>
+                                      AppColorsLight.primaryColor.shade200,
+                                  },
+                                ),
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(8, 4, 8, 4),
+                                  child: Text(
+                                    switch (order.deliveryStatus) {
+                                      0 => 'Just Placed',
+                                      1 => 'Order Processed',
+                                      2 => 'Picked Up',
+                                      3 => 'At Location',
+                                      4 => 'Delivered',
+                                      int() => 'Unknown'
+                                    },
+                                    style: GoogleFonts.aladin(
+                                      color: AppColorsLight.lightColor,
+                                      fontSize: 18,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            if (order.deliveryStatus == 3)
+                              FilledButton(
+                                  style: const ButtonStyle(
+                                      backgroundColor: MaterialStatePropertyAll(
+                                          Colors.green)),
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(builder: (context) {
+                                      return DeliveryConfirm(order: order);
+                                    })).whenComplete(() => update());
+                                  },
+                                  child: Text(
+                                    'Recive Order',
+                                    style: GoogleFonts.aladin(
+                                      fontSize: 22,
+                                    ),
+                                  ))
+                          ],
                         ),
                       ],
-                    ),
-                    Text(
-                      '${order.dateOfOrder.substring(0, 10)}',
-                      style: GoogleFonts.aladin(
-                        color: AppColorsLight.primaryColor,
-                        fontSize: 14,
-                      ),
                     ),
                   ],
                 ),

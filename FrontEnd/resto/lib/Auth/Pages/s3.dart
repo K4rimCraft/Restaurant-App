@@ -42,7 +42,7 @@ class _ShoeAppSignInPageState extends State<S3> {
           key: data.formKey,
           child: Column(
             children: [
-              const SizedBox(height: 250),
+              const SizedBox(height: 180),
               MyPassField(
                 onChanged: (password) {
                   data.onPasswordChanged(password ?? '');
@@ -212,10 +212,7 @@ class _ShoeAppSignInPageState extends State<S3> {
                   Text("Has  Special Characters "),
                 ],
               ),
-              const SizedBox(
-                height: 33,
-              ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 10),
               data.userTypeSelection,
             ],
           ),

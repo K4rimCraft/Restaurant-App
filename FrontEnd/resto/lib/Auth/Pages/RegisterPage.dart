@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:resto/Auth/API.dart';
+
 import 'package:flutter_onboarding_slider/background_final_button.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:provider/provider.dart';
@@ -10,15 +10,7 @@ import '../Pages/s1.dart';
 import '../Pages/s2.dart';
 import '../Pages/s3.dart';
 import '../Providers/SignupData.dart';
-import '/main.dart';
 
-class APIStatus {
-  int statusCode;
-
-  List<dynamic> body;
-
-  APIStatus({required this.statusCode, required this.body});
-}
 
 class RegisterPage extends StatefulWidget {
   final Function update;
@@ -38,38 +30,6 @@ class _RegisterPageState extends State<RegisterPage> {
     widget.update();
   }
 
-  Future<APIStatus> register(
-      String firstName,
-      String lastName,
-      String email,
-      String password,
-      String birthDate,
-      String longitudeAddress,
-      String latitudeAddress,
-      String phoneNumber,
-      String type) async {
-    final response = await http.post(
-      Uri.parse('$serverUrl/api/register'),
-      headers: <String, String>{
-        'Content-Type': 'application/json; charset=UTF-8',
-      },
-      body: jsonEncode(<String, String>{
-        'firstName': firstName,
-        'lastName': lastName,
-        'email': email,
-        'password': password,
-        'birthDate': birthDate,
-        'longitudeAddress': longitudeAddress,
-        'latitudeAddress': latitudeAddress,
-        'phoneNumber': phoneNumber,
-        'type': type,
-      }),
-    );
-
-    return APIStatus(
-        statusCode: response.statusCode,
-        body: jsonDecode(response.body).values.toList());
-  }
 
   @override
   Widget build(BuildContext context) {

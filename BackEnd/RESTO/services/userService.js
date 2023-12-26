@@ -5,6 +5,17 @@ const bcrypt = require("bcrypt");
 const ApiError = require("../utils/apiError");
 const sendEmail = require("../utils/sendEmail");
 
+async function hashPassword(pass) {
+    const saltRounds = 10;
+    const hashedPassword = await new Promise((resolve, reject) => {
+        bcrypt.hash(pass, saltRounds, function (err, hash) {
+            if (err) reject(err)
+            resolve(hash)
+        });
+    })
+    return hashedPassword
+}
+
 const getUsers = asyncHandelr(async (req, res, next) => {
     const [result] = await (await dbConnection).query(`SELECT * FROM persons`);
     if (rows.length === 0) {
@@ -30,22 +41,32 @@ const changePassword = asyncHandelr(async (req, res, next) => {
     res.status(200).json({ message: "Password Updated" });
 });
 
+const changeForgotPassword = asyncHandelr(async (req, res, next) => {
+    const email = req.body.email;
+    const hashedPassword = await hashPassword(req.body.password);
+    //const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    const [result] = await (await dbConnection).query(`UPDATE persons SET password=? WHERE email=?`, [hashedPassword, email]);
+    res.status(200).json({ message: "Password Updated" });
+});
+
 const forgotPassword = asyncHandelr(async (req, res, next) => {
     const email = req.body.email;
+    console.log(req.body.email)
     const [result] = await (await dbConnection).query(`SELECT * FROM persons WHERE email=?`, [email]);
     if (result.length === 0) {
         return next(new ApiError(`Wrong Email`, 404));
     }
-    sendEmail("mahmoudgalal173.95@gmail.com", "ResetPassword", 5121524);
-    const token = jwt.sign({ id: result[0].personId, type: result[0].type }, process.env.JWT_SECRETKEY, {
-        expiresIn: "90d"
-    });
-    res.status(200).json({ token });
+    const randomCode = Math.floor(Math.random() * (999999 - 100000 + 1) + 100000);
+    // sendEmail(req.body.email, "ResetPassword", randomCode);
+    console.log(randomCode);
+    res.status(200).json({ message: randomCode });
+
 });
 
 module.exports = {
     getUsers,
     changeEmail,
     changePassword,
+    changeForgotPassword,
     forgotPassword
 };  

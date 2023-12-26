@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import '../UI_Components/CustomTextField.dart';
-import '../UI_Components/PrimaryButton.dart';
 import '../Const/assests.dart';
 import 'RegisterPage.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:resto/Auth/API.dart';
 import '/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../UI_Components/DateTextField.dart';
+
 import 'ForgotPasswordForm.dart';
 
 class LoginPage extends StatefulWidget {
@@ -41,26 +39,6 @@ class _LoginPagePageState extends State<LoginPage> {
     await prefs.setString('type', type);
     await prefs.setInt('id', id);
     widget.update();
-  }
-
-  Future<APIStatus> login(
-    String email,
-    String password,
-  ) async {
-    final response = await http.post(
-      Uri.parse('$serverUrl/api/login'),
-      headers: <String, String>{
-        'Content-Type': 'application/json; charset=UTF-8',
-      },
-      body: jsonEncode(<String, String>{
-        'email': email,
-        'password': password,
-      }),
-    );
-
-    return APIStatus(
-        statusCode: response.statusCode,
-        body: jsonDecode(response.body).values.toList());
   }
 
   @override
@@ -154,7 +132,57 @@ class _LoginPagePageState extends State<LoginPage> {
                           onPressed: () async {
                             if (_mailController.text == 'admin' &&
                                 _passwordController.text == "admin") {
-                              saveInfo('admin', 'admin', 1);
+                              final prefs =
+                                  await SharedPreferences.getInstance();
+
+                              if (prefs.getBool('IsThereAdmin') ?? false) {
+                                APIStatus status = await login(
+                                    'admin@admin.com', 'adminadmin');
+
+                                if (status.statusCode == 200) {
+                                  saveInfo(status.body[0], status.body[1],
+                                      status.body[2]);
+                                } else {
+                                  if (context.mounted) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        behavior: SnackBarBehavior.floating,
+                                        content: Text(status.body[2]),
+                                        duration: const Duration(seconds: 3),
+                                      ),
+                                    );
+                                  }
+                                }
+                              } else {
+                                print(prefs.getBool('IsThereAdmin'));
+                                APIStatus status = await register(
+                                    'admin',
+                                    'admin',
+                                    'admin@admin.com',
+                                    'adminadmin',
+                                    '2000-01-01',
+                                    '0',
+                                    '0',
+                                    '12345678912',
+                                    'admin');
+                                status = await login(
+                                    'admin@admin.com', 'adminadmin');
+                                if (status.statusCode == 200) {
+                                  prefs.setBool('IsThereAdmin', true);
+                                  saveInfo(status.body[0], status.body[1],
+                                      status.body[2]);
+                                } else {
+                                  if (context.mounted) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        behavior: SnackBarBehavior.floating,
+                                        content: Text(status.body[2]),
+                                        duration: const Duration(seconds: 3),
+                                      ),
+                                    );
+                                  }
+                                }
+                              }
                             }
                             if (_formKey.currentState!.validate()) {
                               APIStatus status = await login(

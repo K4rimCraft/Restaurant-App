@@ -30,6 +30,7 @@ RESTO.use("/admin", require("./routes/Admin/itemRoute"));
 RESTO.use("/admin", require("./routes/Admin/categoryRoute"));
 RESTO.use("/admin", require("./routes/Admin/overviewRoute"));
 RESTO.use("/delivery", require("./routes/DeliveryMen/deliveryRoute"));
+RESTO.use("/delivery", require("./routes/DeliveryMen/hardwareRoute"));
 
 
 

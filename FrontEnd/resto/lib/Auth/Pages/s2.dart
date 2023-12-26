@@ -45,7 +45,7 @@ class _ShoeAppSignInPageState extends State<S2> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 240),
+              const SizedBox(height: 180),
               MyTextField(
                 onChanged: (value) {
                   data.isFormValid = data.formKey.currentState!.validate();
@@ -57,7 +57,7 @@ class _ShoeAppSignInPageState extends State<S2> {
                 hintText: 'Phone number',
                 validator: data.validatePhoneNumber,
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 15),
               MyDateField(
                 onChanged: (value) {
                   // Assuming 'data' is an instance of the class where this widget is used.
@@ -76,7 +76,7 @@ class _ShoeAppSignInPageState extends State<S2> {
                 hintText: 'Birth Date',
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 15),
               MyTextField(
                 onChanged: (value) {
                   data.isFormValid = data.formKey.currentState!.validate();
@@ -88,7 +88,7 @@ class _ShoeAppSignInPageState extends State<S2> {
                 hintText: 'Address',
                 validator: data.validateAddress,
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 15),
               // Add a button or any other UI element that needs to be enabled
               // only when the form is valid
             ],

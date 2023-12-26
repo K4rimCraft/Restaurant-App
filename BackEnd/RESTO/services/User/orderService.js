@@ -38,13 +38,13 @@ const placeOrder = asyncHandelr(async (req, res, next) => {
 
 const getOrdersFilter = asyncHandelr(async (req, res, next) => {
     const query = `
-      SELECT orders.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName 
+      SELECT orders.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName , orders.confirmationNumber
       FROM orders 
       INNER JOIN customers 
       ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId 
       WHERE orders.deliveryStatus = ? AND orders.customerId = ?;`;
     const query2 = `
-      SELECT orders.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName 
+      SELECT orders.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName , orders.confirmationNumber
       FROM orders 
       INNER JOIN customers 
       ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId 

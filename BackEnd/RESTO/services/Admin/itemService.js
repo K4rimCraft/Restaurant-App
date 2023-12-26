@@ -5,11 +5,11 @@ const jwt = require("jsonwebtoken");
 
 const addItem = asyncHandelr(async (req, res, next) => {
 
-    const { itemId, name, inStock, description, rating, price, timesOrdered, firstImage, secondImage, categories } = req.body;
+    const { itemId, name, stock, description, rating, price, timesOrdered, firstImage, secondImage, categories } = req.body;
     const queryMenuItem = 'INSERT INTO menuitems (itemId, name, stock, description, rating, price, timesOrdered, firstImage, secondImage) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?)';
     const addCategoryQuery = 'INSERT INTO categories_has_menuitems VALUES (?, ?)'
 
-    const [result] = await (await dbConnection).query(queryMenuItem, [itemId, name, inStock, description, rating, price, timesOrdered, firstImage, secondImage]);
+    const [result] = await (await dbConnection).query(queryMenuItem, [itemId, name, stock, description, rating, price, timesOrdered, firstImage, secondImage]);
 
     const jsonCategories = JSON.parse(categories);
 
@@ -47,14 +47,14 @@ const deleteItem = asyncHandelr(async (req, res, next) => {
 
 const updateItem = asyncHandelr(async (req, res, next) => {
 
-    const { name, stock, description, rating, price, timesOrdered, firstImage, secondImage, categories } = req.body;
+    const { name, stock, description, rating, price, firstImage, secondImage, categories } = req.body;
     const checkItemQuery = 'SELECT * FROM menuitems WHERE itemId = ?';
     const addCategoryQuery = 'INSERT INTO categories_has_menuitems VALUES (?, ?)'
     const deleteCategoryQuery = 'DELETE FROM categories_has_menuitems WHERE categories_has_menuitems.itemId = ?'
 
     const updateQuery = `
       UPDATE menuitems
-      SET name = ?, description = ?, rating = ?, price = ?, timesOrdered = ?, firstImage = ?, secondImage = ?
+      SET name = ?, description = ?, rating = ?, price = ?, stock = ?, firstImage = ?, secondImage = ?
       WHERE itemId = ?
     `;
 
@@ -66,7 +66,7 @@ const updateItem = asyncHandelr(async (req, res, next) => {
         return next(new ApiError(`Item not found`, 404));
     }
 
-    await (await dbConnection).query(updateQuery, [name, description, rating, price, timesOrdered, firstImage, secondImage, req.params.itemId]);
+    await (await dbConnection).query(updateQuery, [name, description, rating, price, stock, firstImage, secondImage, req.params.itemId]);
     await (await dbConnection).query(deleteCategoryQuery, [req.params.itemId]);
 
     const jsonCategories = JSON.parse(categories);
@@ -109,7 +109,7 @@ const getItemsWithFilter = asyncHandelr(async (req, res, next) => {
 
 
 const searchItem = asyncHandelr(async (req, res, next) => {
-    const query = `SELECT * FROM menuItems WHERE menuItems.name LIKE ?`;
+    const query = `SELECT * FROM menuitems WHERE menuitems.name LIKE ?`;
     const [Table] = await (await dbConnection).query(query, `%${req.body.searchterm}%`);
     for (let i = 0; i < Table.length; i++) {
         Table[i]['categories'] = [];

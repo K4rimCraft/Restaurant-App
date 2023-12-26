@@ -1,4 +1,5 @@
 const express = require("express");
+const { verifyTokenAndAdmin } = require("../../middlewares/verifyToken");
 
 const {
     addItem,
@@ -12,7 +13,7 @@ const multer = require('multer');
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
 
-        cb(null, './Images')
+        cb(null, './images')
     },
     filename: (req, file, cb) => {
 
@@ -22,10 +23,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 const router = express.Router();
 
-router.post("/addItem", addItem);
+router.post("/addItem", verifyTokenAndAdmin ,addItem);
 router.post("/sendItemPics", upload.array('file'), sendItemPics);
-router.delete('/deleteItem/:itemId', deleteItem)
-router.put('/updateItem/:itemId', updateItem)
-router.post("/getItemsWithFilter", getItemsWithFilter);
-router.post("/searchItem", searchItem);
+router.delete('/deleteItem/:itemId', verifyTokenAndAdmin,deleteItem)
+router.put('/updateItem/:itemId', verifyTokenAndAdmin,updateItem)
+router.post("/getItemsWithFilter", verifyTokenAndAdmin,getItemsWithFilter);
+router.post("/searchItem", verifyTokenAndAdmin,searchItem);
 module.exports = router;

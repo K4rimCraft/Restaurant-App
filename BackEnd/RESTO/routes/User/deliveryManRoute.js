@@ -1,11 +1,13 @@
 const express = require("express");
-const { editRating, editStatus, editNumberOfOrders } = require("../../services/User/deliveryManService");
+const { editRating, editStatus, editNumberOfOrders, updateDeliveryManStatus, updateOrderData } = require("../../services/User/deliveryManService");
 const { verifyTokenAndAuthorization, verifyTokenDeliveryMan } = require("../../middlewares/verifyToken");
 
 const router = express.Router();
 
 router.put("/editRating", verifyTokenAndAuthorization, editRating);
-router.put("/editStatus", verifyTokenDeliveryMan, editStatus);
-router.put("/editNumberOfOrders", verifyTokenDeliveryMan, editNumberOfOrders);
+router.put("/editStatus", verifyTokenAndAuthorization, editStatus);
+router.put("/editNumberOfOrders", verifyTokenAndAuthorization, editNumberOfOrders);
 
+router.put("/updateDeliveryManStatus", verifyTokenAndAuthorization, updateDeliveryManStatus);
+router.put("/updateOrderData/:orderId", verifyTokenAndAuthorization, updateOrderData);
 module.exports = router;

@@ -2,11 +2,16 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
 import 'package:resto/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 Future<List<OrderData>> fetchOrders(double minPrice, double maxPrice) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.post(Uri.parse('$serverUrl/admin/getOrders'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
+        'token': token,
       },
       body: jsonEncode(<String, String>{
         'minPrice': minPrice.toString(),
@@ -21,10 +26,14 @@ Future<List<OrderData>> fetchOrders(double minPrice, double maxPrice) async {
 }
 
 Future<List<OrderData>> fetchOrdersNameFilter(String name) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.get(
     Uri.parse('$serverUrl/admin/getOrdersNameFilter/$name'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
   );
 
@@ -38,10 +47,14 @@ Future<List<OrderData>> fetchOrdersNameFilter(String name) async {
 }
 
 Future<List<OrderData>> fetchOrdersFilterStatus(int deliveryStatus) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.get(
     Uri.parse('$serverUrl/admin/getOrdersFilterStatus/$deliveryStatus'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
   );
 
@@ -125,10 +138,14 @@ class OrderData {
 }
 
 Future<List<DeliveryMenData>> fetchDeliveryMen(int maxNumberOfOrders) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.get(
     Uri.parse('$serverUrl/admin/getDeliveryMen/$maxNumberOfOrders'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
   );
 
@@ -140,10 +157,14 @@ Future<List<DeliveryMenData>> fetchDeliveryMen(int maxNumberOfOrders) async {
 }
 
 Future<List<DeliveryMenData>> fetchDeliveryMenFilterStatus(int status) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.get(
     Uri.parse('$serverUrl/admin/getDeliveryMenFilterStatus/$status'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
   );
   if (response.statusCode == 200) {
@@ -203,7 +224,16 @@ class DeliveryMenData {
 /////////////////////
 
 Future<List<BookingData>> fetchbooking() async {
-  final response = await http.get(Uri.parse('$serverUrl/admin/getBookings'));
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
+  final response = await http.get(
+    Uri.parse('$serverUrl/admin/getBookings'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
+    },
+  );
 
   if (response.statusCode == 200) {
     return BookingData.toList(jsonDecode(response.body));
@@ -213,8 +243,16 @@ Future<List<BookingData>> fetchbooking() async {
 }
 
 Future<List<BookingData>> fetchBookingWithTableNumber(int table) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.get(
-      Uri.parse('$serverUrl/admin/getBookingWithTableNumberFilter/$table'));
+    Uri.parse('$serverUrl/admin/getBookingWithTableNumberFilter/$table'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
+    },
+  );
 
   if (response.statusCode == 200) {
     return BookingData.toList(jsonDecode(response.body));
@@ -224,8 +262,16 @@ Future<List<BookingData>> fetchBookingWithTableNumber(int table) async {
 }
 
 Future<List<BookingData>> fetchBookingWithNumberOfPeople(int people) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.get(
-      Uri.parse('$serverUrl/admin/getBookingWithNumberOfPeopleFilter/$people'));
+    Uri.parse('$serverUrl/admin/getBookingWithNumberOfPeopleFilter/$people'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
+    },
+  );
 
   if (response.statusCode == 200) {
     return BookingData.toList(jsonDecode(response.body));

@@ -4,15 +4,26 @@ import '../OrderTile.dart';
 import '../../../models/Order_list.dart';
 import '../../../API/MenuAPI.dart';
 
-class OrdersPage extends StatelessWidget {
+class OrdersPage extends StatefulWidget {
   final int status;
-  late Future<List<OrderData>> futureOrders;
-  final ScrollController yourScrollController = ScrollController();
+
   OrdersPage({required this.status});
 
   @override
+  State<OrdersPage> createState() => _OrdersPageState();
+}
+
+class _OrdersPageState extends State<OrdersPage> {
+  late Future<List<OrderData>> futureOrders;
+
+  final ScrollController yourScrollController = ScrollController();
+  update() {
+    setState(() {});
+  }
+
+  @override
   Widget build(BuildContext context) {
-    futureOrders = getOrdersFilter(status);
+    futureOrders = getOrdersFilter(widget.status);
     return FutureBuilder(
         future: futureOrders,
         builder: (context, snapshot) {
@@ -42,6 +53,7 @@ class OrdersPage extends StatelessWidget {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: OrderItem(
+                          update: update,
                           order: snapshot.data![index],
                         ),
                       );

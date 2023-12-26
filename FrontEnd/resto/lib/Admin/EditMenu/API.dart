@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:resto/main.dart';
 import 'package:path/path.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class APIStatus {
   int statusCode;
@@ -34,10 +35,14 @@ Future<APIStatus> sendProductPics(XFile imageFile, String name) async {
 }
 
 Future<List<FoodCardData>> searchItem(String searchTerm) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response = await http.post(
     Uri.parse('$serverUrl/admin/searchItem'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
     body: jsonEncode(<String, String>{
       'searchterm': searchTerm,
@@ -53,10 +58,14 @@ Future<List<FoodCardData>> searchItem(String searchTerm) async {
 
 Future<List<FoodCardData>> fetchFoodCardData(
     double rating, double maxPrice, double minPrice, int timeThreshold) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
   final response =
       await http.post(Uri.parse('$serverUrl/admin/getItemsWithFilter'),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
+            'token': token,
           },
           body: jsonEncode(<String, String>{
             'ratingThreshold': rating.toString(),
@@ -87,14 +96,17 @@ Future<List<FoodCardData>> fetchFoodCardData(
 // }
 
 Future<APIStatus> sendFoodCardData(FoodCardData dataObj) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
   final response = await http.post(
     Uri.parse('$serverUrl/admin/addItem'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
     body: jsonEncode(<String, String>{
       'name': dataObj.name,
-      'inStock': dataObj.stock.toString(),
+      'stock': dataObj.stock.toString(),
       'description': dataObj.description.toString(),
       'rating': dataObj.rating.toString(),
       'price': dataObj.price.toString(),
@@ -119,18 +131,20 @@ Future<APIStatus> sendFoodCardData(FoodCardData dataObj) async {
 }
 
 Future<APIStatus> updateFoodCardData(FoodCardData dataObj) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
   final response = await http.put(
     Uri.parse('$serverUrl/admin/updateItem/${dataObj.itemId.toString()}'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
     body: jsonEncode(<String, String>{
       'name': dataObj.name,
-      'inStock': dataObj.stock.toString(),
+      'stock': dataObj.stock.toString(),
       'description': dataObj.description.toString(),
       'rating': dataObj.rating.toString(),
       'price': dataObj.price.toString(),
-      'timesOrdered': dataObj.timesOrdered.toString(),
       'firstImage': dataObj.firstImage,
       'secondImage': dataObj.secondImage,
       'categories': jsonEncode(dataObj.catagories),
@@ -142,10 +156,13 @@ Future<APIStatus> updateFoodCardData(FoodCardData dataObj) async {
 }
 
 Future<APIStatus> deleteFoodCardData(FoodCardData dataObj) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
   final response = await http.delete(
     Uri.parse('$serverUrl/admin/deleteItem/${dataObj.itemId.toString()}'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
   );
 
@@ -234,10 +251,13 @@ class FoodCardData {
 //////////////////////////////////
 
 Future<APIStatus> sendCatagory(CategoryData dataObj) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
   final response = await http.post(
     Uri.parse('$serverUrl/admin/addCategory'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
     body: jsonEncode(<String, String>{
       'categoryName': dataObj.catagoryName,
@@ -249,11 +269,14 @@ Future<APIStatus> sendCatagory(CategoryData dataObj) async {
 }
 
 Future<APIStatus> deleteCatagory(CategoryData dataObj) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
   final response = await http.delete(
     Uri.parse(
         '$serverUrl/admin/deleteCategory/${dataObj.categoryId.toString()}'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
     },
   );
 
@@ -263,7 +286,15 @@ Future<APIStatus> deleteCatagory(CategoryData dataObj) async {
 }
 
 Future<List<CategoryData>> fetchCatagories() async {
-  final response = await http.get(Uri.parse('$serverUrl/admin/getCategories'));
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+  final response = await http.get(
+    Uri.parse('$serverUrl/admin/getCategories'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
+    },
+  );
 
   if (response.statusCode == 200) {
     return CategoryData.toList(jsonDecode(response.body));

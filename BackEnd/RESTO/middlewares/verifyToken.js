@@ -30,6 +30,8 @@ const verifyTokenAndAuthorization = (req, res, next) => {
         }
     })
 }
+
+
 const verifyTokenDeliveryMan = (req, res, next) => {
     verifyToken(req, res, async () => {
         const [rows] = await (await dbConnection).query('SELECT personId FROM persons where personId=?', [req.person.id]);

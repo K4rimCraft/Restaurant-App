@@ -18,6 +18,7 @@ class AuthInterface extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => s1_data()),
         ChangeNotifierProvider(create: (context) => s2_data()),
         ChangeNotifierProvider(create: (context) => s3_data()),
+        ChangeNotifierProvider(create: (context) => forgot_data()),
       ],
       child: MaterialApp(
         home: LoginPage(update: update),

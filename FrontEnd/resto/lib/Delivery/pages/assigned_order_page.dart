@@ -341,10 +341,11 @@ class OrderStatusTracker extends StatelessWidget {
               onPressed: tookOrderData.first.deliveryStatus == 3
                   ? () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  DeliveryConfirmation(update: update)));
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      DeliveryConfirmation(update: update)))
+                          .whenComplete(() => update());
                     }
                   : null,
               style: const ButtonStyle(
@@ -404,7 +405,7 @@ class _DeliveryConfirmationState extends State<DeliveryConfirmation> {
           if (selectedButtonIndex == 1)
             Container(
               width: 380,
-              height: 310,
+              height: 290,
               child: Card(
                 child: Column(children: [
                   const SizedBox(height: 20),
@@ -428,11 +429,26 @@ class _DeliveryConfirmationState extends State<DeliveryConfirmation> {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     onPressed: () async {
-                      await updateOrderData(tookOrderData.first.orderId, 4);
-                      await updateDeliveryManStatus(0);
+                      // await updateOrderData(tookOrderData.first.orderId, 4);
+                      // await updateDeliveryManStatus(0);
                       tookOrderData = await fetchTookOrder();
-                      widget.update();
-                      Navigator.of(context).pop();
+                      if (tookOrderData[0].deliveryStatus == 4) {
+                        widget.update();
+                        Navigator.of(context).pop();
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                behavior: SnackBarBehavior.floating,
+                                showCloseIcon: true,
+                                duration: Duration(seconds: 3),
+                                content: Text('Order Recieved.')));
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                behavior: SnackBarBehavior.floating,
+                                showCloseIcon: true,
+                                duration: Duration(seconds: 3),
+                                content: Text('Order is yet to be confirmed')));
+                      }
                     },
                   )
                 ]),
@@ -441,7 +457,7 @@ class _DeliveryConfirmationState extends State<DeliveryConfirmation> {
           if (selectedButtonIndex == 2)
             Container(
               width: 380,
-              height: 370,
+              height: 350,
               child: Card(
                 child: Column(children: [
                   const SizedBox(height: 20),
@@ -475,7 +491,26 @@ class _DeliveryConfirmationState extends State<DeliveryConfirmation> {
                       'Check And Confirm',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    onPressed: () {},
+                    onPressed: () async {
+                      tookOrderData = await fetchTookOrder();
+                      if (tookOrderData[0].deliveryStatus == 4) {
+                        widget.update();
+                        Navigator.of(context).pop();
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                behavior: SnackBarBehavior.floating,
+                                showCloseIcon: true,
+                                duration: Duration(seconds: 3),
+                                content: Text('Order Recieved.')));
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                behavior: SnackBarBehavior.floating,
+                                showCloseIcon: true,
+                                duration: Duration(seconds: 3),
+                                content: Text('Order is yet to be confirmed')));
+                      }
+                    },
                   )
                 ]),
               ),

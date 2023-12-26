@@ -3,7 +3,7 @@ const asyncHandelr = require("express-async-handler");
 const ApiError = require("../../utils/apiError");
 
 const getAllItems = asyncHandelr(async (req, res, next) => {
-    const [result] = await (await dbConnection).query("SELECT * FROM menuItems");
+    const [result] = await (await dbConnection).query("SELECT * FROM menuitems");
     // if (result.length === 0) {
     //     return next(new ApiError(`No Items Found`, 404));
     // }
@@ -22,7 +22,7 @@ const getItemByCategory = asyncHandelr(async (req, res, next) => {
 });
 
 const getMostPopularItems = asyncHandelr(async (req, res, next) => {
-    const [result] = await (await dbConnection).query("SELECT * FROM menuItems ORDER BY rating DESC");
+    const [result] = await (await dbConnection).query("SELECT * FROM menuitems ORDER BY rating DESC");
     // if (result.length === 0) {
     //     return next(new ApiError(`No Items Found`, 404));
     // }
@@ -30,7 +30,7 @@ const getMostPopularItems = asyncHandelr(async (req, res, next) => {
 });
 
 const getRandomItems = asyncHandelr(async (req, res, next) => {
-    const [result] = await (await dbConnection).query("SELECT * FROM menuItems ORDER BY RAND() LIMIT 5");
+    const [result] = await (await dbConnection).query("SELECT * FROM menuitems ORDER BY RAND() LIMIT 5");
     // if (result.length === 0) {
     //     return next(new ApiError(`No Items Found`, 404));
     // }

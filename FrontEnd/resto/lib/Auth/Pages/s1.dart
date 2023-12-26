@@ -46,7 +46,7 @@ class _ShoeAppSignInPageState extends State<S1> {
           autovalidateMode: AutovalidateMode.onUserInteraction,
           child: Column(
             children: [
-              const SizedBox(height: 156),
+              const SizedBox(height: 105),
               const Center(
                 child: Text(
                   'Sign up',
@@ -66,7 +66,7 @@ class _ShoeAppSignInPageState extends State<S1> {
                   color: Colors.black,
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 15),
               MyTextField(
                 iconColor: AppColors.kLavender,
                 controller: data.firstNameController,
@@ -78,7 +78,7 @@ class _ShoeAppSignInPageState extends State<S1> {
                 validator: (p0) => data.validFirstname(p0),
                 hintText: 'First Name',
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 15),
               MyTextField(
                 iconColor: AppColors.kLavender,
                 controller: data.lastNameController,
@@ -90,7 +90,7 @@ class _ShoeAppSignInPageState extends State<S1> {
                 validator: (p0) => data.validLastname(p0),
                 hintText: 'Last Name',
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 15),
               MyTextField(
                 iconColor: AppColors.kLavender,
                 controller: data.emailController,
@@ -102,7 +102,7 @@ class _ShoeAppSignInPageState extends State<S1> {
                 validator: (p0) => data.validEmail(p0),
                 hintText: 'Email address',
               ),
-              const SizedBox(height: 150),
+              const SizedBox(height: 50),
               Row(
                 children: [
                   GestureDetector(
