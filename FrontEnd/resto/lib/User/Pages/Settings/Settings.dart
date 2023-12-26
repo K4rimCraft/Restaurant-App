@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:resto/User/Pages/Settings/DeveloperOptions.dart';
 import 'Favorite.dart';
 import '../Orders/Pages/Orders_Page.dart';
 import 'Profile.dart';
@@ -122,16 +123,34 @@ class _SettingsState extends State<Settings> {
                             child: Switch(
                               activeColor: AppColorsLight.primaryColor,
                               value: Settings.darkMode,
-                              onChanged: (value) {
-                                setState(() {
-                                  Settings.darkMode = value;
-                                });
-                              },
+                              onChanged: null,
+                              // onChanged: (value) {
+                              //   setState(() {
+                              //     Settings.darkMode = value;
+                              //   });
+                              // },
                             ),
                           )
                         ],
                       ),
                     ),
+                  ),
+                ),
+                const SizedBox(height: 15),
+                InkWell(
+                  borderRadius: BorderRadius.circular(15),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const DeveloperOptions(),
+                    ));
+                  },
+                  child: Ink(
+                    decoration: BoxDecoration(
+                        color: AppColorsLight.secondaryColor.shade200,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Tooltip(
+                        message: 'Developer Options',
+                        child: BuildContainer("Developer Options", Icons.code)),
                   ),
                 ),
                 const SizedBox(height: 50),

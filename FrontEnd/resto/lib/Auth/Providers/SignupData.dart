@@ -61,6 +61,7 @@ class s2_data extends ChangeNotifier {
   TextEditingController dateController = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
   TextEditingController addressController = TextEditingController();
+  TextEditingController address2Controller = TextEditingController();
 
   // Validation function for the phone number field
   String? validatePhoneNumber(String? value) {

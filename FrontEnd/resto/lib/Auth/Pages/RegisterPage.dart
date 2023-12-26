@@ -11,7 +11,6 @@ import '../Pages/s2.dart';
 import '../Pages/s3.dart';
 import '../Providers/SignupData.dart';
 
-
 class RegisterPage extends StatefulWidget {
   final Function update;
   RegisterPage({required this.update});
@@ -30,7 +29,6 @@ class _RegisterPageState extends State<RegisterPage> {
     widget.update();
   }
 
-
   @override
   Widget build(BuildContext context) {
     final data1 = Provider.of<s1_data>(context);
@@ -39,7 +37,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
     return OnBoardingSlider(
       hasFloatingButton: true,
-      finishButtonText: '     Sign up    ',
+      finishButtonText: '     Register    ',
       onFinish: () async {
         if (data1.isFormValid && data2.isFormValid && data3.isFormValid) {
           APIStatus status = await register(
@@ -49,7 +47,7 @@ class _RegisterPageState extends State<RegisterPage> {
               data3.passwordController.text,
               data2.dateController.text,
               data2.addressController.text,
-              data2.addressController.text,
+              data2.address2Controller.text,
               data2.phoneNumberController.text,
               data3.userTypeSelection.selectedUserType);
 

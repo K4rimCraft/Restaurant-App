@@ -23,9 +23,10 @@ class _ShoeAppSignInPageState extends State<S2> {
 // Validation function
   void validateForm() {
     final data = Provider.of<s2_data>(context, listen: false);
-    if (!data.phoneNumberController.text.isEmpty ||
-        !data.dateController.text.isEmpty ||
-        !data.addressController.text.isEmpty) {
+    if (data.phoneNumberController.text.isNotEmpty ||
+        data.dateController.text.isNotEmpty ||
+        data.addressController.text.isNotEmpty ||
+        data.address2Controller.text.isNotEmpty) {
       data.validateAddress(data.addressController.text);
       data.validatePhoneNumber(data.phoneNumberController.text);
 
@@ -53,7 +54,7 @@ class _ShoeAppSignInPageState extends State<S2> {
                 iconColor: AppColors.kLavender,
                 controller: data.phoneNumberController,
                 keyboardType: TextInputType.number,
-                icon: AppAssets.kUser,
+                icon: AppAssets.PhoneNumber,
                 hintText: 'Phone number',
                 validator: data.validatePhoneNumber,
               ),
@@ -77,16 +78,41 @@ class _ShoeAppSignInPageState extends State<S2> {
               ),
 
               const SizedBox(height: 15),
-              MyTextField(
-                onChanged: (value) {
-                  data.isFormValid = data.formKey.currentState!.validate();
-                },
-                iconColor: AppColors.kLavender,
-                controller: data.addressController,
-                keyboardType: TextInputType.text,
-                icon: AppAssets.PhoneNumber,
-                hintText: 'Address',
-                validator: data.validateAddress,
+              Flex(
+                direction: Axis.horizontal,
+                children: [
+                  Flexible(
+                    flex: 1,
+                    child: MyTextField(
+                      onChanged: (value) {
+                        data.isFormValid =
+                            data.formKey.currentState!.validate();
+                      },
+                      iconColor: AppColors.kLavender,
+                      controller: data.addressController,
+                      keyboardType: TextInputType.number,
+                      icon: AppAssets.kUser,
+                      hintText: 'Latitude',
+                      validator: data.validateAddress,
+                    ),
+                  ),
+                  const SizedBox(width: 15),
+                  Flexible(
+                    flex: 1,
+                    child: MyTextField(
+                      onChanged: (value) {
+                        data.isFormValid =
+                            data.formKey.currentState!.validate();
+                      },
+                      iconColor: AppColors.kLavender,
+                      controller: data.address2Controller,
+                      keyboardType: TextInputType.number,
+                      icon: AppAssets.kUser,
+                      hintText: 'Longitude',
+                      validator: data.validateAddress,
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 15),
               // Add a button or any other UI element that needs to be enabled

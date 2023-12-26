@@ -1,4 +1,5 @@
 import 'package:http/http.dart' as http;
+import 'package:resto/User/models/User.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/food.dart';
 import '../models/Order_list.dart';
@@ -227,4 +228,46 @@ Future<List<FoodData>> fetchOrderItems(int orderId) async {
   } else {
     throw Exception('Failed to load order history');
   }
+}
+
+Future<List<UserData>> fetchUserData() async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+  final response = await http.get(
+    Uri.parse('$serverUrl/api/getUser'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
+    },
+  );
+
+  if (response.statusCode == 200) {
+    return UserData.toList(jsonDecode(response.body));
+  } else {
+    throw Exception('Failed to load User data');
+  }
+}
+
+Future<APIStatus> updateUser(UserData data) async {
+  final prefs = await SharedPreferences.getInstance();
+  final String token = prefs.getString('token') ?? '';
+
+  final response = await http.put(
+    Uri.parse('$serverUrl/api/updateUser'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      'token': token,
+    },
+    body: jsonEncode(<String, String>{
+      'firstName': data.firstName,
+      'lastName': data.lastName,
+      'longitudeAddress': data.longitudeAddress.toString(),
+      'latitudeAddress': data.latitudeAddress.toString(),
+      'email': data.email,
+      'phoneNumber': data.phoneNumber,
+    }),
+  );
+  return APIStatus(
+      statusCode: response.statusCode,
+      message: jsonDecode(response.body)['message']);
 }

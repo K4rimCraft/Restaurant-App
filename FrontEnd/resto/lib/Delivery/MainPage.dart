@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resto/Delivery/pages/assigned_order_page.dart';
 import 'package:resto/Delivery/pages/available_order_page.dart';
+import 'package:resto/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DeliveryInteface extends StatefulWidget {
@@ -13,22 +14,6 @@ class DeliveryInteface extends StatefulWidget {
 class _DeliveryIntefaceState extends State<DeliveryInteface> {
   int _selectedIndex = 0;
 
-  final List<Widget> _widgetOptions = <Widget>[
-    const AvailableOrderPage(),
-    AssignedOrderPage(),
-    Center(
-      child: Container(
-        child: ElevatedButton(
-          child: Text('dwd'),
-          onPressed: () async {
-            final prefs = await SharedPreferences.getInstance();
-            await prefs.remove('token');
-          },
-        ),
-      ),
-    )
-  ];
-
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -37,6 +22,29 @@ class _DeliveryIntefaceState extends State<DeliveryInteface> {
 
   @override
   Widget build(BuildContext context) {
+    
+  final List<Widget> _widgetOptions = <Widget>[
+    const AvailableOrderPage(),
+    AssignedOrderPage(),
+    Center(
+      child: Container(
+        child: ElevatedButton(
+          child: const Text('Sign Out'),
+          onPressed: () async {
+           final prefs = await SharedPreferences.getInstance();
+                  await prefs.remove('token');
+                  if (context.mounted) {
+                    Navigator.of(context)
+                        .pushReplacement(MaterialPageRoute(builder: (context) {
+                      return MyApp();
+                    }));
+                  }
+          },
+        ),
+      ),
+    )
+  ];
+
     return Scaffold(
       body: Center(
         child: _widgetOptions[_selectedIndex],

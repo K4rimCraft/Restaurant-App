@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import '../Providers/SignupData.dart';
 import '../UI_Components/CustomTextField.dart';
 import '../Const/assests.dart';
+import 'package:resto/User/theme/app_color.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class S1 extends StatefulWidget {
   @override
@@ -47,15 +49,12 @@ class _ShoeAppSignInPageState extends State<S1> {
           child: Column(
             children: [
               const SizedBox(height: 105),
-              const Center(
-                child: Text(
-                  'Sign up',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                ),
+              Center(
+                child: Text('Sign Up',
+                    style: GoogleFonts.dmSerifDisplay(
+                      color: AppColorsLight.primaryColor,
+                      fontSize: 45,
+                    )),
               ),
               const SizedBox(height: 5),
               const Text(

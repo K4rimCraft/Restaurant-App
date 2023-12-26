@@ -21,6 +21,7 @@ class AuthInterface extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => forgot_data()),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: LoginPage(update: update),
         theme: getThemeDataLight(),
       ),

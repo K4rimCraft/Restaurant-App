@@ -44,9 +44,20 @@ const getCurrentBooking = asyncHandelr(async (req, res) => {
     console.log(currentTime)
     console.log(currentDate)
     const [result] = await (await dbConnection).query(`SELECT customerId FROM customers where personId = ? `, [req.person.id]);
-
-    const sql = (`SELECT * FROM bookings WHERE customerId = ${result[0].customerId} AND (date >= '${currentDate}'  OR (endTime > '${currentTime}' AND date >= '${currentDate}')) order by startTime;`)
-    const [bookings] = await (await dbConnection).query(sql)
+    const sqlQuery = `SELECT  bookings.bookingId,
+    bookings.numberOfPeople,
+    bookings.tableNumber,
+    bookings.date,
+    bookings.startTime,
+    bookings.endTime,
+    bookings.customerId,
+    persons.firstName,
+    persons.lastName
+    FROM bookings
+    INNER JOIN customers ON bookings.customerId = customers.customerId 
+    INNER JOIN persons ON persons.personId = customers.personId 
+    WHERE bookings.customerId = ${result[0].customerId} AND (date >= '${currentDate}'  OR (endTime > '${currentTime}' AND date >= '${currentDate}')) order by startTime;`;
+    const [bookings] = await (await dbConnection).query(sqlQuery)
     res.status(200).json(bookings)
 });
 

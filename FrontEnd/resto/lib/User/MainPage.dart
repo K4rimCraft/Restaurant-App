@@ -12,7 +12,6 @@ import '/User/Pages/Menu.dart';
 import '/User/Pages/Settings/Settings.dart';
 import '/User/Pages/Orders/Pages/Orders_Page.dart';
 
-bool paymentStatus = false;
 
 class UserInterface extends StatefulWidget {
   int selectedPage;

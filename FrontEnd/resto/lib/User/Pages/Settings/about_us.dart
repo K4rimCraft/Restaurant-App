@@ -11,15 +11,11 @@ class AboutUs extends StatefulWidget {
   State<AboutUs> createState() => _AboutUsState();
 }
 
-delete() async {
-  final prefs = await SharedPreferences.getInstance();
-  await prefs.remove('token');
-}
 
 class _AboutUsState extends State<AboutUs> {
   @override
   Widget build(BuildContext context) {
-    delete();
+  
     return Scaffold(
       backgroundColor: AppColorsLight.lightColor,
       appBar: AppBar(

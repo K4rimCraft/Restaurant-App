@@ -8,6 +8,7 @@ import '../models/food.dart';
 import '../theme/app_color.dart';
 import '../MainPage.dart';
 import '../API/MenuAPI.dart';
+import 'package:resto/main.dart';
 
 class Cart extends StatefulWidget with ChangeNotifier {
   final List<FoodData> _items = CartList.items;
@@ -250,7 +251,7 @@ class _CartState extends State<Cart> {
                           width: MediaQuery.of(context).size.width * 0.6,
                           child: TextButton(
                             onPressed: () async {
-                              if (paymentStatus == false) {
+                              if (payment == false) {
                                 //print(FoodData.toItemCart(CartList.items));
                                 if (CartList.items.isNotEmpty) {
                                   APIStatus status = await placeOrder(20, 20,
@@ -329,6 +330,31 @@ class _CartState extends State<Cart> {
                                     note:
                                         "Contact us for any questions on your order.",
                                     onSuccess: (Map params) async {
+                                      if (CartList.items.isNotEmpty) {
+                                        APIStatus status = await placeOrder(
+                                            20,
+                                            20,
+                                            FoodData.toItemCart(
+                                                CartList.items));
+                                        if (status.statusCode == 200 &&
+                                            context.mounted) {
+                                          CartList.items.clear();
+                                        }
+                                        if (context.mounted) {
+                                          setState(() {});
+                                          Navigator.pop(context);
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(SnackBar(
+                                                  behavior:
+                                                      SnackBarBehavior.floating,
+                                                  showCloseIcon: true,
+                                                  duration: const Duration(
+                                                      seconds: 3),
+                                                  content:
+                                                      Text(status.message)));
+                                        }
+                                      }
+
                                       setState(() {
                                         CartList.clear();
                                       });

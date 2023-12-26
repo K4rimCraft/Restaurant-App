@@ -16,12 +16,27 @@ async function hashPassword(pass) {
     return hashedPassword
 }
 
-const getUsers = asyncHandelr(async (req, res, next) => {
-    const [result] = await (await dbConnection).query(`SELECT * FROM persons`);
-    if (rows.length === 0) {
+const getUser = asyncHandelr(async (req, res, next) => {
+    const decoded = jwt.verify(req.headers.token, process.env.JWT_SECRETKEY);
+    req.person = decoded;
+    const [result] = await (await dbConnection).query(`SELECT * FROM persons WHERE personId = ?`, [req.person.id]);
+    if (result.length === 0) {
         return next(new ApiError(`No users Found`, 404));
     }
-    res.json(rows);
+
+    res.status(200).json(result);
+}
+);
+
+const updateUser = asyncHandelr(async (req, res, next) => {
+    const { firstName, lastName, email, longitudeAddress, latitudeAddress, phoneNumber } = req.body;
+    console.log(req.body);
+    const decoded = jwt.verify(req.headers.token, process.env.JWT_SECRETKEY);
+    req.person = decoded;
+    console.log(req.person);
+    const [result] = await (await dbConnection).query(`UPDATE persons SET firstName = ?, lastName = ?, email = ?,longitudeAddress = ?,latitudeAddress = ?,phoneNumber = ? WHERE personId=?`, [firstName, lastName, email, longitudeAddress, latitudeAddress, phoneNumber, req.person.id]);
+    console.log(result);
+    res.status(200).json({ message: "User Updated" });
 }
 );
 
@@ -51,7 +66,7 @@ const changeForgotPassword = asyncHandelr(async (req, res, next) => {
 
 const forgotPassword = asyncHandelr(async (req, res, next) => {
     const email = req.body.email;
-    console.log(req.body.email)
+
     const [result] = await (await dbConnection).query(`SELECT * FROM persons WHERE email=?`, [email]);
     if (result.length === 0) {
         return next(new ApiError(`Wrong Email`, 404));
@@ -64,7 +79,8 @@ const forgotPassword = asyncHandelr(async (req, res, next) => {
 });
 
 module.exports = {
-    getUsers,
+    getUser,
+    updateUser,
     changeEmail,
     changePassword,
     changeForgotPassword,

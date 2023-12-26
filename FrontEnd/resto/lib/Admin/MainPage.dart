@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resto/Admin/EditMenu/Page.dart';
-
+import 'package:resto/main.dart';
 import 'package:resto/Admin/Overview/OverviewPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -23,10 +23,16 @@ class _AdminInterfaceState extends State<AdminInterface> {
         int() => Center(
             child: Container(
               child: ElevatedButton(
-                child: Text('dwd'),
+                child: Text('Sign Out'),
                 onPressed: () async {
                   final prefs = await SharedPreferences.getInstance();
                   await prefs.remove('token');
+                  if (context.mounted) {
+                    Navigator.of(context)
+                        .pushReplacement(MaterialPageRoute(builder: (context) {
+                      return MyApp();
+                    }));
+                  }
                 },
               ),
             ),

@@ -3981,3 +3981,93 @@ Tue Dec 26 2023 03:11:26 GMT+0000 (GMT)
     '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\DeliveryMen\\hardwareService.js:12:35\n' +
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
 }
+Tue Dec 26 2023 03:12:06 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'confirmationNumber')
+      at C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\DeliveryMen\hardwareService.js:12:35
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'confirmationNumber')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'confirmationNumber')\n" +
+    '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\DeliveryMen\\hardwareService.js:12:35\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 07:10:48 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: ReferenceError: rows is not defined
+      at C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\userService.js:23:5
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: 'rows is not defined',
+  stack: 'ReferenceError: rows is not defined\n' +
+    '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\userService.js:23:5\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 07:11:29 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: ReferenceError: rows is not defined
+      at C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\userService.js:23:5
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: 'rows is not defined',
+  stack: 'ReferenceError: rows is not defined\n' +
+    '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\userService.js:23:5\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 07:42:51 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 07:51:40 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Column 'customerId' in where clause is ambiguous
+      at PromiseConnection.query (C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\kimos\Downloads\College\CSE2\Data Bases\CSE2 Projects\Restaurant-App\BackEnd\RESTO\services\User\bookingService.js:60:51
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_NON_UNIQ_ERROR',
+    errno: 1052,
+    sql: 'SELECT  bookings.bookingId,\n' +
+      '    bookings.numberOfPeople,\n' +
+      '    bookings.tableNumber,\n' +
+      '    bookings.date,\n' +
+      '    bookings.startTime,\n' +
+      '    bookings.endTime,\n' +
+      '    bookings.customerId,\n' +
+      '    persons.firstName,\n' +
+      '    persons.lastName\n' +
+      '    FROM bookings\n' +
+      '    INNER JOIN customers ON bookings.customerId = customers.customerId \n' +
+      '    INNER JOIN persons ON persons.personId = customers.personId \n' +
+      "    WHERE customerId = 3 AND (date >= '2023-12-26'  OR (endTime > '07:51:40' AND date >= '2023-12-26')) order by startTime;",
+    sqlState: '23000',
+    sqlMessage: "Column 'customerId' in where clause is ambiguous",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Column 'customerId' in where clause is ambiguous",
+  stack: "Error: Column 'customerId' in where clause is ambiguous\n" +
+    '    at PromiseConnection.query (C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:60:51\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}

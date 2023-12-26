@@ -198,7 +198,9 @@ class _BookingState extends State<Booking> {
                     ],
                   );
                 } else {
-                  // BookingTable.setName = snapshot.data![0]['firstName'];
+                  BookingTable.setName = snapshot.data![0]['firstName'] +
+                      " " +
+                      snapshot.data![0]['lastName'];
                   BookingTable.tableNumber = snapshot.data![0]['tableNumber'];
                   BookingTable.numOfSeats = snapshot.data![0]['numberOfPeople'];
                   BookingTable.setDate =

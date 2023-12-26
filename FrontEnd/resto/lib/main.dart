@@ -9,6 +9,7 @@ import 'package:resto/User/theme/app_color.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 String serverUrl = "http://localhost:3000";
+bool payment = true;
 int selectedInterface = 0;
 void main() {
   runApp(const MyApp());
@@ -38,6 +39,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
     final String? token = prefs.getString('token');
     final String? type = prefs.getString('type');
     serverUrl = prefs.getString('serverUrl') ?? 'http://localhost:3000';
+    payment = prefs.getBool('payment') ?? true;
     print(token);
     print(type);
     if (token == null) {

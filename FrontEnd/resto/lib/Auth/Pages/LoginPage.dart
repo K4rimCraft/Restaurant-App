@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:resto/User/theme/app_color.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../UI_Components/CustomTextField.dart';
 import '../Const/assests.dart';
 import 'RegisterPage.dart';
 import 'package:resto/Auth/API.dart';
+import 'package:resto/Auth/Pages/DeveloperOptions.dart';
 import '/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -21,16 +24,10 @@ class _LoginPagePageState extends State<LoginPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _mailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _urlController = TextEditingController();
+
   void _validateFirstName(String value) {
     // Additional validation logic for the first name if needed
     _formKey.currentState!.validate();
-  }
-
-  @override
-  void initState() {
-    _urlController.text = serverUrl;
-    super.initState();
   }
 
   void saveInfo(String token, String type, int id) async {
@@ -53,32 +50,42 @@ class _LoginPagePageState extends State<LoginPage> {
             child: Column(
               children: [
                 Expanded(
-                  child: Container(
-                    clipBehavior: Clip.antiAlias,
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(40),
-                            bottomRight: Radius.circular(40))),
-                    width: MediaQuery.of(context).size.width,
-                    // height: 450,
-                    child: Image.asset(
-                      'assets/Login.png',
-                      fit: BoxFit.cover,
-                    ),
+                  child: Stack(
+                    alignment: Alignment.topRight,
+                    children: [
+                      Container(
+                        clipBehavior: Clip.antiAlias,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(40),
+                                bottomRight: Radius.circular(40))),
+                        width: MediaQuery.of(context).size.width,
+                        // height: 450,
+                        child: Image.asset(
+                          'assets/Login.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      IconButton(
+                          color: Colors.white,
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const DeveloperOptions(),
+                            ));
+                          },
+                          icon: Icon(Icons.settings)),
+                    ],
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(30),
+                  padding: EdgeInsets.fromLTRB(30, 10, 30, 30),
                   child: Column(children: [
-                    const Center(
-                      child: Text(
-                        'Sign In',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
+                    Center(
+                      child: Text('Sign In',
+                          style: GoogleFonts.dmSerifDisplay(
+                            color: AppColorsLight.primaryColor,
+                            fontSize: 45,
+                          )),
                     ),
                     const SizedBox(height: 5),
                     const Text(
@@ -125,8 +132,10 @@ class _LoginPagePageState extends State<LoginPage> {
                       width: 300,
                       height: 50,
                       child: FilledButtonTheme(
-                        data: const FilledButtonThemeData(
+                        data: FilledButtonThemeData(
                             style: ButtonStyle(
+                                backgroundColor: MaterialStatePropertyAll(
+                                    AppColorsLight.primaryColor.shade600),
                                 elevation: MaterialStatePropertyAll(3))),
                         child: FilledButton(
                           onPressed: () async {
@@ -249,22 +258,7 @@ class _LoginPagePageState extends State<LoginPage> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
-                    SizedBox(
-                        height: 70,
-                        width: 200,
-                        child: TextField(
-                          controller: _urlController,
-                          decoration: const InputDecoration(
-                            border: OutlineInputBorder(),
-                          ),
-                          onChanged: (value) async {
-                            final prefs = await SharedPreferences.getInstance();
-                            //_urlController.text = value;
-                            serverUrl = value;
-                            prefs.setString('serverUrl', value);
-                          },
-                        )),
+
                     // Container(
                     //   child: Row(
                     //     mainAxisAlignment: MainAxisAlignment.center,
