@@ -73,10 +73,11 @@ class _FavoriteCardState extends State<FavoriteCard> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                widget.food.name,
-                                style: GoogleFonts.dmSerifDisplay(
-                                  fontSize: 22,
-                                ),
+                                  widget.food.name,
+                                  style: GoogleFonts.dmSerifDisplay(
+                                    fontSize: 22,
+                                  ),
+                                
                               ),
                               const SizedBox(height: 7),
                               Text(

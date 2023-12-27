@@ -51,14 +51,17 @@ class _MostPopularCardState extends State<MostPopularCard> {
                         ),
                         height: 110),
                     Container(
-                      width: 120,
+                      width: 145,
                       child: Column(
                         children: [
                           Center(
-                            child: Text(
-                              widget.food.name,
-                              style: GoogleFonts.dmSerifDisplay(
-                                fontSize: 20,
+                            child: FittedBox(
+                              fit: BoxFit.fitWidth,
+                              child: Text(
+                                widget.food.name,
+                                style: GoogleFonts.dmSerifDisplay(
+                                  fontSize: 20,
+                                ),
                               ),
                             ),
                           ),

@@ -22,7 +22,7 @@ const getItemByCategory = asyncHandelr(async (req, res, next) => {
 });
 
 const getMostPopularItems = asyncHandelr(async (req, res, next) => {
-    const [result] = await (await dbConnection).query("SELECT * FROM menuitems ORDER BY rating DESC");
+    const [result] = await (await dbConnection).query("SELECT * FROM menuitems ORDER BY rating DESC LIMIT 5");
     // if (result.length === 0) {
     //     return next(new ApiError(`No Items Found`, 404));
     // }

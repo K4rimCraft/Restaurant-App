@@ -43,11 +43,14 @@ class _MyADSState extends State<MyADS> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("${widget.food.name}",
-                        style: GoogleFonts.aladin(
-                            color: AppColorsLight.lightColor,
-                            fontSize: 30,
-                            fontWeight: FontWeight.w600)),
+                    FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Text("${widget.food.name}",
+                          style: GoogleFonts.aladin(
+                              color: AppColorsLight.lightColor,
+                              fontSize: 30,
+                              fontWeight: FontWeight.w600)),
+                    ),
                     SizedBox(
                       height: 9,
                     ),

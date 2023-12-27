@@ -55,7 +55,6 @@ class _MainPageState extends State<MainPage> {
               },
               icon: Icon(
                 Icons.person,
-                color: AppColorsLight.lightColor,
               ))
         ],
       ),
@@ -184,7 +183,7 @@ class _MainPageState extends State<MainPage> {
                               const Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 25),
                                 child: Text(
-                                  "Most Popular FoodData",
+                                  "Most Popular Food Items!",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
