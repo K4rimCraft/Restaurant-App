@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:resto/Admin/Overview/API.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,10 @@ class _BookingsContentState extends State<BookingsContent> {
   late Future<List<BookingData>> futurebooking;
   ScrollController scroll = ScrollController();
   int selected = 0;
-  String numberOfPeopleIndex = '';
-  String tableNumbersIndex = '';
-  List<int> numberOfPeople = [2, 4,5, 6, 8];
+  int tableNumbersIndexNumber = -1;
+  int numberOfPeopleIndexNumber = -1;
+
+  List<int> numberOfPeople = [2, 4, 5, 6, 8];
   List<int> tableNumbers = [
     1,
     2,
@@ -55,11 +57,10 @@ class _BookingsContentState extends State<BookingsContent> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 10),
-            const Text(
+            Text(
               'Bookings',
-              style: TextStyle(
+              style: GoogleFonts.dmSerifDisplay(
                 fontSize: 28,
-                fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 10),
@@ -72,7 +73,7 @@ class _BookingsContentState extends State<BookingsContent> {
                         ? Icons.table_restaurant
                         : Icons.table_restaurant_outlined),
                     label: Text(
-                      'Table Number${tableNumbersIndex}',
+                      'Table Number',
                       style: TextStyle(
                           color: selected == 1
                               ? Theme.of(context).colorScheme.primary
@@ -85,6 +86,7 @@ class _BookingsContentState extends State<BookingsContent> {
                         } else {
                           selected = 1;
                         }
+                        tableNumbersIndexNumber = -1;
                         futurebooking = fetchbooking();
                       });
                     },
@@ -97,7 +99,7 @@ class _BookingsContentState extends State<BookingsContent> {
                     avatar: Icon(
                         selected == 2 ? Icons.person : Icons.person_outline),
                     label: Text(
-                      'Number Of People${numberOfPeopleIndex}',
+                      'Number Of People',
                       style: TextStyle(
                           color: selected == 2
                               ? Theme.of(context).colorScheme.primary
@@ -110,6 +112,7 @@ class _BookingsContentState extends State<BookingsContent> {
                         } else {
                           selected = 2;
                         }
+                        numberOfPeopleIndexNumber = -1;
                         futurebooking = fetchbooking();
                       });
                     },
@@ -139,7 +142,8 @@ class _BookingsContentState extends State<BookingsContent> {
                           return Container(
                             width: 60,
                             child: Card(
-                              elevation: 5,
+                              elevation:
+                                  tableNumbersIndexNumber == index ? 0 : 5,
                               clipBehavior: Clip.antiAlias,
                               child: Stack(
                                 children: [
@@ -149,8 +153,8 @@ class _BookingsContentState extends State<BookingsContent> {
                                   InkWell(
                                     onTap: () {
                                       setState(() {
-                                        tableNumbersIndex =
-                                            ": ${(index + 1).toString()}";
+                                        tableNumbersIndexNumber = index;
+
                                         futurebooking =
                                             fetchBookingWithTableNumber(
                                                 tableNumbers[index]);
@@ -187,7 +191,8 @@ class _BookingsContentState extends State<BookingsContent> {
                           return Container(
                             width: 60,
                             child: Card(
-                              elevation: 5,
+                              elevation:
+                                  numberOfPeopleIndexNumber == index ? 0 : 5,
                               clipBehavior: Clip.antiAlias,
                               child: Stack(
                                 children: [
@@ -197,8 +202,8 @@ class _BookingsContentState extends State<BookingsContent> {
                                   InkWell(
                                     onTap: () {
                                       setState(() {
-                                        numberOfPeopleIndex =
-                                            ": ${(numberOfPeople[index]).toString()}";
+                                        numberOfPeopleIndexNumber = index;
+
                                         futurebooking =
                                             fetchBookingWithNumberOfPeople(
                                                 numberOfPeople[index]);

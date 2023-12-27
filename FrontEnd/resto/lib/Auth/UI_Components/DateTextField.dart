@@ -35,15 +35,11 @@ class _MyDateFieldState extends State<MyDateField> {
     return TextFormField(
       onChanged: widget.onChanged,
       controller: widget.controller,
-      style: const TextStyle(fontSize: 14, color: Colors.black),
       keyboardType: widget.keyboardType,
       validator: widget.validator,
       decoration: InputDecoration(
         border: const OutlineInputBorder(),
         labelText: widget.hintText,
-        hintStyle: const TextStyle(color: Colors.grey),
-        fillColor: AppColors.kLightWhite2,
-        filled: true,
         errorMaxLines: 3,
         prefixIcon: Padding(
           padding: const EdgeInsets.all(8),

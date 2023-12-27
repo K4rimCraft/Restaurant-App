@@ -31,13 +31,13 @@ class _MostPopularCardState extends State<MostPopularCard> {
           child: Tooltip(
             message: widget.food.name,
             child: Card(
+              elevation: 2,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.38,
                 decoration: BoxDecoration(
-                  color: AppColorsLight.secondaryColor[100],
                   borderRadius: BorderRadius.circular(20),
                 ),
                 padding: EdgeInsets.all(10),

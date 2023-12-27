@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:resto/Admin/Overview/OrdersContent.dart';
 import 'package:resto/Admin/Overview/DeliveryContent.dart';
 import 'package:resto/Admin/Overview/BookingsContent.dart';
@@ -23,9 +24,12 @@ class _OverviewPageState extends State<OverviewPage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text(
+              Text(
                 'Overview',
-                style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
+                style: GoogleFonts.dmSerifDisplay(
+                  fontSize: 40,
+               
+                ),
               ),
               Divider(),
               const SizedBox(height: 10),

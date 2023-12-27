@@ -33,7 +33,6 @@ class _BookingConfirmState extends State<BookingConfirm> {
     _date.text = DateFormat.yMMMMEEEEd().format(BookingTable.dateTime!);
 
     return Scaffold(
-      backgroundColor: AppColorsLight.lightColor,
       appBar: AppBar(
         elevation: 0,
         title: Text("Available Tables",
@@ -157,7 +156,7 @@ class _BookingConfirmState extends State<BookingConfirm> {
                     onPressed: () async {
                       if (BookingTable.tableNumber != null &&
                           BookingTable.numOfSeats != null) {
-                       // BookingTable.isbook = true;
+                        // BookingTable.isbook = true;
                         APIStatus status = await addBooking();
 
                         if (status.statusCode == 200 && context.mounted) {
@@ -168,31 +167,30 @@ class _BookingConfirmState extends State<BookingConfirm> {
                         }
 
                         if (context.mounted) {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            backgroundColor:
-                                AppColorsLight.secondaryColor.shade800,
-                            action: SnackBarAction(
-                              label: "OK",
-                              textColor: AppColorsLight.lightColor,
-                              onPressed: () {},
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              action: SnackBarAction(
+                                label: "OK",
+                                onPressed: () {},
+                              ),
+                              behavior: SnackBarBehavior.floating,
+                              content: Text(status.message),
+                              duration: const Duration(seconds: 3),
                             ),
-                            content: Text(status.message,
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold)),
-                          ));
+                          );
                         }
                       } else {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          backgroundColor:
-                              AppColorsLight.secondaryColor.shade800,
-                          action: SnackBarAction(
-                            label: "OK",
-                            textColor: AppColorsLight.lightColor,
-                            onPressed: () {},
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            action: SnackBarAction(
+                              label: "OK",
+                              onPressed: () {},
+                            ),
+                            behavior: SnackBarBehavior.floating,
+                            content: const Text('Select Available Table'),
+                            duration: const Duration(seconds: 3),
                           ),
-                          content: const Text("Select Available Table",
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                        ));
+                        );
                       }
                     },
                     child: Row(
@@ -228,16 +226,17 @@ class _BookingConfirmState extends State<BookingConfirm> {
       onTap: () {
         setState(() {
           if (!BookingTable.isAvailable(index)) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              backgroundColor: AppColorsLight.secondaryColor.shade800,
-              action: SnackBarAction(
-                label: "OK",
-                textColor: AppColorsLight.lightColor,
-                onPressed: () {},
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                action: SnackBarAction(
+                  label: "OK",
+                  onPressed: () {},
+                ),
+                behavior: SnackBarBehavior.floating,
+                content: const Text('This Table Is Busy At This Time'),
+                duration: const Duration(seconds: 3),
               ),
-              content: Text("This Table Is Busy At This Time",
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-            ));
+            );
           } else {
             _selected = index;
             BookingTable.tableNumber = index;

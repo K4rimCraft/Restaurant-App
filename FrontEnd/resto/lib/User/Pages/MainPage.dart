@@ -39,7 +39,6 @@ class _MainPageState extends State<MainPage> {
     final List<Widget> ads = [];
 
     return Scaffold(
-      backgroundColor: AppColorsLight.lightColor,
       appBar: AppBar(
         elevation: 0,
         title: Text("Resto",
@@ -81,7 +80,6 @@ class _MainPageState extends State<MainPage> {
                     height: 50,
                     width: MediaQuery.of(context).size.width,
                     child: SearchAnchor(
-                      viewBackgroundColor: AppColorsLight.primaryColor.shade100,
                       viewHintText: "Search",
                       viewConstraints: BoxConstraints(maxHeight: 250),
                       builder:
@@ -188,8 +186,7 @@ class _MainPageState extends State<MainPage> {
                                 child: Text(
                                   "Most Popular FoodData",
                                   style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.bold,
                                     fontSize: 18,
                                   ),
                                 ),
@@ -274,8 +271,7 @@ class _MainPageState extends State<MainPage> {
                                 child: Text(
                                   "Categories",
                                   style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.bold,
                                     fontSize: 18,
                                   ),
                                 ),

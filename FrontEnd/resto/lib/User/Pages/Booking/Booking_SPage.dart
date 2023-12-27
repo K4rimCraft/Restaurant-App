@@ -34,7 +34,6 @@ class _BookingSPageState extends State<BookingSPage> {
     _date.text = DateFormat.yMMMMEEEEd().format(BookingTable.dateTime!);
 
     return Scaffold(
-      backgroundColor: AppColorsLight.lightColor,
       appBar: AppBar(
         elevation: 0,
         title: Text("Booking",
@@ -140,16 +139,17 @@ class _BookingSPageState extends State<BookingSPage> {
                       MaterialPageRoute(builder: (context) => BookingConfirm()),
                     );
                   } else {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      backgroundColor: AppColorsLight.secondaryColor.shade800,
-                      action: SnackBarAction(
-                        label: "OK",
-                        textColor: AppColorsLight.lightColor,
-                        onPressed: () {},
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        action: SnackBarAction(
+                          label: "OK",
+                          onPressed: () {},
+                        ),
+                        behavior: SnackBarBehavior.floating,
+                        content: const Text('Select An Hour'),
+                        duration: const Duration(seconds: 3),
                       ),
-                      content: Text("Select Hour",
-                          style: TextStyle(fontWeight: FontWeight.bold)),
-                    ));
+                    );
                   }
                 },
                 child: Row(

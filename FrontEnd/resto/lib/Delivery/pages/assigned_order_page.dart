@@ -403,10 +403,9 @@ class _DeliveryConfirmationState extends State<DeliveryConfirmation> {
               }),
           const SizedBox(height: 20),
           if (selectedButtonIndex == 1)
-            Container(
-              width: 380,
-              height: 290,
-              child: Card(
+            Card(
+              child: Container(
+                width: 380,
                 child: Column(children: [
                   const SizedBox(height: 20),
                   const Text(
@@ -450,15 +449,15 @@ class _DeliveryConfirmationState extends State<DeliveryConfirmation> {
                                 content: Text('Order is yet to be confirmed')));
                       }
                     },
-                  )
+                  ),
+                  const SizedBox(height: 10),
                 ]),
               ),
             ),
           if (selectedButtonIndex == 2)
-            Container(
-              width: 380,
-              height: 350,
-              child: Card(
+            Card(
+              child: Container(
+                width: 380,
                 child: Column(children: [
                   const SizedBox(height: 20),
                   const Text(
@@ -511,7 +510,8 @@ class _DeliveryConfirmationState extends State<DeliveryConfirmation> {
                                 content: Text('Order is yet to be confirmed')));
                       }
                     },
-                  )
+                  ),
+                  const SizedBox(height: 10),
                 ]),
               ),
             ),

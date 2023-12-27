@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../Const/assests.dart';
 
 class MyTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -30,17 +29,12 @@ class MyTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       onChanged: onChanged,
-      // Call the onChanged function with the updated value
       controller: controller,
       validator: validator,
-      style: const TextStyle(fontSize: 14, color: Colors.black),
       keyboardType: keyboardType,
       decoration: InputDecoration(
         border: const OutlineInputBorder(),
         labelText: hintText,
-        hintStyle: const TextStyle(color: Colors.grey),
-        fillColor: AppColors.kLightWhite2,
-        filled: true,
         errorMaxLines: 3,
         prefixIcon: Padding(
           padding: const EdgeInsets.all(8),
@@ -90,16 +84,12 @@ class _MyPassFieldState extends State<MyPassField> {
     return TextFormField(
       onChanged: widget.onChanged,
       controller: widget.controller,
-      style: const TextStyle(fontSize: 14, color: Colors.black),
       keyboardType: widget.keyboardType,
       validator: widget.validator,
       obscureText: !_passwordVisible,
       decoration: InputDecoration(
         border: const OutlineInputBorder(),
         labelText: widget.hintText,
-        hintStyle: const TextStyle(color: Colors.grey),
-        fillColor: AppColors.kLightWhite2,
-        filled: true,
         errorMaxLines: 3,
         prefixIcon: Padding(
           padding: const EdgeInsets.all(8),
@@ -116,45 +106,16 @@ class _MyPassFieldState extends State<MyPassField> {
           padding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
           child: IconButton(
             icon: Icon(
-              // Based on passwordVisible state choose the icon
               _passwordVisible ? Icons.visibility : Icons.visibility_off,
               color: Theme.of(context).primaryColorDark,
             ),
             onPressed: () {
-              // Update the state i.e. toogle the state of passwordVisible variable
               setState(() {
                 _passwordVisible = !_passwordVisible;
               });
             },
           ),
         ),
-      ),
-    );
-  }
-}
-
-class CustomTextButton extends StatelessWidget {
-  final VoidCallback onPressed;
-  final String text;
-  final Color? color;
-  final double? fontSize;
-
-  const CustomTextButton({
-    required this.onPressed,
-    required this.text,
-    this.fontSize,
-    this.color,
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      child: Text(
-        text,
-        style: TextStyle(
-            color: color ?? AppColors.kPrimary, fontSize: fontSize ?? 14),
       ),
     );
   }

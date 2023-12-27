@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:resto/Admin/EditMenu/Page.dart';
+import 'package:resto/Admin/Settings.dart';
 import 'package:resto/main.dart';
 import 'package:resto/Admin/Overview/OverviewPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AdminInterface extends StatefulWidget {
-  AdminInterface({super.key});
+  Function updateTheme;
+  AdminInterface({super.key, required this.updateTheme});
   @override
   State<AdminInterface> createState() => _AdminInterfaceState();
 }
@@ -20,23 +22,8 @@ class _AdminInterfaceState extends State<AdminInterface> {
       body: switch (currentPageIndex) {
         0 => OverviewPage(),
         1 => EditMenuPage(),
-        int() => Center(
-            child: Container(
-              child: ElevatedButton(
-                child: Text('Sign Out'),
-                onPressed: () async {
-                  final prefs = await SharedPreferences.getInstance();
-                  await prefs.remove('token');
-                  if (context.mounted) {
-                    Navigator.of(context)
-                        .pushReplacement(MaterialPageRoute(builder: (context) {
-                      return MyApp();
-                    }));
-                  }
-                },
-              ),
-            ),
-          )
+        int() => Settings(updateTheme: widget.updateTheme),
+       
       },
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
@@ -71,11 +58,11 @@ class _AdminInterfaceState extends State<AdminInterface> {
             ),
             NavigationDestination(
               icon: Icon(
-                Icons.list_alt,
+                Icons.settings,
                 color:
                     currentPageIndex == 2 ? Colors.grey[100] : Colors.grey[600],
               ),
-              label: 'Orders',
+              label: 'Settings',
             ),
           ],
         ),

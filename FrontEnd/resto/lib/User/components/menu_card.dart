@@ -41,6 +41,7 @@ class _FoodTileState extends State<MenuCard> {
         },
         child: Ink(
           child: Card(
+            elevation: 2,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
@@ -48,7 +49,6 @@ class _FoodTileState extends State<MenuCard> {
               message: widget.food.name,
               child: Container(
                 decoration: BoxDecoration(
-                  color: AppColorsLight.secondaryColor[100],
                   borderRadius: BorderRadius.circular(20),
                 ),
                 padding: const EdgeInsets.all(10),
@@ -104,7 +104,7 @@ class _FoodTileState extends State<MenuCard> {
                     ),
                     Column(
                       children: [
-                        IconButton(
+                        IconButton.filledTonal(
                           onPressed: () async {
                             if (FavoriteList.items.contains(widget.food)) {
                               await deleteFavorite(widget.food.itemId);
@@ -124,14 +124,11 @@ class _FoodTileState extends State<MenuCard> {
                                 : Colors.black,
                             size: 30,
                           ),
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                  AppColorsLight.secondaryColor.shade300)),
                         ),
                         const SizedBox(height: 10),
                         Consumer<Cart>(
                           builder: (context, cart, child) {
-                            return IconButton(
+                            return IconButton.filledTonal(
                               onPressed: () {
                                 setState(() {
                                   if (CartList.items.contains(widget.food)) {
@@ -150,9 +147,6 @@ class _FoodTileState extends State<MenuCard> {
                                     : Colors.deepOrange,
                                 size: 30,
                               ),
-                              style: ButtonStyle(
-                                  backgroundColor: MaterialStateProperty.all(
-                                      AppColorsLight.secondaryColor.shade300)),
                             );
                           },
                         ),

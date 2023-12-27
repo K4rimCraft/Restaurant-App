@@ -5,7 +5,7 @@ import '../UI_Components/CustomTextField.dart';
 import '../Const/assests.dart';
 import 'RegisterPage.dart';
 import 'package:resto/Auth/API.dart';
-import 'package:resto/Auth/Pages/DeveloperOptions.dart';
+import 'package:resto/User/Pages/Settings/DeveloperOptions.dart';
 import '/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -51,7 +51,7 @@ class _LoginPagePageState extends State<LoginPage> {
               children: [
                 Expanded(
                   child: Stack(
-                    alignment: Alignment.topRight,
+                    alignment: Alignment.bottomRight,
                     children: [
                       Container(
                         clipBehavior: Clip.antiAlias,
@@ -66,14 +66,23 @@ class _LoginPagePageState extends State<LoginPage> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      IconButton(
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => const DeveloperOptions(),
-                            ));
-                          },
-                          icon: Icon(Icons.settings)),
+                      Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: IconButtonTheme(
+                            data: IconButtonThemeData(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll(
+                                        AppColorsLight.primaryColor.shade500))),
+                            child: IconButton(
+                                color: Colors.white,
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DeveloperOptions(),
+                                  ));
+                                },
+                                icon: Icon(Icons.settings)),
+                          )),
                     ],
                   ),
                 ),
@@ -93,7 +102,6 @@ class _LoginPagePageState extends State<LoginPage> {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w200,
-                        color: Colors.black,
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -141,55 +149,21 @@ class _LoginPagePageState extends State<LoginPage> {
                           onPressed: () async {
                             if (_mailController.text == 'admin' &&
                                 _passwordController.text == "admin") {
-                              final prefs =
-                                  await SharedPreferences.getInstance();
+                              APIStatus status =
+                                  await login('admin@admin.com', 'adminadmin');
 
-                              if (prefs.getBool('IsThereAdmin') ?? false) {
-                                APIStatus status = await login(
-                                    'admin@admin.com', 'adminadmin');
-
-                                if (status.statusCode == 200) {
-                                  saveInfo(status.body[0], status.body[1],
-                                      status.body[2]);
-                                } else {
-                                  if (context.mounted) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        behavior: SnackBarBehavior.floating,
-                                        content: Text(status.body[2]),
-                                        duration: const Duration(seconds: 3),
-                                      ),
-                                    );
-                                  }
-                                }
+                              if (status.statusCode == 200) {
+                                saveInfo(status.body[0], status.body[1],
+                                    status.body[2]);
                               } else {
-                                print(prefs.getBool('IsThereAdmin'));
-                                APIStatus status = await register(
-                                    'admin',
-                                    'admin',
-                                    'admin@admin.com',
-                                    'adminadmin',
-                                    '2000-01-01',
-                                    '0',
-                                    '0',
-                                    '12345678912',
-                                    'admin');
-                                status = await login(
-                                    'admin@admin.com', 'adminadmin');
-                                if (status.statusCode == 200) {
-                                  prefs.setBool('IsThereAdmin', true);
-                                  saveInfo(status.body[0], status.body[1],
-                                      status.body[2]);
-                                } else {
-                                  if (context.mounted) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        behavior: SnackBarBehavior.floating,
-                                        content: Text(status.body[2]),
-                                        duration: const Duration(seconds: 3),
-                                      ),
-                                    );
-                                  }
+                                if (context.mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      behavior: SnackBarBehavior.floating,
+                                      content: Text(status.body[2]),
+                                      duration: const Duration(seconds: 3),
+                                    ),
+                                  );
                                 }
                               }
                             }

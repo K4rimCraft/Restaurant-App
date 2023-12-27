@@ -65,7 +65,6 @@ class _MenuState extends State<Menu> {
     //     fetchFoodData("http://localhost:3000/RESTO");
 
     return Scaffold(
-      backgroundColor: AppColorsLight.lightColor,
       appBar: AppBar(
         elevation: 0,
         title: Text("Menu",
@@ -115,7 +114,6 @@ class _MenuState extends State<Menu> {
               child: SizedBox(
                 height: 50,
                 child: SearchAnchor(
-                  viewBackgroundColor: AppColorsLight.primaryColor.shade100,
                   viewHintText: "Search",
                   viewConstraints: BoxConstraints(maxHeight: 250),
                   builder: (BuildContext context, SearchController controller) {

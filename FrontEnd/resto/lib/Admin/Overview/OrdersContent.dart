@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:resto/Admin/Overview/API.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,13 @@ class _OrdersContentState extends State<OrdersContent> {
   RangeValues priceRange = RangeValues(0, OrderData.maxPrice);
   int selected = 0;
   TextEditingController nameControler = TextEditingController();
-
+  List<String> statusNames = [
+    'New',
+    'Taken',
+    'Picked Up',
+    'At Location',
+    'Delivered'
+  ];
   int selectedButtonIndex = -55;
   @override
   void initState() {
@@ -41,12 +48,12 @@ class _OrdersContentState extends State<OrdersContent> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 10),
-            const Text(
+            Text(
               'Order History',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
+               style: GoogleFonts.dmSerifDisplay(
+                  fontSize: 28,
+          
+                ),
             ),
             const SizedBox(height: 10),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
@@ -115,7 +122,7 @@ class _OrdersContentState extends State<OrdersContent> {
                     } else {
                       selected = 3;
                     }
-                    selectedButtonIndex = 0;
+                    selectedButtonIndex = -55;
                     futureOrders = fetchOrders(0, OrderData.maxPrice);
                   });
                 },
@@ -209,54 +216,51 @@ class _OrdersContentState extends State<OrdersContent> {
               ),
             if (selected == 3)
               Container(
-                height: 86,
-                padding: const EdgeInsets.all(8),
-                child: Card(
-                  elevation: 8,
-                  child: Flex(
-                    direction: Axis.horizontal,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Flexible(
-                        child: Container(
-                          padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                          constraints: const BoxConstraints(
-                              maxWidth: 600, minWidth: 400),
-                          child: SegmentedButton(
-                              showSelectedIcon: false,
-                              style: const ButtonStyle(
-                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                visualDensity:
-                                    VisualDensity(horizontal: -1, vertical: -1),
+                  height: 70,
+                  padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                  child: ScrollbarTheme(
+                    data: const ScrollbarThemeData(
+                      thickness: MaterialStatePropertyAll(5),
+                      crossAxisMargin: -5,
+                    ),
+                    child: Scrollbar(
+                      controller: scroll,
+                      scrollbarOrientation: ScrollbarOrientation.bottom,
+                      interactive: true,
+                      child: ListView.builder(
+                        controller: scroll,
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        itemCount: statusNames.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            //clipBehavior: Clip.antiAlias,
+                            child: Card(
+                              elevation: selectedButtonIndex == index ? 0 : 5,
+                              child: InkWell(
+                                borderRadius: BorderRadius.circular(13),
+                                onTap: () {
+                                  setState(() {
+                                    selectedButtonIndex = index;
+
+                                    futureOrders =
+                                        fetchOrdersFilterStatus(index);
+                                  });
+                                },
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                  child: Center(
+                                      child:
+                                          Text(statusNames[index].toString())),
+                                ),
                               ),
-                              segments: const [
-                                ButtonSegment(value: 0, label: Text('New')),
-                                ButtonSegment(value: 1, label: Text('Taken')),
-                                ButtonSegment(
-                                    value: 2, label: Text('PickedUp')),
-                                ButtonSegment(
-                                    value: 3,
-                                    label: Text(
-                                      'AtLocation',
-                                    )),
-                                ButtonSegment(
-                                    value: 4, label: Text('Delivered '))
-                              ],
-                              selected: {selectedButtonIndex},
-                              onSelectionChanged: (index) {
-                                setState(() {
-                                  selectedButtonIndex = index.first;
-                                  futureOrders =
-                                      fetchOrdersFilterStatus(index.first);
-                                });
-                              }),
-                        ),
+                            ),
+                          );
+                        },
                       ),
-                    ],
-                  ),
-                ),
-              ),
+                    ),
+                  )),
             const Divider(),
             Flexible(
               child: FutureBuilder(
@@ -317,19 +321,24 @@ class _OrdersContentState extends State<OrdersContent> {
                                         ),
                                       ],
                                     ),
-                                    Column(
-                                      children: [
-                                        Text(
-                                            OrderList.dateOfOrder.split('T')[0],
-                                            style:
-                                                const TextStyle(fontSize: 20)),
-                                        Text(
-                                            OrderList.dateOfOrder
-                                                .split('T')[1]
-                                                .split('.')[0],
-                                            style:
-                                                const TextStyle(fontSize: 20)),
-                                      ],
+                                    Opacity(
+                                      opacity: 0.5,
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                              OrderList.dateOfOrder
+                                                  .split('T')[1]
+                                                  .split('.')[0]
+                                                  .substring(0, 5),
+                                              style: const TextStyle(
+                                                  fontSize: 16)),
+                                          Text(
+                                              OrderList.dateOfOrder
+                                                  .split('T')[0],
+                                              style: const TextStyle(
+                                                  fontSize: 16)),
+                                        ],
+                                      ),
                                     ),
                                   ],
                                 ),

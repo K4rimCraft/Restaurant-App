@@ -23,7 +23,15 @@ class AuthInterface extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: LoginPage(update: update),
-        theme: getThemeDataLight(),
+        theme: ThemeData(
+          brightness:
+              AppColorsLight.darkMode ? Brightness.dark : Brightness.light,
+          useMaterial3: true,
+          fontFamily: 'Bitter',
+          colorSchemeSeed: Colors.deepOrange,
+          sliderTheme: const SliderThemeData(
+              showValueIndicator: ShowValueIndicator.always),
+        ),
       ),
     );
   }

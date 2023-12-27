@@ -14,7 +14,6 @@ class _PrivacyPolicyState extends State<TermsConditions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColorsLight.lightColor,
       appBar: AppBar(
         elevation: 0,
         title: Text("Terms & Conditions",
@@ -34,7 +33,6 @@ class _PrivacyPolicyState extends State<TermsConditions> {
       ),
       body: Center(
         child: Container(
-          color: AppColorsLight.lightColor,
           child: Text("Coming Soon....",
               style: TextStyle(
                   color: AppColorsLight.primaryColor,

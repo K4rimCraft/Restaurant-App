@@ -2,20 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:resto/User/Pages/Settings/DeveloperOptions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'Favorite.dart';
-import '../Orders/Pages/Orders_Page.dart';
-import 'Profile.dart';
-import 'about_us.dart';
-import '../Cart.dart';
-import 'privacy_policy.dart';
-import 'terms_conditions.dart';
-import '../../theme/app_color.dart';
+
+import 'package:resto/User/Pages/Settings/about_us.dart';
+import 'package:resto/User/Pages/Settings/privacy_policy.dart';
+import 'package:resto/User/Pages/Settings/terms_conditions.dart';
+import 'package:resto/User/theme/app_color.dart';
 import 'package:resto/main.dart';
 
 class Settings extends StatefulWidget {
   Function updateTheme;
-  final int selectedPage;
-  Settings({super.key, required this.selectedPage, required this.updateTheme});
+  Settings({super.key, required this.updateTheme});
 
   @override
   State<Settings> createState() => _SettingsState();
@@ -41,59 +37,6 @@ class _SettingsState extends State<Settings> {
             padding: const EdgeInsets.only(top: 15.0, right: 10.0, left: 10.0),
             child: Column(
               children: [
-                Tooltip(
-                  message: 'Edit Profile',
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(15),
-                    onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Profile(),
-                      ));
-                    },
-                    child: Ink(
-                        decoration: BoxDecoration(
-                            color: Theme.of(context)
-                                .colorScheme
-                                .secondaryContainer,
-                            borderRadius: BorderRadius.circular(15)),
-                        child: BuildContainer("Profile", Icons.person)),
-                  ),
-                ),
-                const SizedBox(height: 15),
-                InkWell(
-                  borderRadius: BorderRadius.circular(15),
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Cart(),
-                    ));
-                  },
-                  child: Ink(
-                    decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.secondaryContainer,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Tooltip(
-                        message: 'Go To Cart',
-                        child: BuildContainer("My Cart", Icons.shopping_cart)),
-                  ),
-                ),
-                const SizedBox(height: 15),
-                InkWell(
-                  borderRadius: BorderRadius.circular(15),
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Favorite(),
-                    ));
-                  },
-                  child: Ink(
-                    decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.secondaryContainer,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Tooltip(
-                        message: 'Go To My Favorites',
-                        child: BuildContainer("My Favorites", Icons.favorite)),
-                  ),
-                ),
-                const SizedBox(height: 15),
                 InkWell(
                   borderRadius: BorderRadius.circular(15),
                   onTap: () {},

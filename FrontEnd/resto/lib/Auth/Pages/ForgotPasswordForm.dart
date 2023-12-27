@@ -110,7 +110,7 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
                       //   _formKey.currentState!.validate();
                       // },
                       controller: _codeController,
-                      style: const TextStyle(fontSize: 14, color: Colors.black),
+                      style: const TextStyle(fontSize: 14),
                       keyboardType: TextInputType.number,
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
@@ -173,7 +173,6 @@ class _ChangePassState extends State<ChangePass> {
       validateForm();
     });
   }
-
 
 // Validation function
   void validateForm() {

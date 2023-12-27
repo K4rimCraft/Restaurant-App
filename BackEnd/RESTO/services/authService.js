@@ -51,21 +51,19 @@ const register = asyncHandelr(async (req, res, next) => {
         VALUES(?,?,?,?,?,?,?,?,?)`,
         [firstName, lastName, email, hashedPassword, birthDate, longitudeAddress, latitudeAddress, phoneNumber, type]);
 
-    if (type !== "admin") {
-        const [result1] = await (await dbConnection).query('SELECT personId FROM persons where email = ?', [email]);
+    const [result3] = await (await dbConnection).query('SELECT personId FROM persons where email = ?', [email]);
+    personId = result3[0].personId;
 
-        personId = result1[0].personId;
-        if (type === "customer") {
-            const [result] = await (await dbConnection).query(`INSERT INTO customers (personId) VALUES (?)`, [personId]);
-
-            Id = result.insertId;
-        } else if (type === "deliveryman") {
-            const [result] = await (await dbConnection).query(`INSERT INTO deliverymen (personId) VALUES (?)`, [personId]);
-            Id = result.insertId;
-        }
-    } else {
-        Id = result1[0].personId;
+    if (type === "admin") {
+        Id = personId;
+    } else if (type === "customer") {
+        const [result] = await (await dbConnection).query(`INSERT INTO customers (personId) VALUES (?)`, [personId]);
+        Id = result.insertId;
+    } else if (type === "deliveryman") {
+        const [result] = await (await dbConnection).query(`INSERT INTO deliverymen (personId) VALUES (?)`, [personId]);
+        Id = result.insertId;
     }
+
     const token = jwt.sign({ id: personId, type: type }, process.env.JWT_SECRETKEY, {
         expiresIn: "90d"
     });

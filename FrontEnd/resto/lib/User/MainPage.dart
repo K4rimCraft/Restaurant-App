@@ -12,11 +12,12 @@ import '/User/Pages/Menu.dart';
 import '/User/Pages/Settings/Settings.dart';
 import '/User/Pages/Orders/Pages/Orders_Page.dart';
 
-
 class UserInterface extends StatefulWidget {
   int selectedPage;
+  Function updateTheme;
   // int sliding;
-  UserInterface({super.key, required this.selectedPage});
+  UserInterface(
+      {super.key, required this.selectedPage, required this.updateTheme});
   @override
   State<UserInterface> createState() => _UserInterfaceState();
 }
@@ -90,7 +91,6 @@ class _UserInterfaceState extends State<UserInterface> {
           ),
         ),*/
 
-          backgroundColor: AppColorsLight.lightColor,
           body: Stack(
             children: [
               <Widget>[
@@ -98,7 +98,9 @@ class _UserInterfaceState extends State<UserInterface> {
                 Menu(update: update),
                 Booking(),
                 ShowOrderPage(),
-                Settings(selectedPage: widget.selectedPage),
+                Settings(
+                    selectedPage: widget.selectedPage,
+                    updateTheme: widget.updateTheme),
               ][widget.selectedPage],
               Container(
                 alignment: Alignment.bottomCenter,

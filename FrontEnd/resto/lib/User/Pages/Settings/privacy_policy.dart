@@ -14,7 +14,6 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColorsLight.lightColor,
       appBar: AppBar(
         elevation: 0,
         title: Text("Privacy Policy",
@@ -34,7 +33,6 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
       ),
       body: Center(
         child: Container(
-          color: AppColorsLight.lightColor,
           child: Text("Coming Soon....",
               style: TextStyle(
                   color: AppColorsLight.primaryColor,

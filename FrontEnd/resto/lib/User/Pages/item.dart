@@ -48,7 +48,6 @@ class _ItemState extends State<Item> {
         create: (context) => Cart(),
         child: Scaffold(
             extendBodyBehindAppBar: true,
-            backgroundColor: AppColorsLight.lightColor,
             appBar: AppBar(
               backgroundColor: Colors.transparent,
               elevation: 0,
@@ -108,8 +107,11 @@ class _ItemState extends State<Item> {
                       decoration: BoxDecoration(
                           gradient: LinearGradient(
                               colors: <Color>[
-                                AppColorsLight.lightColor.withOpacity(0.5),
-                                AppColorsLight.lightColor,
+                                Theme.of(context)
+                                    .colorScheme
+                                    .background
+                                    .withOpacity(0.5),
+                                Theme.of(context).colorScheme.background,
                               ],
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter),
@@ -129,9 +131,8 @@ class _ItemState extends State<Item> {
                               Text(
                                 widget.food.name,
                                 style: GoogleFonts.dmSerifDisplay(
-                                    fontSize: 45,
-                                    color:
-                                        AppColorsLight.secondaryColor.shade800),
+                                  fontSize: 45,
+                                ),
                               ),
                               Container(
                                 decoration: BoxDecoration(
@@ -169,8 +170,8 @@ class _ItemState extends State<Item> {
                           Text(
                             "\$" + (widget.food.price).toString(),
                             style: GoogleFonts.dmSerifDisplay(
-                                fontSize: 35,
-                                color: AppColorsLight.secondaryColor.shade800),
+                              fontSize: 35,
+                            ),
                           ),
                           const SizedBox(
                             height: 5,
@@ -194,10 +195,9 @@ class _ItemState extends State<Item> {
                                 top: 10.0),
                             child: Text(
                               widget.food.description,
-                              style: TextStyle(
-                                  color: AppColorsLight.secondaryColor.shade800,
+                              style: const TextStyle(
                                   fontWeight: FontWeight.w400,
-                                  fontSize: 13,
+                                  fontSize: 18,
                                   height: 2),
                             ),
                           ),

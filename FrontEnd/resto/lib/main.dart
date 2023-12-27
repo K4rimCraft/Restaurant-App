@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:resto/Admin/MainPage.dart';
 import 'package:resto/Delivery/MainPage.dart';
 import 'package:resto/Auth/MainPage.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
+  int userIndex = 0;
   late AnimationController animationController;
   @override
   void initState() {
@@ -38,10 +40,13 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
     final prefs = await SharedPreferences.getInstance();
     final String? token = prefs.getString('token');
     final String? type = prefs.getString('type');
+    final bool darkMode = prefs.getBool('darkMode') ?? false;
+    AppColorsLight.darkMode = darkMode;
     serverUrl = prefs.getString('serverUrl') ?? 'http://localhost:3000';
     payment = prefs.getBool('payment') ?? true;
     print(token);
     print(type);
+
     if (token == null) {
       selectedInterface = 1;
     } else if (type == 'customer') {
@@ -61,36 +66,38 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
     init();
   }
 
+  void updateTheme() {
+    userIndex = 4;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
-        theme: getThemeDataLight(),
-        // theme: ThemeData(
+        // theme: AppColorsLight.currentTheme,
+        theme: ThemeData(
+            brightness:
+                AppColorsLight.darkMode ? Brightness.dark : Brightness.light,
+            useMaterial3: true,
+            colorSchemeSeed: Colors.deepOrange,
+            sliderTheme: const SliderThemeData(
+                showValueIndicator: ShowValueIndicator.always),
+            fontFamily: 'Bitter'),
+        // darkTheme: ThemeData(
         //   useMaterial3: true,
         //   colorSchemeSeed: Colors.blue,
-        //   brightness: Brightness.light,
+        //   brightness: Brightness.dark,
         //   fontFamily: 'Kanit',
         //   sliderTheme: const SliderThemeData(
         //       showValueIndicator: ShowValueIndicator.always),
-        //   tooltipTheme: TooltipThemeData(
-        //       textStyle: const TextStyle(color: Colors.black),
-        //       decoration: BoxDecoration(color: Colors.blue.shade50)),
+        //   tooltipTheme: const TooltipThemeData(
+        //       textStyle: TextStyle(color: Colors.white),
+        //       decoration:
+        //           BoxDecoration(color: Color.fromARGB(255, 38, 41, 49))),
         // ),
-        darkTheme: ThemeData(
-          useMaterial3: true,
-          colorSchemeSeed: Colors.blue,
-          brightness: Brightness.dark,
-          fontFamily: 'Kanit',
-          sliderTheme: const SliderThemeData(
-              showValueIndicator: ShowValueIndicator.always),
-          tooltipTheme: const TooltipThemeData(
-              textStyle: TextStyle(color: Colors.white),
-              decoration:
-                  BoxDecoration(color: Color.fromARGB(255, 38, 41, 49))),
-        ),
-        themeMode: ThemeMode.light,
+        //themeMode: ThemeMode.light,
         scrollBehavior: const MaterialScrollBehavior().copyWith(
           dragDevices: {
             PointerDeviceKind.mouse,
@@ -103,7 +110,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         home: Stack(
           children: [
             Container(
-              color: Colors.white,
+              color: AppColorsLight.darkMode ? Colors.black : Colors.white,
             ),
             FadeTransition(
                 opacity:
@@ -111,9 +118,10 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                 child: <Widget>[
                   Container(),
                   AuthInterface(update: update),
-                  UserInterface(selectedPage: 0),
-                  const DeliveryInteface(),
-                  AdminInterface(),
+                  UserInterface(
+                      selectedPage: userIndex, updateTheme: updateTheme),
+                  DeliveryInteface(updateTheme: updateTheme),
+                  AdminInterface(updateTheme: updateTheme),
                 ][selectedInterface])
             //home: AdminInterface(),
           ],

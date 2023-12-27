@@ -11,7 +11,6 @@ class ShowOrderPage extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: AppColorsLight.appBarColor,
           title: Center(
             child: Text("Orders",
                 style: GoogleFonts.aladin(

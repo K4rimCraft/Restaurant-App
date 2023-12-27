@@ -24,7 +24,6 @@ class _BookingState extends State<Booking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColorsLight.lightColor,
         appBar: AppBar(
           elevation: 0,
           title: Center(
@@ -158,20 +157,18 @@ class _BookingState extends State<Booking> {
                                               },
                                             ));
                                   } else {
-                                    ScaffoldMessenger.of(context)
-                                        .showSnackBar(SnackBar(
-                                      backgroundColor: AppColorsLight
-                                          .secondaryColor.shade800,
-                                      action: SnackBarAction(
-                                        label: "OK",
-                                        textColor: AppColorsLight.lightColor,
-                                        onPressed: () {},
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        action: SnackBarAction(
+                                          label: "OK",
+                                          onPressed: () {},
+                                        ),
+                                        behavior: SnackBarBehavior.floating,
+                                        content: const Text(
+                                            'Select The Date Of Booking'),
+                                        duration: const Duration(seconds: 3),
                                       ),
-                                      content: Text(
-                                          "Select The Date Of Booking",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                    ));
+                                    );
                                   }
                                 },
                                 child: Row(
@@ -222,10 +219,10 @@ class _BookingState extends State<Booking> {
                           width: MediaQuery.of(context).size.width,
                           child: Container(
                             child: Card(
+                              elevation: 2,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
                               ),
-                              color: AppColorsLight.secondaryColor.shade100,
                               child: Padding(
                                 padding: const EdgeInsets.all(10.0),
                                 child: Column(
@@ -256,214 +253,184 @@ class _BookingState extends State<Booking> {
                                       ],
                                     ),
                                     Card(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            color: AppColorsLight.lightColor),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15.0, vertical: 5.0),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                "Table Name: ",
-                                                style: GoogleFonts.aladin(
-                                                  color: AppColorsLight
-                                                      .primaryColor,
-                                                  fontSize: 28,
-                                                ),
+                                      elevation: 5,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 15.0, vertical: 5.0),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "Table Name: ",
+                                              style: GoogleFonts.aladin(
+                                                color:
+                                                    AppColorsLight.primaryColor,
+                                                fontSize: 28,
                                               ),
-                                              Text(
-                                                BookingTable.name!,
-                                                style: GoogleFonts.aladin(
-                                                  color: AppColorsLight
-                                                      .primaryColor,
-                                                  fontSize: 25,
-                                                ),
+                                            ),
+                                            Text(
+                                              BookingTable.name!,
+                                              style: GoogleFonts.aladin(
+                                                color:
+                                                    AppColorsLight.primaryColor,
+                                                fontSize: 25,
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
                                     Card(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            color: AppColorsLight.lightColor),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15.0, vertical: 5.0),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                "Table: ",
-                                                style: GoogleFonts.aladin(
-                                                  color: AppColorsLight
-                                                      .primaryColor,
-                                                  fontSize: 28,
-                                                ),
+                                      elevation: 5,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 15.0, vertical: 5.0),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "Table: ",
+                                              style: GoogleFonts.aladin(
+                                                color:
+                                                    AppColorsLight.primaryColor,
+                                                fontSize: 28,
                                               ),
-                                              Text(
-                                                "${BookingTable.tableNumber}",
-                                                style: GoogleFonts.aladin(
-                                                  color: AppColorsLight
-                                                      .primaryColor,
-                                                  fontSize: 25,
-                                                ),
+                                            ),
+                                            Text(
+                                              "${BookingTable.tableNumber}",
+                                              style: GoogleFonts.aladin(
+                                                color:
+                                                    AppColorsLight.primaryColor,
+                                                fontSize: 25,
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
                                     Card(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            color: AppColorsLight.lightColor),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15.0, vertical: 5.0),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                "Number Of Seats: ",
-                                                style: GoogleFonts.aladin(
-                                                  color: AppColorsLight
-                                                      .primaryColor,
-                                                  fontSize: 28,
-                                                ),
+                                      elevation: 5,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 15.0, vertical: 5.0),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "Number Of Seats: ",
+                                              style: GoogleFonts.aladin(
+                                                color:
+                                                    AppColorsLight.primaryColor,
+                                                fontSize: 28,
                                               ),
-                                              Text(
-                                                "${BookingTable.numOfSeats}",
-                                                style: GoogleFonts.aladin(
-                                                  color: AppColorsLight
-                                                      .primaryColor,
-                                                  fontSize: 25,
-                                                ),
+                                            ),
+                                            Text(
+                                              "${BookingTable.numOfSeats}",
+                                              style: GoogleFonts.aladin(
+                                                color:
+                                                    AppColorsLight.primaryColor,
+                                                fontSize: 25,
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
                                     Card(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            color: AppColorsLight.lightColor),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15.0, vertical: 5.0),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                "Date:",
-                                                style: GoogleFonts.aladin(
-                                                  color: AppColorsLight
-                                                      .primaryColor,
-                                                  fontSize: 28,
-                                                ),
+                                      elevation: 5,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 15.0, vertical: 5.0),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "Date:",
+                                              style: GoogleFonts.aladin(
+                                                color:
+                                                    AppColorsLight.primaryColor,
+                                                fontSize: 28,
                                               ),
-                                              Text(
-                                                BookingTable.date!,
-                                                style: GoogleFonts.aladin(
-                                                  color: AppColorsLight
-                                                      .primaryColor,
-                                                  fontSize: 25,
-                                                ),
-                                              )
-                                            ],
-                                          ),
+                                            ),
+                                            Text(
+                                              BookingTable.date!,
+                                              style: GoogleFonts.aladin(
+                                                color:
+                                                    AppColorsLight.primaryColor,
+                                                fontSize: 25,
+                                              ),
+                                            )
+                                          ],
                                         ),
                                       ),
                                     ),
                                     Card(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            color: AppColorsLight.lightColor),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15.0, vertical: 5.0),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                "Start Time: ",
-                                                style: GoogleFonts.aladin(
-                                                  color: AppColorsLight
-                                                      .primaryColor,
-                                                  fontSize: 28,
-                                                ),
+                                      elevation: 5,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 15.0, vertical: 5.0),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "Start Time: ",
+                                              style: GoogleFonts.aladin(
+                                                color:
+                                                    AppColorsLight.primaryColor,
+                                                fontSize: 28,
                                               ),
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    "${BookingTable.startTime}",
-                                                    style: GoogleFonts.aladin(
-                                                      color: AppColorsLight
-                                                          .primaryColor,
-                                                      fontSize: 25,
-                                                    ),
+                                            ),
+                                            Row(
+                                              children: [
+                                                Text(
+                                                  "${BookingTable.startTime}",
+                                                  style: GoogleFonts.aladin(
+                                                    color: AppColorsLight
+                                                        .primaryColor,
+                                                    fontSize: 25,
                                                   ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
                                     Card(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            color: AppColorsLight.lightColor),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15.0, vertical: 5.0),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                "End Time: ",
-                                                style: GoogleFonts.aladin(
-                                                  color: AppColorsLight
-                                                      .primaryColor,
-                                                  fontSize: 28,
-                                                ),
+                                      elevation: 5,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 15.0, vertical: 5.0),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "End Time: ",
+                                              style: GoogleFonts.aladin(
+                                                color:
+                                                    AppColorsLight.primaryColor,
+                                                fontSize: 28,
                                               ),
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    "${BookingTable.endTime}",
-                                                    style: GoogleFonts.aladin(
-                                                      color: AppColorsLight
-                                                          .primaryColor,
-                                                      fontSize: 25,
-                                                    ),
+                                            ),
+                                            Row(
+                                              children: [
+                                                Text(
+                                                  "${BookingTable.endTime}",
+                                                  style: GoogleFonts.aladin(
+                                                    color: AppColorsLight
+                                                        .primaryColor,
+                                                    fontSize: 25,
                                                   ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
@@ -544,15 +511,27 @@ class _BookingState extends State<Booking> {
                                                                       .statusCode ==
                                                                   200) {}
                                                               ScaffoldMessenger
-                                                                      .of(
-                                                                          context)
-                                                                  .showSnackBar(SnackBar(
-                                                                      behavior:
-                                                                          SnackBarBehavior
-                                                                              .floating,
-                                                                      content: Text(
-                                                                          status
-                                                                              .message)));
+                                                                      .of(context)
+                                                                  .showSnackBar(
+                                                                SnackBar(
+                                                                  action:
+                                                                      SnackBarAction(
+                                                                    label: "OK",
+                                                                    onPressed:
+                                                                        () {},
+                                                                  ),
+                                                                  behavior:
+                                                                      SnackBarBehavior
+                                                                          .floating,
+                                                                  content: Text(
+                                                                      status
+                                                                          .message),
+                                                                  duration:
+                                                                      const Duration(
+                                                                          seconds:
+                                                                              3),
+                                                                ),
+                                                              );
                                                             }
                                                           },
                                                         ),

@@ -41,6 +41,7 @@ class _FavoriteCardState extends State<FavoriteCard> {
         },
         child: Ink(
           child: Card(
+            elevation: 2,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
@@ -48,7 +49,6 @@ class _FavoriteCardState extends State<FavoriteCard> {
               message: widget.food.name,
               child: Container(
                 decoration: BoxDecoration(
-                  color: AppColorsLight.secondaryColor[100],
                   borderRadius: BorderRadius.circular(20),
                 ),
                 padding: const EdgeInsets.all(10),
@@ -103,7 +103,7 @@ class _FavoriteCardState extends State<FavoriteCard> {
                     ),
                     Column(
                       children: [
-                        IconButton(
+                        IconButton.filledTonal(
                           onPressed: () async {
                             await deleteFavorite(widget.food.itemId);
                             setState(() {
@@ -119,9 +119,6 @@ class _FavoriteCardState extends State<FavoriteCard> {
                                 : Colors.black,
                             size: 30,
                           ),
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                  AppColorsLight.secondaryColor.shade300)),
                         ),
                       ],
                     ),

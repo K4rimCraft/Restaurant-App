@@ -49,7 +49,6 @@ class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColorsLight.lightColor,
         appBar: AppBar(
           elevation: 0,
           title: Text("Shooping Cart",
@@ -632,7 +631,7 @@ class _CartState extends State<Cart> {
             onPressed: () {
               if (coupon!.text != CartList.coupon) {
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  backgroundColor: AppColorsLight.secondaryColor.shade800,
+          
                   action: SnackBarAction(
                     label: "OK",
                     textColor: AppColorsLight.lightColor,

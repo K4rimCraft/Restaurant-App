@@ -58,11 +58,10 @@ class _ShoeAppSignInPageState extends State<S1> {
               ),
               const SizedBox(height: 5),
               const Text(
-                'Welcome  Please enter your details',
+                'Welcome! Please enter your details.',
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w200,
-                  color: Colors.black,
                 ),
               ),
               const SizedBox(height: 15),

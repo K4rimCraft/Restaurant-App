@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:resto/Admin/Overview/API.dart';
 import 'package:flutter/material.dart';
 
@@ -33,12 +34,12 @@ class _DeliveryContentState extends State<DeliveryContent> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 10),
-            const Text(
+             Text(
               'Delivery Men',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
+                style: GoogleFonts.dmSerifDisplay(
+                  fontSize: 28,
+                
+                ),
             ),
             const SizedBox(height: 10),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
@@ -130,6 +131,7 @@ class _DeliveryContentState extends State<DeliveryContent> {
                   ),
                 ),
               ),
+              
             if (selected == 2)
               Container(
                 height: 86,

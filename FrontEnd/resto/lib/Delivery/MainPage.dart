@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:resto/Delivery/pages/assigned_order_page.dart';
 import 'package:resto/Delivery/pages/available_order_page.dart';
+import 'package:resto/Delivery/pages/Settings.dart';
 import 'package:resto/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DeliveryInteface extends StatefulWidget {
-  const DeliveryInteface({super.key});
+  Function updateTheme;
+  DeliveryInteface({super.key, required this.updateTheme});
 
   @override
   State<DeliveryInteface> createState() => _DeliveryIntefaceState();
@@ -22,28 +24,28 @@ class _DeliveryIntefaceState extends State<DeliveryInteface> {
 
   @override
   Widget build(BuildContext context) {
-    
-  final List<Widget> _widgetOptions = <Widget>[
-    const AvailableOrderPage(),
-    AssignedOrderPage(),
-    Center(
-      child: Container(
-        child: ElevatedButton(
-          child: const Text('Sign Out'),
-          onPressed: () async {
-           final prefs = await SharedPreferences.getInstance();
-                  await prefs.remove('token');
-                  if (context.mounted) {
-                    Navigator.of(context)
-                        .pushReplacement(MaterialPageRoute(builder: (context) {
-                      return MyApp();
-                    }));
-                  }
-          },
+    final List<Widget> _widgetOptions = <Widget>[
+      const AvailableOrderPage(),
+      AssignedOrderPage(),
+    Settings(updateTheme: widget.updateTheme),
+      Center(
+        child: Container(
+          child: ElevatedButton(
+            child: const Text('Sign Out'),
+            onPressed: () async {
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.remove('token');
+              if (context.mounted) {
+                Navigator.of(context)
+                    .pushReplacement(MaterialPageRoute(builder: (context) {
+                  return MyApp();
+                }));
+              }
+            },
+          ),
         ),
-      ),
-    )
-  ];
+      )
+    ];
 
     return Scaffold(
       body: Center(

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:resto/Auth/Pages/LoginPage.dart';
 import 'package:resto/main.dart';
@@ -46,7 +47,6 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColorsLight.lightColor,
       appBar: AppBar(
         elevation: 0,
         title: Text("Profile",
@@ -66,7 +66,6 @@ class _ProfileState extends State<Profile> {
       ),
       body: Center(
         child: Container(
-            color: AppColorsLight.lightColor,
             padding: const EdgeInsets.all(20),
             child: FutureBuilder(
                 future: futureUser,
@@ -171,6 +170,7 @@ class _ProfileState extends State<Profile> {
 
                                         return null;
                                       },
+
                                       keyboardType: TextInputType.emailAddress,
                                     ),
                                   ),
@@ -199,6 +199,10 @@ class _ProfileState extends State<Profile> {
 
                                         return null;
                                       },
+                                      inputFormatters: <TextInputFormatter>[
+                                        FilteringTextInputFormatter.allow(
+                                            RegExp(r'(^\d*\.?\d*)'))
+                                      ],
                                     ),
                                   ),
                                 ),
@@ -219,6 +223,10 @@ class _ProfileState extends State<Profile> {
 
                                         return null;
                                       },
+                                      inputFormatters: <TextInputFormatter>[
+                                        FilteringTextInputFormatter.allow(
+                                            RegExp(r'(^\d*\.?\d*)'))
+                                      ],
                                     ),
                                   ),
                                 ),
@@ -248,6 +256,10 @@ class _ProfileState extends State<Profile> {
 
                                         return null;
                                       },
+                                      inputFormatters: <TextInputFormatter>[
+                                        FilteringTextInputFormatter.allow(
+                                            RegExp(r'(^[0-9]*$)'))
+                                      ],
                                       keyboardType: TextInputType.emailAddress,
                                     ),
                                   ),
@@ -267,8 +279,18 @@ class _ProfileState extends State<Profile> {
                                   });
 
                                   if (_formKey.currentState!.validate()) {
-                                    APIStatus status =
-                                        await updateUser(userData.first);
+                                    APIStatus status = await updateUser(
+                                        UserData(
+                                            personId: 0,
+                                            firstName: firstNameControl.text,
+                                            lastName: lastNameControl.text,
+                                            longitudeAddress: double.parse(
+                                                longitudeControl.text),
+                                            latitudeAddress: double.parse(
+                                                latitudeControl.text),
+                                            email: emailControl.text,
+                                            phoneNumber:
+                                                phoneNumberControl.text));
                                     if (mounted) {
                                       if (status.statusCode == 200) {
                                         Navigator.of(context).pop();
@@ -306,25 +328,6 @@ class _ProfileState extends State<Profile> {
                                 },
                               ),
                             ),
-                            Container(
-                                padding: EdgeInsets.fromLTRB(100, 15, 100, 15),
-                                child: OutlinedButton(
-                                  onPressed: () async {
-                                    final prefs =
-                                        await SharedPreferences.getInstance();
-                                    await prefs.remove('token');
-                                    if (context.mounted) {
-                                      Navigator.of(context).pushReplacement(
-                                          MaterialPageRoute(builder: (context) {
-                                        return MyApp();
-                                      }));
-                                    }
-                                  },
-                                  child: Text(
-                                    'Sign Out',
-                                    style: TextStyle(fontSize: 18),
-                                  ),
-                                ))
                           ],
                         ),
                       );
@@ -350,7 +353,7 @@ class _ProfileState extends State<Profile> {
                           ),
                         ));
                   } else {
-                    return const LinearProgressIndicator();
+                    return const CircularProgressIndicator();
                   }
                 })),
       ),

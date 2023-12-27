@@ -34,8 +34,10 @@ class _DeliveryConfirmState extends State<DeliveryConfirm> {
       }
 
       if (widget.order.confirmationNumber == data) {
-        APIStatus status1 = await updateOrderData(widget.order.orderId, 4, widget.order.deliveryManId ?? 0);
-        APIStatus status2 = await updateDeliveryManStatus(0, widget.order.deliveryManId ?? 0);
+        APIStatus status1 = await updateOrderData(
+            widget.order.orderId, 4, widget.order.deliveryManId ?? 0);
+        APIStatus status2 =
+            await updateDeliveryManStatus(0, widget.order.deliveryManId ?? 0);
 
         if (status1.statusCode == 200 && status2.statusCode == 200) {
           if (context.mounted) {
@@ -97,10 +99,9 @@ class _DeliveryConfirmState extends State<DeliveryConfirm> {
               }),
           const SizedBox(height: 20),
           if (selectedButtonIndex == 1)
-            Container(
-              width: 380,
-              height: 350,
-              child: Card(
+            Card(
+              child: Container(
+                width: 380,
                 child: Column(children: [
                   const SizedBox(height: 20),
                   Text(
@@ -127,10 +128,9 @@ class _DeliveryConfirmState extends State<DeliveryConfirm> {
               ),
             ),
           if (selectedButtonIndex == 2)
-            Container(
-              width: 380,
-              height: 340,
-              child: Card(
+            Card(
+              child: Container(
+                width: 380,
                 child: Column(children: [
                   const SizedBox(height: 20),
                   Text(
@@ -170,9 +170,12 @@ class _DeliveryConfirmState extends State<DeliveryConfirm> {
                     onPressed: () async {
                       if (numController.text ==
                           widget.order.confirmationNumber) {
-                        APIStatus status1 =
-                            await updateOrderData(widget.order.orderId, 4, widget.order.deliveryManId ?? 0);
-                        APIStatus status2 = await updateDeliveryManStatus(0, widget.order.deliveryManId ?? 0);
+                        APIStatus status1 = await updateOrderData(
+                            widget.order.orderId,
+                            4,
+                            widget.order.deliveryManId ?? 0);
+                        APIStatus status2 = await updateDeliveryManStatus(
+                            0, widget.order.deliveryManId ?? 0);
                         print(status1.message);
                         if (status1.statusCode == 200 &&
                             status2.statusCode == 200) {
@@ -196,7 +199,8 @@ class _DeliveryConfirmState extends State<DeliveryConfirm> {
                                     Text('Incorrect Confirmation Number.')));
                       }
                     },
-                  )
+                  ),
+                  const SizedBox(height: 10),
                 ]),
               ),
             ),

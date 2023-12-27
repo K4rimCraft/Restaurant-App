@@ -36,12 +36,12 @@ class _FoodTileState extends State<CartCard> {
         },
         child: Ink(
           child: Card(
+            elevation: 2,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: AppColorsLight.secondaryColor[100],
                 borderRadius: BorderRadius.circular(20),
               ),
               padding: EdgeInsets.all(10),
@@ -94,7 +94,7 @@ class _FoodTileState extends State<CartCard> {
                   ),
                   Column(
                     children: [
-                      IconButton(
+                      IconButton.filledTonal(
                         onPressed: () {
                           setState(() {
                             CartList.delete(widget.food);
@@ -106,9 +106,6 @@ class _FoodTileState extends State<CartCard> {
                           color: Colors.black,
                           size: 30,
                         ),
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                                AppColorsLight.secondaryColor.shade300)),
                       ),
                     ],
                   ),
