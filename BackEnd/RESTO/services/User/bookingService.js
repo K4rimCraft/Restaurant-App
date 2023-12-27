@@ -41,8 +41,6 @@ const getCurrentBooking = asyncHandelr(async (req, res) => {
         ("00" + currentDateTime.getHours()).slice(-2) + ":" +
         ("00" + currentDateTime.getMinutes()).slice(-2) + ":" +
         ("00" + currentDateTime.getSeconds()).slice(-2);
-    console.log(currentTime)
-    console.log(currentDate)
     const [result] = await (await dbConnection).query(`SELECT customerId FROM customers where personId = ? `, [req.person.id]);
     const sqlQuery = `SELECT  bookings.bookingId,
     bookings.numberOfPeople,

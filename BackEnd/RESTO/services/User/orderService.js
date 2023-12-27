@@ -11,12 +11,20 @@ const placeOrder = asyncHandelr(async (req, res, next) => {
     for (var i = 0; i < itemsList.length; i++) {
         items[i] = itemsList[i].itemId;
     }
-    const [result1] = await (await dbConnection).query(`SELECT itemId,timesOrdered,price FROM menuitems WHERE itemId IN (?)`, [items]);
+    const [result1] = await (await dbConnection).query(`SELECT itemId,timesOrdered,stock,price FROM menuitems WHERE itemId IN (?)`, [items]);
+    
     for (var i = 0; i < itemsList.length; i++) {
         for (var j = 0; j < result1.length; j++) {
             if (result1[j].itemId === itemsList[i].itemId) {
                 totalPrice += result1[j].price * itemsList[i].quantity;
-                await (await dbConnection).query(`UPDATE menuitems SET timesOrdered = ? WHERE itemId = ?`, [result1[j].timesOrdered + itemsList[i].quantity, result1[j].itemId]);
+                if(result1[j].stock != 0){
+                    await (await dbConnection).query(`UPDATE menuitems SET timesOrdered = ? WHERE itemId = ?`, [result1[j].timesOrdered + itemsList[i].quantity, result1[j].itemId]);
+                    await (await dbConnection).query(`UPDATE menuitems SET stock = ? WHERE itemId = ?`, [result1[j].stock - itemsList[i].quantity, result1[j].itemId]);
+                }
+                else{
+                    return (new ApiError("Item Not out of stdock",404));
+                }
+                
             }
         }
     }

@@ -36,7 +36,7 @@ const getOrdersFilterStatus = asyncHandelr(async (req, res, next) => {
 
 
 const getOrdersNameFilter = asyncHandelr(async (req, res, next) => {
-  const query = 'SELECT * FROM persons WHERE firstName = ? ';
+  const query = 'SELECT * FROM persons WHERE firstName LIKE ? ';
   const query2 = 'SELECT * FROM customers WHERE personId = ? ';
   const query3 = `
   SELECT orders.orderId, orders.deliveryStatus, orders.longitudeAddress, orders.latitudeAddress, orders.deliveryManId, orders.customerId, orders.dateOfOrder, orders.totalPrice, persons.firstName, persons.lastName 
@@ -45,7 +45,7 @@ const getOrdersNameFilter = asyncHandelr(async (req, res, next) => {
   ON orders.customerId = customers.customerId INNER JOIN persons ON customers.personId = persons.personId 
   WHERE orders.customerId = ? `;
 
-  const [Table] = await (await dbConnection).query(query, req.params.name);
+  const [Table] = await (await dbConnection).query(query, `%${req.params.name}%`);
 
   if (Table.length !== 0) {
     const [Table2] = await (await dbConnection).query(query2, Table[0].personId);

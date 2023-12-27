@@ -114,7 +114,6 @@ const searchItem = asyncHandelr(async (req, res, next) => {
     for (let i = 0; i < Table.length; i++) {
         Table[i]['categories'] = [];
     }
-    console.log(Table)
     res.status(200).json(Table);
 });
 

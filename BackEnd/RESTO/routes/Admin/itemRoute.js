@@ -1,5 +1,5 @@
 const express = require("express");
-const { verifyTokenAndAdmin } = require("../../middlewares/verifyToken");
+const { verifyTokenAndAdmin, verifyTokenAndAuthorization } = require("../../middlewares/verifyToken");
 
 const {
     addItem,
@@ -28,5 +28,5 @@ router.post("/sendItemPics", upload.array('file'), sendItemPics);
 router.delete('/deleteItem/:itemId', verifyTokenAndAdmin,deleteItem)
 router.put('/updateItem/:itemId', verifyTokenAndAdmin,updateItem)
 router.post("/getItemsWithFilter", verifyTokenAndAdmin,getItemsWithFilter);
-router.post("/searchItem", verifyTokenAndAdmin,searchItem);
+router.post("/searchItem",searchItem);
 module.exports = router;

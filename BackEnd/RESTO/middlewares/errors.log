@@ -4071,3 +4071,1283 @@ Tue Dec 26 2023 07:51:40 GMT+0000 (GMT)
     '    at C:\\Users\\kimos\\Downloads\\College\\CSE2\\Data Bases\\CSE2 Projects\\Restaurant-App\\BackEnd\\RESTO\\services\\User\\bookingService.js:60:51\n' +
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
 }
+Tue Dec 26 2023 08:13:03 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:14:57 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:98:25
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:98:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:15:06 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:98:25
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:98:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:29:18 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'personId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:67:25
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'personId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'personId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:67:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:30:21 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:42:37 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:49:31 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:52:50 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:52:56 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:53:05 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:53:27 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:53:27 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:54:47 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:56:44 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:56:46 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 08:56:47 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:26:19 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:85:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:85:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:28:15 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:29:33 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:29:54 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:30:59 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:91:21 {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:91:21'
+}
+Tue Dec 26 2023 09:36:00 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:36:01 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:39:30 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:39:35 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:39:39 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:39:40 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:39:53 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Can't find this route /admin/getOrdersNameFilter/
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\RESTO.js:38:10
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at Route.dispatch (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: "Can't find this route /admin/getOrdersNameFilter/",
+  stack: "Error: Can't find this route /admin/getOrdersNameFilter/\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\RESTO.js:38:10\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at Route.dispatch (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)'
+}
+Tue Dec 26 2023 09:39:55 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Can't find this route /admin/getOrdersNameFilter/
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\RESTO.js:38:10
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:140:7)
+      at Route.dispatch (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:114:3) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: "Can't find this route /admin/getOrdersNameFilter/",
+  stack: "Error: Can't find this route /admin/getOrdersNameFilter/\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\RESTO.js:38:10\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:140:7)\n' +
+    '    at Route.dispatch (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:114:3)'
+}
+Tue Dec 26 2023 09:40:09 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:41:12 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:41:17 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:43:48 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:43:52 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:43:53 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:43:53 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:44:27 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:44:28 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:45:04 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1
+      at PromiseConnection.query (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:48:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sql: "SELECT * FROM persons WHERE firstName LIKE %'sha'% ",
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1",
+  stack: "Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1\n" +
+    '    at PromiseConnection.query (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:48:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:45:05 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1
+      at PromiseConnection.query (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:48:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sql: "SELECT * FROM persons WHERE firstName LIKE %'sha'% ",
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1",
+  stack: "Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1\n" +
+    '    at PromiseConnection.query (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:48:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:45:06 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1
+      at PromiseConnection.query (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:48:46
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sql: "SELECT * FROM persons WHERE firstName LIKE %'sha'% ",
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1",
+  stack: "Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%'sha'%' at line 1\n" +
+    '    at PromiseConnection.query (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:48:46\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:45:43 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: Error: Duplicate entry 'ma@gmail.com' for key 'email_UNIQUE'
+      at PromiseConnection.query (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\mysql2\promise.js:94:22)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:49:50 {
+    code: 'ER_DUP_ENTRY',
+    errno: 1062,
+    sql: 'INSERT INTO persons\n' +
+      '        (firstName,lastName,email,password,birthDate,longitudeAddress,latitudeAddress,phoneNumber,type)\n' +
+      "        VALUES('manar','mohammed','ma@gmail.com','$2b$10$sjqYsKebnkacAzP9jnUvkuu.XnXtWgtWscrvH1R1eXpOvBtwFOycK','2023-12-26','128','128','01205548856','deliveryman')",
+    sqlState: '23000',
+    sqlMessage: "Duplicate entry 'ma@gmail.com' for key 'email_UNIQUE'",
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Duplicate entry 'ma@gmail.com' for key 'email_UNIQUE'",
+  stack: "Error: Duplicate entry 'ma@gmail.com' for key 'email_UNIQUE'\n" +
+    '    at PromiseConnection.query (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\mysql2\\promise.js:94:22)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:49:50'
+}
+Tue Dec 26 2023 09:45:46 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:46:51 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:59:45
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:59:45\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:46:52 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\orderService.js:60:106
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\orderService.js:60:106\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:46:53 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\favoritesService.js:27:74
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\favoritesService.js:27:74\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:47:00 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\orderService.js:60:106
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\orderService.js:60:106\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:47:08 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\orderService.js:60:106
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\orderService.js:60:106\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:47:10 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\orderService.js:60:106
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\orderService.js:60:106\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:47:12 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\orderService.js:57:105
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\orderService.js:57:105\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:47:43 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:85:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:85:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:47:53 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:85:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:85:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:52:30 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Name not found
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\Admin\overviewService.js:56:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Name not found',
+  stack: 'Error: Name not found\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\Admin\\overviewService.js:56:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:54:57 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:55:27 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:55:35 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 09:57:52 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Resto is open from 8:00 AM to 12:00 AM!
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:11:21
+      at asyncUtilWrap (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express-async-handler\index.js:3:20)
+      at Layer.handle [as handle_request] (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\node_modules\express\lib\router\route.js:144:13)
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\middlewares\verifyToken.js:24:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 400,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Resto is open from 8:00 AM to 12:00 AM!',
+  stack: 'Error: Resto is open from 8:00 AM to 12:00 AM!\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:11:21\n' +
+    '    at asyncUtilWrap (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express-async-handler\\index.js:3:20)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\middlewares\\verifyToken.js:24:17\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:01:22 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:91:21 {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:91:21'
+}
+Tue Dec 26 2023 10:07:06 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:85:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:85:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:07:11 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:85:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:85:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:07:17 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:85:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:85:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:09:33 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:09:33 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:09:33 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:09:33 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:09:33 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:09:34 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:09:34 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:09:34 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:40:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:40:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:44:07 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\favoritesService.js:27:74
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\favoritesService.js:27:74\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:44:08 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\bookingService.js:57:45
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\bookingService.js:57:45\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:44:08 GMT+0000 (GMT)
+{
+  status: 'error',
+  err: TypeError: Cannot read properties of undefined (reading 'customerId')
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\User\orderService.js:68:106
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 500,
+    status: 'error'
+  },
+  message: "Cannot read properties of undefined (reading 'customerId')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'customerId')\n" +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\User\\orderService.js:68:106\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 10:52:02 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:91:21 {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:91:21'
+}
+Tue Dec 26 2023 11:10:07 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:85:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:85:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 11:10:12 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:85:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:85:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 11:10:17 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:85:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:85:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}
+Tue Dec 26 2023 11:10:30 GMT+0000 (GMT)
+{
+  status: 'fail',
+  err: ApiError: Wrong Email Or Password
+      at C:\Users\Mahmoud Galal\Desktop\Restaurant-App-main\BackEnd\RESTO\services\authService.js:85:21
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+    statusCode: 404,
+    status: 'fail',
+    isOperational: true
+  },
+  message: 'Wrong Email Or Password',
+  stack: 'Error: Wrong Email Or Password\n' +
+    '    at C:\\Users\\Mahmoud Galal\\Desktop\\Restaurant-App-main\\BackEnd\\RESTO\\services\\authService.js:85:21\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)'
+}

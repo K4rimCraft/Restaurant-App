@@ -72,7 +72,7 @@ const forgotPassword = asyncHandelr(async (req, res, next) => {
         return next(new ApiError(`Wrong Email`, 404));
     }
     const randomCode = Math.floor(Math.random() * (999999 - 100000 + 1) + 100000);
-    // sendEmail(req.body.email, "ResetPassword", randomCode);
+    sendEmail(req.body.email, "ResetPassword", randomCode);
     console.log(randomCode);
     res.status(200).json({ message: randomCode });
 
