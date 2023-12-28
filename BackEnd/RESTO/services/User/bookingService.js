@@ -8,7 +8,7 @@ const addBooking = asyncHandelr(async (req, res, next) => {
     console.log(startTime);
     console.log(endTime);
     if ((startTime > '00:00' && startTime < '08:00') || (endTime > '00:00' && endTime < '08:00')) {
-        return next(new ApiError("Resto is open from 8:00 AM to 12:00 AM!", 400));
+        return next(new ApiError("Resto is only open from 8:00 AM to 12:00 AM!", 400));
     }
     if (startTime > endTime) {
         return next(new ApiError("The time entered is incorrect!", 400));

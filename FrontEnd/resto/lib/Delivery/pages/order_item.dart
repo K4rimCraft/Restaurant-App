@@ -37,7 +37,12 @@ class OrderItem extends StatelessWidget {
                         fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    data.dateOfOrder,
+                    data.dateOfOrder
+                            .split('T')[1]
+                            .split('.')[0]
+                            .substring(0, 5) +
+                        '   ' +
+                        data.dateOfOrder.split('T')[0],
                     style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(150, 156, 142, 153)),

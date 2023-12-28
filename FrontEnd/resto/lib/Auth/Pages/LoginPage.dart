@@ -114,6 +114,8 @@ class _LoginPagePageState extends State<LoginPage> {
                       validator: (value) {
                         if (value!.isEmpty) {
                           return 'Please enter your email address';
+                        } else if (value == 'admin') {
+                          return null;
                         } else if (!value.contains("@")) {
                           return 'Please enter a valid email address';
                         }
