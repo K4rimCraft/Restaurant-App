@@ -76,7 +76,6 @@ class _OrdersContentState extends State<OrdersContent> {
                     } else {
                       selected = 1;
                     }
-
                     futureOrders = fetchOrders(0, OrderData.maxPrice);
                   });
                 },
@@ -99,7 +98,6 @@ class _OrdersContentState extends State<OrdersContent> {
                     } else {
                       selected = 2;
                     }
-
                     futureOrders = fetchOrders(0, OrderData.maxPrice);
                   });
                 },
@@ -242,9 +240,7 @@ class _OrdersContentState extends State<OrdersContent> {
                                 onTap: () {
                                   setState(() {
                                     selectedButtonIndex = index;
-
-                                    futureOrders =
-                                        fetchOrdersFilterStatus(index);
+                                    futureOrders = fetchOrdersFilterStatus(index);
                                   });
                                 },
                                 child: Padding(
@@ -323,21 +319,9 @@ class _OrdersContentState extends State<OrdersContent> {
                                     ),
                                     Opacity(
                                       opacity: 0.5,
-                                      child: Column(
-                                        children: [
-                                          Text(
-                                              OrderList.dateOfOrder
-                                                  .split('T')[1]
-                                                  .split('.')[0]
-                                                  .substring(0, 5),
-                                              style: const TextStyle(
-                                                  fontSize: 16)),
-                                          Text(
-                                              OrderList.dateOfOrder
-                                                  .split('T')[0],
-                                              style: const TextStyle(
-                                                  fontSize: 16)),
-                                        ],
+                                      child: Text(
+                                          OrderList.dateOfOrder.split('T')[0],
+                                          style: const TextStyle(fontSize: 17)
                                       ),
                                     ),
                                   ],
