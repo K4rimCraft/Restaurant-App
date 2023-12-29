@@ -48,7 +48,7 @@ class _AboutUsState extends State<AboutUs> {
                         fontSize: 40,
                       )),
                   Text(
-                      "- Karim Salah Eldin Elghmary\n- Mahmoud Galal Ramadan El-Gendy\n- Hassan Mohamed Hassan Ali\n- Mohamed Gehad Hussien Metwally\n- Ahmed Mohamed Salah Eldin\n- Nancy Ayman Nabil Mohamed\n- Mohamed Mahmoud Mohamed Ghanem\n- Karim Wael Talba Muhammad\n- Reham Hamdy Mohamed Ibrahim\n- Shahd AlSayed Ahmed Ali\n- Mohamed Ahmed Mahmoud Mohamed",
+                      "- Karim Salah Eldin Elghmary\n- Mahmoud Galal Ramadan El-Gendy\n- Hassan Mohamed Hassan Ali\n- Mohamed Gehad Hussien Metwally\n- Ahmed Mohamed Salah Eldin\n- Nancy Ayman Nabil Mohamed\n- Mohamed Mahmoud Mohamed Ghanem\n- Kareem Wael Tolba Muhammad\n- Reham Hamdy Mohamed Ibrahim\n- Shahd AlSayed Ahmed Ali\n- Mohamed Ahmed Mahmoud Mohamed",
                       style: TextStyle(fontSize: 17)),
                 ],
               ),
